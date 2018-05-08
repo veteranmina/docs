@@ -10,27 +10,81 @@
     
 
     
-        
     <url>
      <loc>https://github.com/eveseat/docs/general/contact/</loc>
      <lastmod>2018-05-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
         
     <url>
-     <loc>https://github.com/eveseat/docs/general/reporting_bugs/</loc>
+     <loc>https://github.com/eveseat/docs/guides/installation/getting_started/</loc>
      <lastmod>2018-05-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://github.com/eveseat/docs/general/community_packages/</loc>
+     <loc>https://github.com/eveseat/docs/guides/installation/installation/</loc>
      <lastmod>2018-05-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://github.com/eveseat/docs/general/todo/</loc>
+     <loc>https://github.com/eveseat/docs/guides/installation/docker/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/centos6/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/centos7/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/ubuntu/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/debian/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/developer_installation/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/upgrade/general_upgrades/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/upgrade/seat1_to_2/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/upgrade/seat2_to_3/</loc>
      <lastmod>2018-05-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -46,8 +100,38 @@
     </url>
         
     <url>
-     <loc>https://github.com/eveseat/docs</loc>
-     <lastmod></lastmod>
+     <loc>https://github.com/eveseat/docs/guides/admin/sso/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/admin/job_queue_flow/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/admin/scaling_seat/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/admin/rbac/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/admin/tracking/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/admin/eveapi_admin_contact/</loc>
+     <lastmod>2018-05-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -57,9 +141,25 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+        
     <url>
-     <loc>https://github.com/eveseat/docs</loc>
-     <lastmod></lastmod>
+     <loc>https://github.com/eveseat/docs/guides/development/general/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/development/package_breakdown/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/development/package_development/</loc>
+     <lastmod>2018-05-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -111,6 +211,30 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>https://github.com/eveseat/docs/general/reporting_bugs/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://github.com/eveseat/docs/general/community_packages/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://github.com/eveseat/docs/general/todo/</loc>
+     <lastmod>2018-05-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>

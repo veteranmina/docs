@@ -52,17 +52,17 @@
         },
         {
             "location": "/general/contact/",
-            "text": "Contact\n\u00b6\n\n\nNeed help? Use these channels to get support!\n\n\nSlack\n\u00b6\n\n\nWe are on the \neve-seat\n slack team.\n\nIt seems like most of the activity happens here, and has a really nice github bot too :)  \n\nGet invites \nhere\n \n\n\nEVE Online Forum Thread\n\u00b6\n\n\nTrack the conversation on the eveonline forums here:\n\nhttps://forums.eveonline.com/default.aspx?g=posts&t=460658&find=unread",
+            "text": "Contact\n\u00b6\n\n\nSlack\n\u00b6\n\n\nWe are on the \neve-seat\n slack team. Get invites \nhere\n\n\n\n\nEVE Online Forum Thread\n\u00b6\n\n\nTrack the conversation on the eveonline forums here:\n\nhttps://forums.eveonline.com/default.aspx?g=posts&t=460658&find=unread",
             "title": "Contact"
         },
         {
             "location": "/general/contact/#contact",
-            "text": "Need help? Use these channels to get support!",
+            "text": "",
             "title": "Contact"
         },
         {
             "location": "/general/contact/#slack",
-            "text": "We are on the  eve-seat  slack team. \nIt seems like most of the activity happens here, and has a really nice github bot too :)   \nGet invites  here",
+            "text": "We are on the  eve-seat  slack team. Get invites  here",
             "title": "Slack"
         },
         {
@@ -71,149 +71,49 @@
             "title": "EVE Online Forum Thread"
         },
         {
-            "location": "/general/reporting_bugs/",
-            "text": "Reporting Bugs\n\u00b6\n\n\nSo, the inevitable happened. Something broke! Its ok. The first thing to do is to relax, and prepare some info for a bug report.\n\n\nThe more info, the better\n\u00b6\n\n\nIn order to best understand the bug, we need as much info as possible about your environment. For that, you can run the following command (from your SeAT directory), and copy / paste the output as part of your bug report:\n\n\nphp artisan seat:admin:diagnose\n\n\n\n\n\nLog files\n\u00b6\n\n\nLog files are a fantastic resource. Check out the laravel log for any \nException\n type errors, and add them to your bug report. The log file is located (relative to where you installed SeAT) at:\n\n\nstorage/logs/laravel.log\n\n\n\n\n\nScreenshots and debug mode\n\u00b6\n\n\nScreenshots may also help, so don't be shy to take some and attach them to your bug report! If you flip your installation into debug mode then it may be possible to capture the error that is occurring via a screenshot.\n\n\nTo flip to debug mode, open your applications \n.env\n file, and set \nDEBUG=false\n to \nDEBUG=true\n. See: \nhttps://github.com/eveseat/seat/blob/master/.env.example#L2\n\n\nDiagnose command\n\u00b6\n\n\nSeAT is provided with some diagnostic tests that you can run using the following cli command :\n\n\nphp artisan seat:admin:diagnose\n\n\n\n\n\nThe report it will produce is including a few of basic checks that should assist you in your problem resolution like\nensuring the folder is writable by SeAT, the database is reachable, as well as the version of your installed SeAT packages.\n\n\n\n\nWarning\n\n\nDespite the check that's done by the command, you need to run it using the SeAT executive user (used to be \nseat\n).\nOther wise, it could produce false positive response.\n\n\n\n\nReport the bug\n\u00b6\n\n\nFinally, to report the bug, head over to \nhttps://github.com/eveseat/seat/issues\n and click on \nNew Issue\n.",
-            "title": "Reporting Bugs"
-        },
-        {
-            "location": "/general/reporting_bugs/#reporting-bugs",
-            "text": "So, the inevitable happened. Something broke! Its ok. The first thing to do is to relax, and prepare some info for a bug report.",
-            "title": "Reporting Bugs"
-        },
-        {
-            "location": "/general/reporting_bugs/#the-more-info-the-better",
-            "text": "In order to best understand the bug, we need as much info as possible about your environment. For that, you can run the following command (from your SeAT directory), and copy / paste the output as part of your bug report:  php artisan seat:admin:diagnose",
-            "title": "The more info, the better"
-        },
-        {
-            "location": "/general/reporting_bugs/#log-files",
-            "text": "Log files are a fantastic resource. Check out the laravel log for any  Exception  type errors, and add them to your bug report. The log file is located (relative to where you installed SeAT) at:  storage/logs/laravel.log",
-            "title": "Log files"
-        },
-        {
-            "location": "/general/reporting_bugs/#screenshots-and-debug-mode",
-            "text": "Screenshots may also help, so don't be shy to take some and attach them to your bug report! If you flip your installation into debug mode then it may be possible to capture the error that is occurring via a screenshot.  To flip to debug mode, open your applications  .env  file, and set  DEBUG=false  to  DEBUG=true . See:  https://github.com/eveseat/seat/blob/master/.env.example#L2",
-            "title": "Screenshots and debug mode"
-        },
-        {
-            "location": "/general/reporting_bugs/#diagnose-command",
-            "text": "SeAT is provided with some diagnostic tests that you can run using the following cli command :  php artisan seat:admin:diagnose  The report it will produce is including a few of basic checks that should assist you in your problem resolution like\nensuring the folder is writable by SeAT, the database is reachable, as well as the version of your installed SeAT packages.   Warning  Despite the check that's done by the command, you need to run it using the SeAT executive user (used to be  seat ).\nOther wise, it could produce false positive response.",
-            "title": "Diagnose command"
-        },
-        {
-            "location": "/general/reporting_bugs/#report-the-bug",
-            "text": "Finally, to report the bug, head over to  https://github.com/eveseat/seat/issues  and click on  New Issue .",
-            "title": "Report the bug"
-        },
-        {
-            "location": "/general/community_packages/",
-            "text": "Community Packages\n\u00b6\n\n\nBelow is a list of packages contributed by the community. These packages normally follow the same installation procedure, however, its best you consult the documentation of the package itself in case there is anything special you need to get it working.\n\n\nGeneric package installation\n\u00b6\n\n\nPackages will normally come in the form of a composer package that you need to include in your SeAT install, as well as a Service Provider that you need to bootstrap. So, generically speaking, installing a package will mean that you:\n\n\n\n\nRequire\n the package via composer:\n\n\n\n\ncomposer require <package vendor>/<package-name>\n\n\n\n\n\n\n\nPublish\n the assets with artisan:\n\n\n\n\nphp artisan vendor:publish --force --all\n\n\n\n\n\n\n\nRun migration\n in order to update database:\n\n\n\n\nphp artisan migrate\n\n\n\n\n\nInstalling packages like this will ensure that none of the core SeAT packages are affected and you should be free to upgrade SeAT core at anytime.\n\n\nPackage list\n\u00b6\n\n\nSeAT specific packages\n\u00b6\n\n\nMaintained packages\n\u00b6\n\n\n\n\n\n\n\n\nPackage\n\n\nVersion\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nwarlof/slackbot\n\n\n\n\nA slack bot that handles invites and kicks based on an api key addon for seat 1.x, 2.x and 3.x\n\n\n\n\n\n\nwarlof/seat-migrator\n\n\n\n\nA migration script between SeAT 2 and SeAT 3\n\n\n\n\n\n\nBenHUET/eveseat-calendar\n\n\n\n\nCalendar plugin for SeAT 2.x and 3.x\n\n\n\n\n\n\n\n\nDeprecated packages\n\u00b6\n\n\n\n\n\n\n\n\nPackage\n\n\nVersion\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfreedenizen/eveseat-notes\n\n\n\n\nA notes addon for seat 1.x\n\n\n\n\n\n\nwarlof/seat-slack-sso\n\n\n\n\nSlack SSO integration for seat 2.x\n\n\n\n\n\n\nwarlof/eveseat-mining-ledger\n\n\n\n\nESI capability that provides a mining ledger to SeAT 2.x\n\n\n\n\n\n\neve-scout/eveseat-oauth2-server\n\n\n\n\nThis EVE SeAT package enables an OAuth2 server for Single sign-on.\n\n\n\n\n\n\n\n\n\n\nDanger\n\n\nThe package in this section are provided as history and idea database. They will not work on the stable version\nsince they are non longer maintained by their author or have been integrated in core.\n\n\n\n\nOther SeAT related packages\n\u00b6\n\n\n\n\nBetriebsrat/err-seat\n\nSeat Api Interface for errbot\n\n\neve-scout/passport-eveseat\n\nPassport strategy for authenticating with EVE SeAT using the OAuth 2.0 API.\n\n\neve-scout/nodebb-plugin-sso-eveseat\n\nThis NodeBB plugin allows users login/register via their EVE SeAT account.",
-            "title": "Community Packages"
-        },
-        {
-            "location": "/general/community_packages/#community-packages",
-            "text": "Below is a list of packages contributed by the community. These packages normally follow the same installation procedure, however, its best you consult the documentation of the package itself in case there is anything special you need to get it working.",
-            "title": "Community Packages"
-        },
-        {
-            "location": "/general/community_packages/#generic-package-installation",
-            "text": "Packages will normally come in the form of a composer package that you need to include in your SeAT install, as well as a Service Provider that you need to bootstrap. So, generically speaking, installing a package will mean that you:   Require  the package via composer:   composer require <package vendor>/<package-name>   Publish  the assets with artisan:   php artisan vendor:publish --force --all   Run migration  in order to update database:   php artisan migrate  Installing packages like this will ensure that none of the core SeAT packages are affected and you should be free to upgrade SeAT core at anytime.",
-            "title": "Generic package installation"
-        },
-        {
-            "location": "/general/community_packages/#package-list",
-            "text": "",
-            "title": "Package list"
-        },
-        {
-            "location": "/general/community_packages/#seat-specific-packages",
-            "text": "",
-            "title": "SeAT specific packages"
-        },
-        {
-            "location": "/general/community_packages/#maintained-packages",
-            "text": "Package  Version  Description      warlof/slackbot   A slack bot that handles invites and kicks based on an api key addon for seat 1.x, 2.x and 3.x    warlof/seat-migrator   A migration script between SeAT 2 and SeAT 3    BenHUET/eveseat-calendar   Calendar plugin for SeAT 2.x and 3.x",
-            "title": "Maintained packages"
-        },
-        {
-            "location": "/general/community_packages/#deprecated-packages",
-            "text": "Package  Version  Description      freedenizen/eveseat-notes   A notes addon for seat 1.x    warlof/seat-slack-sso   Slack SSO integration for seat 2.x    warlof/eveseat-mining-ledger   ESI capability that provides a mining ledger to SeAT 2.x    eve-scout/eveseat-oauth2-server   This EVE SeAT package enables an OAuth2 server for Single sign-on.      Danger  The package in this section are provided as history and idea database. They will not work on the stable version\nsince they are non longer maintained by their author or have been integrated in core.",
-            "title": "Deprecated packages"
-        },
-        {
-            "location": "/general/community_packages/#other-seat-related-packages",
-            "text": "Betriebsrat/err-seat \nSeat Api Interface for errbot  eve-scout/passport-eveseat \nPassport strategy for authenticating with EVE SeAT using the OAuth 2.0 API.  eve-scout/nodebb-plugin-sso-eveseat \nThis NodeBB plugin allows users login/register via their EVE SeAT account.",
-            "title": "Other SeAT related packages"
-        },
-        {
-            "location": "/general/todo/",
-            "text": "Todo\n\u00b6\n\n\nThis list is supposed to give a very brief idea of \nwhats coming\u2122\n.\nIt is the stuff that should be developed; should be improved; should be fixed etc.\nAll items in this list is very high level and should be interpreted from a long term perspective.\nOf course, there are also the Github tickets tagged as \nwishlist\n items: \nhttps://github.com/eveseat/seat/labels/wishlist\n.\n\n\nThe list\n\u00b6\n\n\n\n\n~~Table sorting, filtering etc.~~\n\n\nWallet Ledger with reporting capabilities.\n\n\nExport to CSV / Excel ability for datasets\n\n\nRBAC Wiki Documentation\n\n\n~~RBAC roles additions for; all characters; all corporations~~\n\n\n~~RBAC roles exclusions for; NOT \ncharacter_id\n; NOT \ncorporation_id\n~~\n\n\nIntegration: Teamspeak3\n\n\nIntegration: Mumble\n\n\nIntegration: Openfire\n\n\nIntegration: PHPBB\n\n\nIntegration: SMF\n\n\nCharacter public views if key does not exist.\n\n\nRead package schedules from a config file and seed them using the \nScheduleSeeder\n\n\n~~Implement the Search functionality~~\n\n\n\n\nWishlist\n\u00b6\n\n\nMany features are requested via the github issues page. This list is a collection of those feature requests.\nThey are 'wishlist' items as the feeling is they need to be solved via a SeAT package\n\n\nThe wishlist\n\u00b6\n\n\n\n\nRecruitment Page \nref\n\n\nSRP \nref\n\n\nNodeBB Integration \nref\n\n\n~~Starbase Siphon Detection \nref\n~~\n\n\nStarbase Timer Board \nref",
-            "title": "TODO List"
-        },
-        {
-            "location": "/general/todo/#todo",
-            "text": "This list is supposed to give a very brief idea of  whats coming\u2122 .\nIt is the stuff that should be developed; should be improved; should be fixed etc.\nAll items in this list is very high level and should be interpreted from a long term perspective.\nOf course, there are also the Github tickets tagged as  wishlist  items:  https://github.com/eveseat/seat/labels/wishlist .",
-            "title": "Todo"
-        },
-        {
-            "location": "/general/todo/#the-list",
-            "text": "~~Table sorting, filtering etc.~~  Wallet Ledger with reporting capabilities.  Export to CSV / Excel ability for datasets  RBAC Wiki Documentation  ~~RBAC roles additions for; all characters; all corporations~~  ~~RBAC roles exclusions for; NOT  character_id ; NOT  corporation_id ~~  Integration: Teamspeak3  Integration: Mumble  Integration: Openfire  Integration: PHPBB  Integration: SMF  Character public views if key does not exist.  Read package schedules from a config file and seed them using the  ScheduleSeeder  ~~Implement the Search functionality~~",
-            "title": "The list"
-        },
-        {
-            "location": "/general/todo/#wishlist",
-            "text": "Many features are requested via the github issues page. This list is a collection of those feature requests.\nThey are 'wishlist' items as the feeling is they need to be solved via a SeAT package",
-            "title": "Wishlist"
-        },
-        {
-            "location": "/general/todo/#the-wishlist",
-            "text": "Recruitment Page  ref  SRP  ref  NodeBB Integration  ref  ~~Starbase Siphon Detection  ref ~~  Starbase Timer Board  ref",
-            "title": "The wishlist"
-        },
-        {
             "location": "/guides/installation/getting_started/",
-            "text": "Getting Started\n\u00b6\n\n\nBefore you rush ahead and install SeAT, it would be a good idea to review what you need first. Once you have done this,\nhead over to the \nquick install\n guide to start the actual installation.\n\n\nSummary\n\u00b6\n\n\nSeAT is a self hosted web application. This means that you will need your own server (and optional domain) to host SeAT. SeAT needs \nPHP7.1\n, a \nMariaDB\n (or \nMySQL\n) database, a \nRedis\n cache, \nSupervisor\n and an internet connection in order to be fully functional.\n\n\nAll of these can be installed and configured separately, or, if you are running a supported operating system, you can use the \nseat\n tool to perform the installation for you.\n\n\nRequirements\n\u00b6\n\n\nHardware\n\u00b6\n\n\nAs far as hardware goes, there isn't really a hard and fast rule on what is needed. The more resources you make available, the faster API updates will occur. However, there are some minimum \nrecommended\n specifications.\n\n\n\n\nMemory            : 1GB of RAM. Less can work, it will just be slow.\n\n\nHard Drive Space  : 10GB (used mostly by the database and the EVE API caching)\n\n\nOperating System : Any linux distribution suit to SeAT, for Windows, we're relying on \nDocker for Windows\n with Linux containers\n\n\n\n\n\n\nNote\n\n\nDue to its structure and requirement, SeAT will \nNOT\n work on mutualized services.\nDo not attempt to install it on such services since you will fail for sure.\n\n\n\n\n\n\nWarning\n\n\nIf you plan to use Docker, you will need a bit more of storage space since services\nwill share memory and CPU but not storage. Every SeAT image will contains each vendors.\nYou probably be good with 20GB.\n\n\nAlso, if you plan to process a large amount of data, schedule storage in consequence.\nAfter static content, the database will be the more storage consumsive. You also can\ndefer it on a dedicated server.\n\n\n\n\nSoftware\n\u00b6\n\n\nSoftware specifications are also based on a \nminimum\n version requirement. These are:\n\n\n\n\nFor Linux, almost any distribution that can run PHP and a Web server should be fine. For Windows, you need Docker with Linux containers\n\n\nPHP Version 7.1\n\n\nSupervisor Version 3\n\n\nMariaDB 10.2.7 or greater (or MySQL Version 5.7 or greater)\n\n\nA Web server such as Apache or Nginx\n\n\nEither an SSH or a RDP access according to the selected system",
+            "text": "Getting Started\n\u00b6\n\n\nBefore you rush ahead and install SeAT, it would be a good idea to review what you need first. Once you have done this, head over to the \nquick install\n guide to start the actual installation.\n\n\nSoftware Requirements\n\u00b6\n\n\nSeAT is a self hosted web application. This means that you will need your own server (and optional domain) to host SeAT. SeAT has a number of software requirements to function. Those are:\n\n\n\n\nPHP7.1\n. At least version 7.1.\n\n\nA database server which can be either \nMariaDB\n (\nrecommended\n) or \nMySQL\n. This is by far the most important component as it stores everything.\n\n\nA caching service provided by \nRedis\n. A lot of data is cached within SeAT in order to speed things up!\n\n\nA service supervisor such as \nSupervisor\n\n\n\n\n\n\nNote\n\n\nGuidance on how to install everything will be provided later in this document. For now this serves simply as an informational component.\n\n\n\n\nSoftware Versions\n\u00b6\n\n\nSoftware version requirements are based on a \nminimum\n requirement (Dockerized installation methods take care of these for you!). The requirements are:\n\n\n\n\nFor Linux, almost any distribution that can run PHP and a Web server should be fine. For Windows, you need Docker with Linux containers\n\n\nPHP Version 7.1\n\n\nSupervisor Version 3\n\n\nMariaDB 10.2.7 or greater (or MySQL Version 5.7 or greater)\n\n\nAny Web server such as Apache or Nginx\n\n\n\n\nHardware Requirements\n\u00b6\n\n\nAs far as hardware goes, there isn't really a hard and fast rule on what is needed. The more resources you make available, the faster API updates will occur. However, there are some minimum \nrecommended\n specifications.\n\n\n\n\nMemory            : 1GB of RAM. Less can work, it will just be \nreally\n  slow.\n\n\nHard Drive Space  : 10GB (used mostly by the database and the EVE API caching)\n\n\nOperating System  : Any linux distribution will work with SeAT (depending on how you choose to install). For Windows, the only option available is \nDocker for Windows\n with Linux containers\n\n\n\n\n\n\nWarning\n\n\nIf you intend to process a large amount of data, plan your storage accordingly. The SeAT database can grow incredibly quickly depending on the amount of tokens you process.",
             "title": "Getting Started"
         },
         {
             "location": "/guides/installation/getting_started/#getting-started",
-            "text": "Before you rush ahead and install SeAT, it would be a good idea to review what you need first. Once you have done this,\nhead over to the  quick install  guide to start the actual installation.",
+            "text": "Before you rush ahead and install SeAT, it would be a good idea to review what you need first. Once you have done this, head over to the  quick install  guide to start the actual installation.",
             "title": "Getting Started"
         },
         {
-            "location": "/guides/installation/getting_started/#summary",
-            "text": "SeAT is a self hosted web application. This means that you will need your own server (and optional domain) to host SeAT. SeAT needs  PHP7.1 , a  MariaDB  (or  MySQL ) database, a  Redis  cache,  Supervisor  and an internet connection in order to be fully functional.  All of these can be installed and configured separately, or, if you are running a supported operating system, you can use the  seat  tool to perform the installation for you.",
-            "title": "Summary"
+            "location": "/guides/installation/getting_started/#software-requirements",
+            "text": "SeAT is a self hosted web application. This means that you will need your own server (and optional domain) to host SeAT. SeAT has a number of software requirements to function. Those are:   PHP7.1 . At least version 7.1.  A database server which can be either  MariaDB  ( recommended ) or  MySQL . This is by far the most important component as it stores everything.  A caching service provided by  Redis . A lot of data is cached within SeAT in order to speed things up!  A service supervisor such as  Supervisor    Note  Guidance on how to install everything will be provided later in this document. For now this serves simply as an informational component.",
+            "title": "Software Requirements"
         },
         {
-            "location": "/guides/installation/getting_started/#requirements",
-            "text": "",
-            "title": "Requirements"
+            "location": "/guides/installation/getting_started/#software-versions",
+            "text": "Software version requirements are based on a  minimum  requirement (Dockerized installation methods take care of these for you!). The requirements are:   For Linux, almost any distribution that can run PHP and a Web server should be fine. For Windows, you need Docker with Linux containers  PHP Version 7.1  Supervisor Version 3  MariaDB 10.2.7 or greater (or MySQL Version 5.7 or greater)  Any Web server such as Apache or Nginx",
+            "title": "Software Versions"
         },
         {
-            "location": "/guides/installation/getting_started/#hardware",
-            "text": "As far as hardware goes, there isn't really a hard and fast rule on what is needed. The more resources you make available, the faster API updates will occur. However, there are some minimum  recommended  specifications.   Memory            : 1GB of RAM. Less can work, it will just be slow.  Hard Drive Space  : 10GB (used mostly by the database and the EVE API caching)  Operating System : Any linux distribution suit to SeAT, for Windows, we're relying on  Docker for Windows  with Linux containers    Note  Due to its structure and requirement, SeAT will  NOT  work on mutualized services.\nDo not attempt to install it on such services since you will fail for sure.    Warning  If you plan to use Docker, you will need a bit more of storage space since services\nwill share memory and CPU but not storage. Every SeAT image will contains each vendors.\nYou probably be good with 20GB.  Also, if you plan to process a large amount of data, schedule storage in consequence.\nAfter static content, the database will be the more storage consumsive. You also can\ndefer it on a dedicated server.",
-            "title": "Hardware"
+            "location": "/guides/installation/getting_started/#hardware-requirements",
+            "text": "As far as hardware goes, there isn't really a hard and fast rule on what is needed. The more resources you make available, the faster API updates will occur. However, there are some minimum  recommended  specifications.   Memory            : 1GB of RAM. Less can work, it will just be  really   slow.  Hard Drive Space  : 10GB (used mostly by the database and the EVE API caching)  Operating System  : Any linux distribution will work with SeAT (depending on how you choose to install). For Windows, the only option available is  Docker for Windows  with Linux containers    Warning  If you intend to process a large amount of data, plan your storage accordingly. The SeAT database can grow incredibly quickly depending on the amount of tokens you process.",
+            "title": "Hardware Requirements"
         },
         {
-            "location": "/guides/installation/getting_started/#software",
-            "text": "Software specifications are also based on a  minimum  version requirement. These are:   For Linux, almost any distribution that can run PHP and a Web server should be fine. For Windows, you need Docker with Linux containers  PHP Version 7.1  Supervisor Version 3  MariaDB 10.2.7 or greater (or MySQL Version 5.7 or greater)  A Web server such as Apache or Nginx  Either an SSH or a RDP access according to the selected system",
-            "title": "Software"
+            "location": "/guides/installation/installation/",
+            "text": "Installation\n\u00b6\n\n\nA number of options are available to install SeAT. We highly recommend a Dockerized version as the installation and upgrade process is the fastest and most simple. Nonetheless, three methods exist to install SeAT:\n\n\n\n\nVia docker and a \ndocker-compose.yml\n file.\n\n\nVia the installer scripts and the \nseat\n tool.\n\n\nManually.\n\n\n\n\nEach method has a detailed guide available that illustrates the steps either via screenshots or short videos.\n\n\n\n\nWarning\n\n\nMake sure you review the \nhardware\n and \nsoftware\n requirements sections before installing anything intended for production use!\n\n\n\n\nDocker (recommended)\n\u00b6\n\n\nWIP\n\n\nInstaller (SeAT Tool)\n\u00b6\n\n\nA semi automated installation option for Debian 8 / 9, Ubuntu LTS versions and CentOS 7 is available. To get started with this method, a helper script should be downloaded and run.\n\n\n\n\nWarning\n\n\nThis installer assumes that \nnothing else\n is configured on the host operating system. If you have an existing database server or web server on the host this script is run on there is a high chance it will fail!\n\n\n\n\nbash <\n(\ncurl -fsSL https://git.io/seat-installer\n)\n\n\n\n\n\n\nThis will ask you to choose your operating system in order to prepare the \nseat\n tool for use.\n\n\nExample usage:\n\n\n$ bash <\n(\ncurl -fsSL https://git.io/seat-installer\n)\n\n * SeAT Installer Operating System Selection\n\n1\n)\n CentOS \n6\n    \n3\n)\n Ubuntu 16x  \n5\n)\n Debian 9x\n\n2\n)\n CentOS \n7\n    \n4\n)\n Debian 8x   \n6\n)\n Quit\n * Please \nselect\n the target operating system:\n\n\n\n\n\nWIP",
+            "title": "Installation"
         },
         {
-            "location": "/guides/installation/quick_install/",
-            "text": "Quick Install\n\u00b6\n\n\nIntroduction\n\u00b6\n\n\nThe fastest way to get started with SeAT, is to start the installer with:\n\n\nbash <\n(\ncurl -fsSL https://git.io/seat-installer\n)\n\n\n\n\n\n\nThis will ask you to choose your operating system in order to prepare the seat tool for use.\n\n\nExample usage:\n\n\n$ apt-get update\n$ bash <\n(\ncurl -fsSL https://git.io/seat-installer\n)\n\n * SeAT Installer Operating System Selection\n\n1\n)\n CentOS \n6\n  \n3\n)\n Ubuntu \n14\n.04  \n5\n)\n Quit\n\n2\n)\n CentOS \n7\n  \n4\n)\n Ubuntu \n16\n.04\n * Please \nselect\n the target operating system:\n\n  ...\n\n $ php /var/www/seat/artisan seat:admin:reset\n $ php /var/www/seat/artisan seat:admin:email\n\n\n\n\n\nA community provided installation video is available at the following\n\nlink\n, visually showing the installation process",
-            "title": "Quick Install"
+            "location": "/guides/installation/installation/#installation",
+            "text": "A number of options are available to install SeAT. We highly recommend a Dockerized version as the installation and upgrade process is the fastest and most simple. Nonetheless, three methods exist to install SeAT:   Via docker and a  docker-compose.yml  file.  Via the installer scripts and the  seat  tool.  Manually.   Each method has a detailed guide available that illustrates the steps either via screenshots or short videos.   Warning  Make sure you review the  hardware  and  software  requirements sections before installing anything intended for production use!",
+            "title": "Installation"
         },
         {
-            "location": "/guides/installation/quick_install/#quick-install",
-            "text": "",
-            "title": "Quick Install"
+            "location": "/guides/installation/installation/#docker-recommended",
+            "text": "WIP",
+            "title": "Docker (recommended)"
         },
         {
-            "location": "/guides/installation/quick_install/#introduction",
-            "text": "The fastest way to get started with SeAT, is to start the installer with:  bash < ( curl -fsSL https://git.io/seat-installer )   This will ask you to choose your operating system in order to prepare the seat tool for use.  Example usage:  $ apt-get update\n$ bash < ( curl -fsSL https://git.io/seat-installer ) \n * SeAT Installer Operating System Selection 1 )  CentOS  6    3 )  Ubuntu  14 .04   5 )  Quit 2 )  CentOS  7    4 )  Ubuntu  16 .04\n * Please  select  the target operating system:\n\n  ...\n\n $ php /var/www/seat/artisan seat:admin:reset\n $ php /var/www/seat/artisan seat:admin:email  A community provided installation video is available at the following link , visually showing the installation process",
-            "title": "Introduction"
+            "location": "/guides/installation/installation/#installer-seat-tool",
+            "text": "A semi automated installation option for Debian 8 / 9, Ubuntu LTS versions and CentOS 7 is available. To get started with this method, a helper script should be downloaded and run.   Warning  This installer assumes that  nothing else  is configured on the host operating system. If you have an existing database server or web server on the host this script is run on there is a high chance it will fail!   bash < ( curl -fsSL https://git.io/seat-installer )   This will ask you to choose your operating system in order to prepare the  seat  tool for use.  Example usage:  $ bash < ( curl -fsSL https://git.io/seat-installer ) \n * SeAT Installer Operating System Selection 1 )  CentOS  6      3 )  Ubuntu 16x   5 )  Debian 9x 2 )  CentOS  7      4 )  Debian 8x    6 )  Quit\n * Please  select  the target operating system:  WIP",
+            "title": "Installer (SeAT Tool)"
         },
         {
             "location": "/guides/installation/docker/",
@@ -2354,6 +2254,106 @@
             "location": "/changelogs/web/#2018",
             "text": "036bce9  2017-09-17 Leon Jacobs (tag: 2.0.18) Version bump\n4ab49a2  2017-09-17 Lo\u00efc LEUILLIOT fix hasrole method by calling magic property instead method. (#90)\n6183416  2017-09-16 Lo\u00efc LEUILLIOT add documentation link to supervisor integration (#89)",
             "title": "2.0.18"
+        },
+        {
+            "location": "/general/reporting_bugs/",
+            "text": "Reporting Bugs\n\u00b6\n\n\nSo, the inevitable happened. Something broke! Its ok. The first thing to do is to relax, and prepare some info for a bug report.\n\n\nThe more info, the better\n\u00b6\n\n\nIn order to best understand the bug, we need as much info as possible about your environment. For that, you can run the following command (from your SeAT directory), and copy / paste the output as part of your bug report:\n\n\nphp artisan seat:admin:diagnose\n\n\n\n\n\nLog files\n\u00b6\n\n\nLog files are a fantastic resource. Check out the laravel log for any \nException\n type errors, and add them to your bug report. The log file is located (relative to where you installed SeAT) at:\n\n\nstorage/logs/laravel.log\n\n\n\n\n\nScreenshots and debug mode\n\u00b6\n\n\nScreenshots may also help, so don't be shy to take some and attach them to your bug report! If you flip your installation into debug mode then it may be possible to capture the error that is occurring via a screenshot.\n\n\nTo flip to debug mode, open your applications \n.env\n file, and set \nDEBUG=false\n to \nDEBUG=true\n. See: \nhttps://github.com/eveseat/seat/blob/master/.env.example#L2\n\n\nDiagnose command\n\u00b6\n\n\nSeAT is provided with some diagnostic tests that you can run using the following cli command :\n\n\nphp artisan seat:admin:diagnose\n\n\n\n\n\nThe report it will produce is including a few of basic checks that should assist you in your problem resolution like\nensuring the folder is writable by SeAT, the database is reachable, as well as the version of your installed SeAT packages.\n\n\n\n\nWarning\n\n\nDespite the check that's done by the command, you need to run it using the SeAT executive user (used to be \nseat\n).\nOther wise, it could produce false positive response.\n\n\n\n\nReport the bug\n\u00b6\n\n\nFinally, to report the bug, head over to \nhttps://github.com/eveseat/seat/issues\n and click on \nNew Issue\n.",
+            "title": "Reporting Bugs"
+        },
+        {
+            "location": "/general/reporting_bugs/#reporting-bugs",
+            "text": "So, the inevitable happened. Something broke! Its ok. The first thing to do is to relax, and prepare some info for a bug report.",
+            "title": "Reporting Bugs"
+        },
+        {
+            "location": "/general/reporting_bugs/#the-more-info-the-better",
+            "text": "In order to best understand the bug, we need as much info as possible about your environment. For that, you can run the following command (from your SeAT directory), and copy / paste the output as part of your bug report:  php artisan seat:admin:diagnose",
+            "title": "The more info, the better"
+        },
+        {
+            "location": "/general/reporting_bugs/#log-files",
+            "text": "Log files are a fantastic resource. Check out the laravel log for any  Exception  type errors, and add them to your bug report. The log file is located (relative to where you installed SeAT) at:  storage/logs/laravel.log",
+            "title": "Log files"
+        },
+        {
+            "location": "/general/reporting_bugs/#screenshots-and-debug-mode",
+            "text": "Screenshots may also help, so don't be shy to take some and attach them to your bug report! If you flip your installation into debug mode then it may be possible to capture the error that is occurring via a screenshot.  To flip to debug mode, open your applications  .env  file, and set  DEBUG=false  to  DEBUG=true . See:  https://github.com/eveseat/seat/blob/master/.env.example#L2",
+            "title": "Screenshots and debug mode"
+        },
+        {
+            "location": "/general/reporting_bugs/#diagnose-command",
+            "text": "SeAT is provided with some diagnostic tests that you can run using the following cli command :  php artisan seat:admin:diagnose  The report it will produce is including a few of basic checks that should assist you in your problem resolution like\nensuring the folder is writable by SeAT, the database is reachable, as well as the version of your installed SeAT packages.   Warning  Despite the check that's done by the command, you need to run it using the SeAT executive user (used to be  seat ).\nOther wise, it could produce false positive response.",
+            "title": "Diagnose command"
+        },
+        {
+            "location": "/general/reporting_bugs/#report-the-bug",
+            "text": "Finally, to report the bug, head over to  https://github.com/eveseat/seat/issues  and click on  New Issue .",
+            "title": "Report the bug"
+        },
+        {
+            "location": "/general/community_packages/",
+            "text": "Community Packages\n\u00b6\n\n\nBelow is a list of packages contributed by the community. These packages normally follow the same installation procedure, however, its best you consult the documentation of the package itself in case there is anything special you need to get it working.\n\n\nGeneric package installation\n\u00b6\n\n\nPackages will normally come in the form of a composer package that you need to include in your SeAT install, as well as a Service Provider that you need to bootstrap. So, generically speaking, installing a package will mean that you:\n\n\n\n\nRequire\n the package via composer:\n\n\n\n\ncomposer require <package vendor>/<package-name>\n\n\n\n\n\n\n\nPublish\n the assets with artisan:\n\n\n\n\nphp artisan vendor:publish --force --all\n\n\n\n\n\n\n\nRun migration\n in order to update database:\n\n\n\n\nphp artisan migrate\n\n\n\n\n\nInstalling packages like this will ensure that none of the core SeAT packages are affected and you should be free to upgrade SeAT core at anytime.\n\n\nPackage list\n\u00b6\n\n\nSeAT specific packages\n\u00b6\n\n\nMaintained packages\n\u00b6\n\n\n\n\n\n\n\n\nPackage\n\n\nVersion\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nwarlof/slackbot\n\n\n\n\nA slack bot that handles invites and kicks based on an api key addon for seat 1.x, 2.x and 3.x\n\n\n\n\n\n\nwarlof/seat-migrator\n\n\n\n\nA migration script between SeAT 2 and SeAT 3\n\n\n\n\n\n\nBenHUET/eveseat-calendar\n\n\n\n\nCalendar plugin for SeAT 2.x and 3.x\n\n\n\n\n\n\n\n\nDeprecated packages\n\u00b6\n\n\n\n\n\n\n\n\nPackage\n\n\nVersion\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfreedenizen/eveseat-notes\n\n\n\n\nA notes addon for seat 1.x\n\n\n\n\n\n\nwarlof/seat-slack-sso\n\n\n\n\nSlack SSO integration for seat 2.x\n\n\n\n\n\n\nwarlof/eveseat-mining-ledger\n\n\n\n\nESI capability that provides a mining ledger to SeAT 2.x\n\n\n\n\n\n\neve-scout/eveseat-oauth2-server\n\n\n\n\nThis EVE SeAT package enables an OAuth2 server for Single sign-on.\n\n\n\n\n\n\n\n\n\n\nDanger\n\n\nThe package in this section are provided as history and idea database. They will not work on the stable version\nsince they are non longer maintained by their author or have been integrated in core.\n\n\n\n\nOther SeAT related packages\n\u00b6\n\n\n\n\nBetriebsrat/err-seat\n\nSeat Api Interface for errbot\n\n\neve-scout/passport-eveseat\n\nPassport strategy for authenticating with EVE SeAT using the OAuth 2.0 API.\n\n\neve-scout/nodebb-plugin-sso-eveseat\n\nThis NodeBB plugin allows users login/register via their EVE SeAT account.",
+            "title": "Community Packages"
+        },
+        {
+            "location": "/general/community_packages/#community-packages",
+            "text": "Below is a list of packages contributed by the community. These packages normally follow the same installation procedure, however, its best you consult the documentation of the package itself in case there is anything special you need to get it working.",
+            "title": "Community Packages"
+        },
+        {
+            "location": "/general/community_packages/#generic-package-installation",
+            "text": "Packages will normally come in the form of a composer package that you need to include in your SeAT install, as well as a Service Provider that you need to bootstrap. So, generically speaking, installing a package will mean that you:   Require  the package via composer:   composer require <package vendor>/<package-name>   Publish  the assets with artisan:   php artisan vendor:publish --force --all   Run migration  in order to update database:   php artisan migrate  Installing packages like this will ensure that none of the core SeAT packages are affected and you should be free to upgrade SeAT core at anytime.",
+            "title": "Generic package installation"
+        },
+        {
+            "location": "/general/community_packages/#package-list",
+            "text": "",
+            "title": "Package list"
+        },
+        {
+            "location": "/general/community_packages/#seat-specific-packages",
+            "text": "",
+            "title": "SeAT specific packages"
+        },
+        {
+            "location": "/general/community_packages/#maintained-packages",
+            "text": "Package  Version  Description      warlof/slackbot   A slack bot that handles invites and kicks based on an api key addon for seat 1.x, 2.x and 3.x    warlof/seat-migrator   A migration script between SeAT 2 and SeAT 3    BenHUET/eveseat-calendar   Calendar plugin for SeAT 2.x and 3.x",
+            "title": "Maintained packages"
+        },
+        {
+            "location": "/general/community_packages/#deprecated-packages",
+            "text": "Package  Version  Description      freedenizen/eveseat-notes   A notes addon for seat 1.x    warlof/seat-slack-sso   Slack SSO integration for seat 2.x    warlof/eveseat-mining-ledger   ESI capability that provides a mining ledger to SeAT 2.x    eve-scout/eveseat-oauth2-server   This EVE SeAT package enables an OAuth2 server for Single sign-on.      Danger  The package in this section are provided as history and idea database. They will not work on the stable version\nsince they are non longer maintained by their author or have been integrated in core.",
+            "title": "Deprecated packages"
+        },
+        {
+            "location": "/general/community_packages/#other-seat-related-packages",
+            "text": "Betriebsrat/err-seat \nSeat Api Interface for errbot  eve-scout/passport-eveseat \nPassport strategy for authenticating with EVE SeAT using the OAuth 2.0 API.  eve-scout/nodebb-plugin-sso-eveseat \nThis NodeBB plugin allows users login/register via their EVE SeAT account.",
+            "title": "Other SeAT related packages"
+        },
+        {
+            "location": "/general/todo/",
+            "text": "Todo\n\u00b6\n\n\nThis list is supposed to give a very brief idea of \nwhats coming\u2122\n.\nIt is the stuff that should be developed; should be improved; should be fixed etc.\nAll items in this list is very high level and should be interpreted from a long term perspective.\nOf course, there are also the Github tickets tagged as \nwishlist\n items: \nhttps://github.com/eveseat/seat/labels/wishlist\n.\n\n\nThe list\n\u00b6\n\n\n\n\n~~Table sorting, filtering etc.~~\n\n\nWallet Ledger with reporting capabilities.\n\n\nExport to CSV / Excel ability for datasets\n\n\nRBAC Wiki Documentation\n\n\n~~RBAC roles additions for; all characters; all corporations~~\n\n\n~~RBAC roles exclusions for; NOT \ncharacter_id\n; NOT \ncorporation_id\n~~\n\n\nIntegration: Teamspeak3\n\n\nIntegration: Mumble\n\n\nIntegration: Openfire\n\n\nIntegration: PHPBB\n\n\nIntegration: SMF\n\n\nCharacter public views if key does not exist.\n\n\nRead package schedules from a config file and seed them using the \nScheduleSeeder\n\n\n~~Implement the Search functionality~~\n\n\n\n\nWishlist\n\u00b6\n\n\nMany features are requested via the github issues page. This list is a collection of those feature requests.\nThey are 'wishlist' items as the feeling is they need to be solved via a SeAT package\n\n\nThe wishlist\n\u00b6\n\n\n\n\nRecruitment Page \nref\n\n\nSRP \nref\n\n\nNodeBB Integration \nref\n\n\n~~Starbase Siphon Detection \nref\n~~\n\n\nStarbase Timer Board \nref",
+            "title": "TODO List"
+        },
+        {
+            "location": "/general/todo/#todo",
+            "text": "This list is supposed to give a very brief idea of  whats coming\u2122 .\nIt is the stuff that should be developed; should be improved; should be fixed etc.\nAll items in this list is very high level and should be interpreted from a long term perspective.\nOf course, there are also the Github tickets tagged as  wishlist  items:  https://github.com/eveseat/seat/labels/wishlist .",
+            "title": "Todo"
+        },
+        {
+            "location": "/general/todo/#the-list",
+            "text": "~~Table sorting, filtering etc.~~  Wallet Ledger with reporting capabilities.  Export to CSV / Excel ability for datasets  RBAC Wiki Documentation  ~~RBAC roles additions for; all characters; all corporations~~  ~~RBAC roles exclusions for; NOT  character_id ; NOT  corporation_id ~~  Integration: Teamspeak3  Integration: Mumble  Integration: Openfire  Integration: PHPBB  Integration: SMF  Character public views if key does not exist.  Read package schedules from a config file and seed them using the  ScheduleSeeder  ~~Implement the Search functionality~~",
+            "title": "The list"
+        },
+        {
+            "location": "/general/todo/#wishlist",
+            "text": "Many features are requested via the github issues page. This list is a collection of those feature requests.\nThey are 'wishlist' items as the feeling is they need to be solved via a SeAT package",
+            "title": "Wishlist"
+        },
+        {
+            "location": "/general/todo/#the-wishlist",
+            "text": "Recruitment Page  ref  SRP  ref  NodeBB Integration  ref  ~~Starbase Siphon Detection  ref ~~  Starbase Timer Board  ref",
+            "title": "The wishlist"
         }
     ]
 }
