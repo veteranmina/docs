@@ -1,0 +1,1726 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Simple EVE Api Tool Documentation">
+      
+      
+        <link rel="canonical" href="https://github.com/eveseat/docs/guides/installation/ubuntu/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Ubuntu - SeAT Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#ubuntu" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/eveseat/docs" title="SeAT Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                SeAT Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Ubuntu
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      eveseat/docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    SeAT Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      eveseat/docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../general/contact/" title="Contact" class="md-nav__link">
+      Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../general/reporting_bugs/" title="Reporting Bugs" class="md-nav__link">
+      Reporting Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../general/community_packages/" title="Community Packages" class="md-nav__link">
+      Community Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../general/todo/" title="TODO List" class="md-nav__link">
+      TODO List
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Installation Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Installation Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick_install/" title="Quick Install" class="md-nav__link">
+      Quick Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../centos6/" title="CentOS 6.x" class="md-nav__link">
+      CentOS 6.x
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../centos7/" title="CentOS 7.x" class="md-nav__link">
+      CentOS 7.x
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Ubuntu
+      </label>
+    
+    <a href="./" title="Ubuntu" class="md-nav__link md-nav__link--active">
+      Ubuntu
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eve-application" title="Eve Application" class="md-nav__link">
+    Eve Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" title="Basics" class="md-nav__link">
+    Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" title="Database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" title="PHP" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seat-download" title="SeAT Download" class="md-nav__link">
+    SeAT Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seat-setup" title="SeAT Setup" class="md-nav__link">
+    SeAT Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" title="Supervisor" class="md-nav__link">
+    Supervisor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-service" title="Web Service" class="md-nav__link">
+    Web Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-login" title="Admin Login" class="md-nav__link">
+    Admin Login
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../debian/" title="Debian" class="md-nav__link">
+      Debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developer_installation/" title="Developer Installation" class="md-nav__link">
+      Developer Installation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Upgrade Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Upgrade Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrade/general_upgrades/" title="General Upgrades" class="md-nav__link">
+      General Upgrades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrade/seat1_to_2/" title="SeAT 1.0 to SeAT 2.0" class="md-nav__link">
+      SeAT 1.0 to SeAT 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrade/seat2_to_3/" title="SeAT 2.0 to SeAT 3.0" class="md-nav__link">
+      SeAT 2.0 to SeAT 3.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Admin Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Admin Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      Email Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        Email Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/email/mailgun/" title="Using Mailgun" class="md-nav__link">
+      Using Mailgun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/email/gmail/" title="Using Gmail" class="md-nav__link">
+      Using Gmail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/sso/" title="Configuring Eve Online SSO" class="md-nav__link">
+      Configuring Eve Online SSO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/job_queue_flow/" title="Job Queue Flow" class="md-nav__link">
+      Job Queue Flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/scaling_seat/" title="Scaled SeAT Deployments" class="md-nav__link">
+      Scaled SeAT Deployments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/rbac/" title="Role Based Access Control" class="md-nav__link">
+      Role Based Access Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/tracking/" title="Understanding Tracking" class="md-nav__link">
+      Understanding Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/eveapi_admin_contact/" title="EVE Api Administrative Contact" class="md-nav__link">
+      EVE Api Administrative Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-8" type="checkbox" id="nav-3-3-8">
+    
+    <label class="md-nav__link" for="nav-3-3-8">
+      Package Configurations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-8">
+        Package Configurations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/api/" title="Api" class="md-nav__link">
+      Api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/console/" title="Console" class="md-nav__link">
+      Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/eveapi/" title="Eveapi" class="md-nav__link">
+      Eveapi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/notifications/" title="Notifications" class="md-nav__link">
+      Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/service/" title="Service" class="md-nav__link">
+      Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/other/" title="Other" class="md-nav__link">
+      Other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Developers Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Developers Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../development/general/" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../development/package_breakdown/" title="Core Package Breakdown" class="md-nav__link">
+      Core Package Breakdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../development/package_development/" title="Package Development" class="md-nav__link">
+      Package Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../seat_api/" title="SeAT API" class="md-nav__link">
+      SeAT API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Changelogs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Changelogs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/api/" title="Api" class="md-nav__link">
+      Api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/console/" title="Console" class="md-nav__link">
+      Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/eveapi/" title="Eveapi" class="md-nav__link">
+      Eveapi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/notifications/" title="Notifications" class="md-nav__link">
+      Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/services/" title="Services" class="md-nav__link">
+      Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eve-application" title="Eve Application" class="md-nav__link">
+    Eve Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" title="Basics" class="md-nav__link">
+    Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" title="Database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" title="PHP" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seat-download" title="SeAT Download" class="md-nav__link">
+    SeAT Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seat-setup" title="SeAT Setup" class="md-nav__link">
+    SeAT Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" title="Supervisor" class="md-nav__link">
+    Supervisor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-service" title="Web Service" class="md-nav__link">
+    Web Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-login" title="Admin Login" class="md-nav__link">
+    Admin Login
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eveseat/docs/edit/master/docs/guides/installation/ubuntu.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p><img alt="SeAT" src="http://i.imgur.com/aPPOxSK.png" /></p>
+<h1 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h1>
+<p>This guide attempts to explain how to manually install SeAT onto an <strong>Ubuntu</strong> Server.
+A small amount of Linux experience is preferred when it comes to this guide, all though it is not entirely mandatory.
+This guide assumes you want all of the available SeAT components installed (which is the default).</p>
+<h3 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h3>
+<p>We are going to assume you have root access to a fresh Ubuntu Server. Typically access is gained via SSH.
+All of the below commands are to be entered in the SSH terminal session for the installation &amp; configuration of SeAT.
+If the server you want to install SeAT on is being used for other things too (such as hosting MySQL databases and or websites), then please keep that in mind while following this guide.</p>
+<p>Packages are installed using the <code>aptitude</code> package manager as the <code>root</code> user.</p>
+<h3 id="eve-application">Eve Application<a class="headerlink" href="#eve-application" title="Permanent link">&para;</a></h3>
+<p>SeAT 3.0 consumes ESI in order to retrieve information. Before you can make any authenticated calls to ESI, you have to create an <code>eve application</code>. To do so, browse to https://developers.eveonline.com and login using the button on top right corner.
+Once done, on the top menu, click on <code>applications</code> then create a new one with <code>create new application</code> button.</p>
+<p>Fill the initial form with whatever you want (<code>name</code> and <code>description</code>) but keep in mind that this information will be showed to the user while they sign in as well as when they review third party applications that have access to their account information.</p>
+<ul>
+<li>In the <code>Connection Type</code> section, check <code>Authentication &amp; API Access</code> and add scopes from which you want information. (you need only those starting by <code>esi</code>).</li>
+<li>In the <code>Callback URL</code> section, put <code>https://yourserver/auth/eve/callback</code> where <code>yourserver</code> is either a domain or an IP pointing to the server where SeAT will be installed.</li>
+<li>Finally, click on <code>Create application</code> button, back to <code>applications</code> and near the created application, hit the <code>view application</code> button.</li>
+</ul>
+<p>Take note of the <code>Client ID</code>, <code>Secret Key</code>, <code>Callback URL</code> fields which will be required at a later stage in this documentation.</p>
+<h3 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h3>
+<p>We will ensuring that your system is up to date before starting with package installation. So, let's start with basics :</p>
+<ul>
+<li><code>apt-get update</code> to refresh the repositories cache.</li>
+<li><code>apt-get full-upgrade</code> to update any installed packages.</li>
+<li><code>reboot</code> in order to ensure any updated software is the current running version.</li>
+<li><code>apt-get autoremove</code> (after the reboot) to cleanup any unneeded packages.</li>
+</ul>
+<h3 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h3>
+<p>SeAT relies <strong>heavily</strong> on a database to function.
+Everything it learns is stored here, along with things such as user accounts for your users. It comes without saying that database security is a very important aspect too. So, ensure that you choose very strong passwords for your installation where required.</p>
+<p>This document describes using MariaDB, but you can use MySQL as well. Just double check the requirements.</p>
+<p><code>curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash</code> this script provided by MariaDB team will setup your repositories properly</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>At the time when this document was written, MariaDB as not available on Ubuntu 18.04 Bionic.
+The package version available in main repository does not meet minimum requirement as SeAT 3.0 requires at least
+version 10.2.7 or higher whereas official repository only provides 10.1.29. In order to install SeAT,
+use MySQL instead.</p>
+</div>
+<p>Lets install the database server:</p>
+<div class="codehilite"><pre><span></span>apt-get install mariadb-server
+</pre></div>
+
+
+<p>Next, we are going to secure the database server by removing anonymous access and setting a <code>root</code> password.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The database <code>root</code> password should not be confused with the operating systems <code>root</code> passwords.
+They are both completely different. They should also not be the same password.</p>
+</div>
+<p>To secure the database, run:</p>
+<div class="codehilite"><pre><span></span>mysql_secure_installation
+</pre></div>
+
+
+<p>This will ask you a series of questions, below is how these should be answered:</p>
+<div class="codehilite"><pre><span></span><span class="o">[</span>...<span class="o">]</span>
+
+Enter current password <span class="k">for</span> root <span class="o">(</span>enter <span class="k">for</span> none<span class="o">)</span>:  BY DEFAULT IT IS NONE, PRESS ENTER
+OK, successfully used password, moving on...
+
+<span class="o">[</span>...<span class="o">]</span>
+
+Set root password? <span class="o">[</span>Y/n<span class="o">]</span> y
+New password:             SET A STRONG PASSWORD HERE
+Re-enter new password:    SET A STRONG PASSWORD HERE
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+<span class="o">[</span>...<span class="o">]</span>
+
+Remove anonymous users? <span class="o">[</span>Y/n<span class="o">]</span> y
+ ... Success!
+
+<span class="o">[</span>...<span class="o">]</span>
+
+Disallow root login remotely? <span class="o">[</span>Y/n<span class="o">]</span> y
+ ... Success!
+
+<span class="o">[</span>...<span class="o">]</span>
+
+Remove <span class="nb">test</span> database and access to it? <span class="o">[</span>Y/n<span class="o">]</span> y
+
+<span class="o">[</span>...<span class="o">]</span>
+
+Reload privilege tables now? <span class="o">[</span>Y/n<span class="o">]</span> y
+ ... Success!
+
+<span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+
+
+<p>That concludes the installation of the database server and securing it.
+Next, we need to create an actual database for SeAT to use on the server.
+For that we need to use the MySQL command line client and enter a few commands to create the database and the user that will be accessing it.
+Let get to it.</p>
+<p>Fire up the MySQL client by running:</p>
+<div class="codehilite"><pre><span></span>mysql -uroot -p
+</pre></div>
+
+
+<p>This will prompt you for a password.
+Use the password you configured for the <code>root</code> account when we ran <code>mysql_secure_installation</code>.
+This will most probably be the last time you need to use this password :)</p>
+<p>If the password was correct, you should see a prompt similar to the one below:</p>
+<div class="codehilite"><pre><span></span><span class="o">[</span>...<span class="o">]</span>
+mysql&gt;
+</pre></div>
+
+
+<p>Lets run the command to create the SeAT database:</p>
+<div class="codehilite"><pre><span></span>create database seat<span class="p">;</span>
+</pre></div>
+
+
+<p>The output should be similar to the below:</p>
+<div class="codehilite"><pre><span></span>mysql&gt; create database seat<span class="p">;</span>
+Query OK, <span class="m">1</span> row affected <span class="o">(</span><span class="m">0</span>.00 sec<span class="o">)</span>
+</pre></div>
+
+
+<p>Next, we create the user that SeAT itself will use to connect and use the <code>seat</code> database:</p>
+<div class="codehilite"><pre><span></span>GRANT ALL ON seat.* to seat@localhost IDENTIFIED BY <span class="s1">&#39;s_p3rs3c3r3tp455w0rd&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>Of course, you need to replace <code>s_p3rs3c3r3tp455w0rd</code> with your own.
+Successfully running this should present you with output similar to the below:</p>
+<div class="codehilite"><pre><span></span>mysql&gt; GRANT ALL ON seat.* to seat@localhost IDENTIFIED BY <span class="s1">&#39;s_p3rs3c3r3tp455w0rd&#39;</span><span class="p">;</span>
+Query OK, <span class="m">0</span> rows affected <span class="o">(</span><span class="m">0</span>.00 sec<span class="o">)</span>
+</pre></div>
+
+
+<p>In the example above, we have effectively declared that SeAT will be using the database as <code>seat:s_p3rs3c3r3tp455w0rd@localhost/seat</code>.
+Finally, we will reload sql server permission cache</p>
+<div class="codehilite"><pre><span></span>FLUSH PRIVILEGES<span class="p">;</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember the password for the <code>seat</code> database user as we will need it later to configure SeAT.</p>
+</div>
+<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
+<p>Since SeAT is a PHP application, we will to install php packages.
+For now, we're relying on PHP 7.1 due to issues with Laravel on PHP 7.2 on some methods.
+We will add ondrej PPA which is very popular and caters for most php versions.</p>
+<p>Let's start by using an editor to create the file <code>/etc/apt/source.list.d/php.list</code> (<code>nano</code> or <code>vi</code> works well for such things).
+Inside the newly created file, simply paste the block bellow :</p>
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" data-target="#phpppa_xenial">Xenial 16.04</a></li>
+<li><a data-toggle="tab" data-target="#phpppa_artful">Artful 17.10</a></li>
+<li><a data-toggle="tab" data-target="#phpppa_bionic">Bionic 18.04</a></li>
+</ul>
+
+<div class="tab-content">
+<div id="phpppa_xenial" class="tab-pane fade in active" markdown="1">
+<pre><code class="bash hljs">deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main
+deb-src http://ppa.launchpad.net/ondrej/php/ubuntu xenial main</code></pre>
+</div>
+<div id="phpppa_artful" class="tab-pane" markdown="1">
+<pre><code class="bash hljs">deb http://ppa.launchpad.net/ondrej/php/ubuntu artful main
+deb-src http://ppa.launchpad.net/ondrej/php/ubuntu artful main</code></pre>
+</div>
+<div id="phpppa_bionic" class="tab-pane fade" markdown="1">
+<pre><code class="bash hljs">deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
+deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main</code></pre>
+</div>
+</div>
+
+<p>Next, we will have to download the repository GPG key and add it into our keychain</p>
+<div class="codehilite"><pre><span></span>apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4F4EA0AAE5267A6C
+</pre></div>
+
+
+<p>Update our repository cache</p>
+<div class="codehilite"><pre><span></span>apt-get update
+</pre></div>
+
+
+<p>And finally, install php packages with SeAT dependencies</p>
+<div class="codehilite"><pre><span></span>apt-get install curl zip php7.1-cli php7.1-mysql php7.1-mcrypt php7.1-intl php7.1-curl php7.1-gd php7.1-mbstring php7.1-bz2 php7.1-dom php7.1-zip
+</pre></div>
+
+
+<h3 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
+<p>SeAT makes use of <a href="http://redis.io/">Redis</a> as a cache and message broker for the Queue backend.
+Installing it is really easy. Do it with:</p>
+<div class="codehilite"><pre><span></span>apt-get install redis-server
+</pre></div>
+
+
+<h3 id="seat-download">SeAT Download<a class="headerlink" href="#seat-download" title="Permanent link">&para;</a></h3>
+<p>Here we go, all requirements are now met. We will start installing SeAT.
+Start with <code>git</code> and <code>composer</code> which will handle our php package dependencies and download SeAT from our repositories.</p>
+<div class="codehilite"><pre><span></span>apt-get install git
+curl -sS https://getcomposer.org/installer <span class="p">|</span> php -- --install-dir<span class="o">=</span>/usr/local/bin --filename<span class="o">=</span>composer <span class="o">&amp;&amp;</span> <span class="nb">hash</span> -r
+</pre></div>
+
+
+<p>Move firstly to your <code>www</code> directory with <code>cd /var/www</code> (in case it does not exists, create it using <code>mkdir /var/www</code>) and download SeAT using <code>composer create-project eveseat/seat --no-dev --stability=beta</code>.</p>
+<p>Next, we will add a dedicated user for security reasons and in order to distinguish SeAT processes easier.</p>
+<div class="codehilite"><pre><span></span>adduser --group --no-create-home --system --disabled-login seat
+chown seat:seat -R /var/www/seat
+</pre></div>
+
+
+<p>Fix read and write access to storage directory which will store backups, logs, caches etc.</p>
+<div class="codehilite"><pre><span></span>chmod -R guo+w /var/www/seat/storage
+</pre></div>
+
+
+<h3 id="seat-setup">SeAT Setup<a class="headerlink" href="#seat-setup" title="Permanent link">&para;</a></h3>
+<p>Next, we will edit SeAT main configuration file <code>.env</code>. This file will be located at <code>/var/www/seat/.env</code></p>
+<p>Update it with the information you got earlier in the installation process. Refer to the table bellow in order to get each parameter description.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APP_URL</td>
+<td>http://seat.local</td>
+<td>This is the public address where SeAT instance is reachable. That should match with the <code>EVE_CALLBACK_URL</code> without <code>/auth/eve/callback</code> suffix</td>
+</tr>
+<tr>
+<td>DB_HOST</td>
+<td>127.0.0.1</td>
+<td>This is the IP or domain from your SQL Server.</td>
+</tr>
+<tr>
+<td>DB_PORT</td>
+<td>3306</td>
+<td>This is the port used by your SQL Server to receive query.</td>
+</tr>
+<tr>
+<td>DB_DATABASE</td>
+<td>seat</td>
+<td>This is the name for your SeAT database.</td>
+</tr>
+<tr>
+<td>DB_USERNAME</td>
+<td>seat</td>
+<td>This is the user which is granted to the SeAT database from SeAT server.</td>
+</tr>
+<tr>
+<td>DB_PASSWORD</td>
+<td>secret</td>
+<td>This is the user password</td>
+</tr>
+<tr>
+<td>MAIL_DRIVER</td>
+<td>smtp</td>
+<td>This is the driver used to send mail. It will be covered in a dedicated article.</td>
+</tr>
+<tr>
+<td>MAIL_HOST</td>
+<td>smtp.mailtrap.io</td>
+<td>This is driver mail hostname. It will be covered in a dedicated article.</td>
+</tr>
+<tr>
+<td>MAIL_PORT</td>
+<td>2525</td>
+<td>This is the driver mail port. It will be covered in a dedicated article.</td>
+</tr>
+<tr>
+<td>MAIL_USERNAME</td>
+<td>null</td>
+<td>This is the driver mail username. It will be covered in a dedicated article.</td>
+</tr>
+<tr>
+<td>MAIL_PASSWORD</td>
+<td>null</td>
+<td>This is the driver mail password. It will be covered in a dedicated article.</td>
+</tr>
+<tr>
+<td>MAIL_ENCRYPTION</td>
+<td>null</td>
+<td>This is the driver mail encryption. It will be covered in a dedicated article.</td>
+</tr>
+<tr>
+<td>MAIL_FROM_ADDRESS</td>
+<td>noreply@localhost.local</td>
+<td>This is the mail address which the user will chown when he will receive mail from SeAT.</td>
+</tr>
+<tr>
+<td>MAIL_FROM_NAME</td>
+<td>SeAT Administrator</td>
+<td>This is the name which the user will chown when he will receive mail from SeAT.</td>
+</tr>
+<tr>
+<td>EVE_CLIENT_ID</td>
+<td>null</td>
+<td>This is the EVE Application Client ID you'll get when you created an application over https://developers.eveonline.com</td>
+</tr>
+<tr>
+<td>EVE_CLIENT_SECRET</td>
+<td>null</td>
+<td>This is the EVE Application Client Secret you'll get when you created an application over https://developers.eveonline.com</td>
+</tr>
+<tr>
+<td>EVE_CALLBACK_URL</td>
+<td>https://seat.local/auth/eve/callback</td>
+<td>This is the EVE Application Callback URL you filled when you created an application over https://developers.eveonline.com. You should have only to fix <code>seat.local</code></td>
+</tr>
+</tbody>
+</table>
+<p>Now, we will publish assets and seed the SeAT database. Let's do this with the following commands :</p>
+<ul>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan vendor:publish --force --all'</code> this will publish all package assets, including horizon</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan migrate'</code> it will generate SeAT database structure</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan db:seed --class=Seat\\Services\\database\\seeds\\ScheduleSeeder'</code> this will seed the scheduling table used for jobs</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan eve:update-sde'</code> it will download latest SDE data</li>
+</ul>
+<h3 id="supervisor">Supervisor<a class="headerlink" href="#supervisor" title="Permanent link">&para;</a></h3>
+<p>SeAT relies on supervisor in order to keep the Horizon process up. Horizon is the new queue backend in SeAT 3.0.</p>
+<div class="codehilite"><pre><span></span>apt-get install supervisor
+</pre></div>
+
+
+<p>Next, we will create a dedicated configuration file which will ask supervisor to keep an eye on Horizon.
+Use your favorite editor in order to spawn the file at the following path <code>/etc/supervisor/conf.d/seat.conf</code></p>
+<p>Inside the newly created file, add the following configuration items:</p>
+<div class="codehilite"><pre><span></span><span class="o">[</span>program:seat<span class="o">]</span>
+<span class="nv">command</span><span class="o">=</span>/usr/bin/php /var/www/seat/artisan horizon
+<span class="nv">process_name</span> <span class="o">=</span> %<span class="o">(</span>program_name<span class="o">)</span>s-80%<span class="o">(</span>process_num<span class="o">)</span>02d
+<span class="nv">stdout_logfile</span> <span class="o">=</span> /var/log/seat-80%<span class="o">(</span>process_num<span class="o">)</span>02d.log
+<span class="nv">stdout_logfile_maxbytes</span><span class="o">=</span>100MB
+<span class="nv">stdout_logfile_backups</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">numprocs</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">directory</span><span class="o">=</span>/var/www/seat
+<span class="nv">stopwaitsecs</span><span class="o">=</span><span class="m">600</span>
+<span class="nv">user</span><span class="o">=</span>seat
+</pre></div>
+
+
+<p>Reload supervisor using the following command :</p>
+<div class="codehilite"><pre><span></span>service supervisor restart
+</pre></div>
+
+
+<p>Finally, setup crontab for SeAT with :</p>
+<div class="codehilite"><pre><span></span>crontab -u seat -e
+</pre></div>
+
+
+<p>And seed the tab with the following :</p>
+<div class="codehilite"><pre><span></span>* * * * * php /var/www/seat/artisan schedule:run
+</pre></div>
+
+
+<h3 id="web-service">Web Service<a class="headerlink" href="#web-service" title="Permanent link">&para;</a></h3>
+<p>The SeAT web interface requires a web server to serve the HTML goodies it has. We highly encourage you to use nginx and will be covered in this document. You don't <strong>have</strong> to use it, so if you prefer something else, feel free.</p>
+<p>Let's install nginx :</p>
+<div class="codehilite"><pre><span></span>apt-get install nginx php7.1-fpm
+</pre></div>
+
+
+<p>Duplicate the standard www pool configuration file from PHP-Fpm to a dedicated SeAT pool :</p>
+<div class="codehilite"><pre><span></span>cp /etc/php/7.1/fpm/pool.d/www.conf /etc/php/7.1/fpm/pool.d/seat.conf
+</pre></div>
+
+
+<p>Next, update the newly created pool file at <code>/etc/php/7.1/fpm/pool.d/seat.conf</code> with some adequate values :</p>
+<table>
+<thead>
+<tr>
+<th>initial value</th>
+<th>new value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[www]</td>
+<td>[seat]</td>
+</tr>
+<tr>
+<td>user = www-data</td>
+<td>user = seat</td>
+</tr>
+<tr>
+<td>group = www-data</td>
+<td>group = seat</td>
+</tr>
+<tr>
+<td>listen = /run/php/php7.1-fpm.sock</td>
+<td>listen = /run/php/seat.sock</td>
+</tr>
+</tbody>
+</table>
+<p>Once done, you can create a new configuration file into nginx to server SeAT called <code>/etc/nginx/site-availables/seat</code> </p>
+<p>And put the content bellow inside</p>
+<div class="codehilite"><pre><span></span>server <span class="o">{</span>
+    listen <span class="m">80</span><span class="p">;</span>
+    listen <span class="o">[</span>::<span class="o">]</span>:80<span class="p">;</span>
+
+    root /var/www/seat/public<span class="p">;</span>
+
+    index index.htm index.html index.php<span class="p">;</span>
+
+    location / <span class="o">{</span>
+       try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ /index.php?<span class="nv">$query_string</span><span class="p">;</span>
+    <span class="o">}</span>
+
+    location ~ <span class="se">\.</span>php$ <span class="o">{</span>
+       try_files <span class="nv">$uri</span> <span class="o">=</span><span class="m">404</span><span class="p">;</span>
+       fastcgi_pass unix:/run/php/seat.sock<span class="p">;</span>
+       fastcgi_param SCRIPT_FILENAME <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+       include fastcgi_params<span class="p">;</span>
+    <span class="o">}</span>
+
+    location ~ /<span class="se">\.</span>ht <span class="o">{</span>
+       deny all<span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Let's symlink to the active config and drop the default one :</p>
+<div class="codehilite"><pre><span></span>ln -s /etc/nginx/sites-availabe/seat /etc/nginx/sites-enabled/seat
+rm /etc/nginx/sites-enabled/default
+</pre></div>
+
+
+<p>Finally, reload services :</p>
+<div class="codehilite"><pre><span></span>service php7.1-fpm reload
+service nginx reload
+</pre></div>
+
+
+<h3 id="admin-login">Admin Login<a class="headerlink" href="#admin-login" title="Permanent link">&para;</a></h3>
+<p>Since SeAT 3.0, an admin user is a real dedicated user and you will no longer be able to link characters or corporations to it. Using the admin user, you will probably and most typically just add your main character to the Superuser group and never login as an admin again.</p>
+<p>To login as an administrator, simply run the following command :</p>
+<div class="codehilite"><pre><span></span>sudo -H -u seat bash -c <span class="s1">&#39;php /var/www/seat/artisan seat:admin:login&#39;</span>
+</pre></div>
+
+
+<p>You'll get a link after the command has finished running which looks similar to the one bellow :</p>
+<div class="codehilite"><pre><span></span>http://yourserver/auth/login/admin/somerandomstring
+</pre></div>
+
+
+<p>Copy it and paste it inside your browser and you will be authenticated as the admin user.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../centos7/" title="CentOS 7.x" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CentOS 7.x
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../debian/" title="Debian" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Debian
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2018 Leon Jacobs
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/eveseat/seat" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

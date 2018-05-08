@@ -1,0 +1,2064 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Simple EVE Api Tool Documentation">
+      
+      
+        <link rel="canonical" href="https://github.com/eveseat/docs/changelogs/services/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Services - SeAT Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#services-change-logs" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/eveseat/docs" title="SeAT Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                SeAT Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Services
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      eveseat/docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    SeAT Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      eveseat/docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/contact/" title="Contact" class="md-nav__link">
+      Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/reporting_bugs/" title="Reporting Bugs" class="md-nav__link">
+      Reporting Bugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/community_packages/" title="Community Packages" class="md-nav__link">
+      Community Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../general/todo/" title="TODO List" class="md-nav__link">
+      TODO List
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Installation Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Installation Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/quick_install/" title="Quick Install" class="md-nav__link">
+      Quick Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/centos6/" title="CentOS 6.x" class="md-nav__link">
+      CentOS 6.x
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/centos7/" title="CentOS 7.x" class="md-nav__link">
+      CentOS 7.x
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/ubuntu/" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/debian/" title="Debian" class="md-nav__link">
+      Debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/installation/developer_installation/" title="Developer Installation" class="md-nav__link">
+      Developer Installation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Upgrade Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Upgrade Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/upgrade/general_upgrades/" title="General Upgrades" class="md-nav__link">
+      General Upgrades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/upgrade/seat1_to_2/" title="SeAT 1.0 to SeAT 2.0" class="md-nav__link">
+      SeAT 1.0 to SeAT 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/upgrade/seat2_to_3/" title="SeAT 2.0 to SeAT 3.0" class="md-nav__link">
+      SeAT 2.0 to SeAT 3.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Admin Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Admin Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      Email Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        Email Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/email/mailgun/" title="Using Mailgun" class="md-nav__link">
+      Using Mailgun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/email/gmail/" title="Using Gmail" class="md-nav__link">
+      Using Gmail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/sso/" title="Configuring Eve Online SSO" class="md-nav__link">
+      Configuring Eve Online SSO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/job_queue_flow/" title="Job Queue Flow" class="md-nav__link">
+      Job Queue Flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/scaling_seat/" title="Scaled SeAT Deployments" class="md-nav__link">
+      Scaled SeAT Deployments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/rbac/" title="Role Based Access Control" class="md-nav__link">
+      Role Based Access Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/tracking/" title="Understanding Tracking" class="md-nav__link">
+      Understanding Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/eveapi_admin_contact/" title="EVE Api Administrative Contact" class="md-nav__link">
+      EVE Api Administrative Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-8" type="checkbox" id="nav-3-3-8">
+    
+    <label class="md-nav__link" for="nav-3-3-8">
+      Package Configurations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-8">
+        Package Configurations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/api/" title="Api" class="md-nav__link">
+      Api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/console/" title="Console" class="md-nav__link">
+      Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/eveapi/" title="Eveapi" class="md-nav__link">
+      Eveapi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/notifications/" title="Notifications" class="md-nav__link">
+      Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/service/" title="Service" class="md-nav__link">
+      Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/configuration/other/" title="Other" class="md-nav__link">
+      Other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Developers Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Developers Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/development/general/" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/development/package_breakdown/" title="Core Package Breakdown" class="md-nav__link">
+      Core Package Breakdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/development/package_development/" title="Package Development" class="md-nav__link">
+      Package Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../seat_api/" title="SeAT API" class="md-nav__link">
+      SeAT API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Changelogs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Changelogs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="Api" class="md-nav__link">
+      Api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../console/" title="Console" class="md-nav__link">
+      Console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../eveapi/" title="Eveapi" class="md-nav__link">
+      Eveapi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../notifications/" title="Notifications" class="md-nav__link">
+      Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Services
+      </label>
+    
+    <a href="./" title="Services" class="md-nav__link md-nav__link--active">
+      Services
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-pre-alpha" title="1.0-pre-alpha" class="md-nav__link">
+    1.0-pre-alpha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" title="1.0.0" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" title="1.0.1" class="md-nav__link">
+    1.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" title="1.0.2" class="md-nav__link">
+    1.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" title="1.0.3" class="md-nav__link">
+    1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" title="1.0.4" class="md-nav__link">
+    1.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" title="1.0.5" class="md-nav__link">
+    1.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" title="1.0.6" class="md-nav__link">
+    1.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" title="1.0.7" class="md-nav__link">
+    1.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" title="1.0.10" class="md-nav__link">
+    1.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" title="1.0.8" class="md-nav__link">
+    1.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" title="1.0.9" class="md-nav__link">
+    1.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011" title="1.0.11" class="md-nav__link">
+    1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012" title="1.0.12" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013" title="1.0.13" class="md-nav__link">
+    1.0.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014" title="1.0.14" class="md-nav__link">
+    1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015" title="1.0.15" class="md-nav__link">
+    1.0.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016" title="1.0.16" class="md-nav__link">
+    1.0.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017" title="1.0.17" class="md-nav__link">
+    1.0.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1018" title="1.0.18" class="md-nav__link">
+    1.0.18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1019" title="1.0.19" class="md-nav__link">
+    1.0.19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1020" title="1.0.20" class="md-nav__link">
+    1.0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1021" title="1.0.21" class="md-nav__link">
+    1.0.21
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1022" title="1.0.22" class="md-nav__link">
+    1.0.22
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1023" title="1.0.23" class="md-nav__link">
+    1.0.23
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha1" title="2.0.0-alpha1" class="md-nav__link">
+    2.0.0-alpha1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha2" title="2.0.0-alpha2" class="md-nav__link">
+    2.0.0-alpha2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" title="2.0.0" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" title="2.0.1" class="md-nav__link">
+    2.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" title="2.0.2" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203" title="2.0.3" class="md-nav__link">
+    2.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" title="2.0.4" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#205" title="2.0.5" class="md-nav__link">
+    2.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#206" title="2.0.6" class="md-nav__link">
+    2.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#207" title="2.0.7" class="md-nav__link">
+    2.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#208" title="2.0.8" class="md-nav__link">
+    2.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#209" title="2.0.9" class="md-nav__link">
+    2.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2010" title="2.0.10" class="md-nav__link">
+    2.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2011" title="2.0.11" class="md-nav__link">
+    2.0.11
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-pre-alpha" title="1.0-pre-alpha" class="md-nav__link">
+    1.0-pre-alpha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" title="1.0.0" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" title="1.0.1" class="md-nav__link">
+    1.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" title="1.0.2" class="md-nav__link">
+    1.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" title="1.0.3" class="md-nav__link">
+    1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" title="1.0.4" class="md-nav__link">
+    1.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" title="1.0.5" class="md-nav__link">
+    1.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" title="1.0.6" class="md-nav__link">
+    1.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" title="1.0.7" class="md-nav__link">
+    1.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" title="1.0.10" class="md-nav__link">
+    1.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" title="1.0.8" class="md-nav__link">
+    1.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" title="1.0.9" class="md-nav__link">
+    1.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011" title="1.0.11" class="md-nav__link">
+    1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012" title="1.0.12" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013" title="1.0.13" class="md-nav__link">
+    1.0.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014" title="1.0.14" class="md-nav__link">
+    1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015" title="1.0.15" class="md-nav__link">
+    1.0.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016" title="1.0.16" class="md-nav__link">
+    1.0.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017" title="1.0.17" class="md-nav__link">
+    1.0.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1018" title="1.0.18" class="md-nav__link">
+    1.0.18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1019" title="1.0.19" class="md-nav__link">
+    1.0.19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1020" title="1.0.20" class="md-nav__link">
+    1.0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1021" title="1.0.21" class="md-nav__link">
+    1.0.21
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1022" title="1.0.22" class="md-nav__link">
+    1.0.22
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1023" title="1.0.23" class="md-nav__link">
+    1.0.23
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha1" title="2.0.0-alpha1" class="md-nav__link">
+    2.0.0-alpha1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha2" title="2.0.0-alpha2" class="md-nav__link">
+    2.0.0-alpha2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" title="2.0.0" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" title="2.0.1" class="md-nav__link">
+    2.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" title="2.0.2" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203" title="2.0.3" class="md-nav__link">
+    2.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" title="2.0.4" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#205" title="2.0.5" class="md-nav__link">
+    2.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#206" title="2.0.6" class="md-nav__link">
+    2.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#207" title="2.0.7" class="md-nav__link">
+    2.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#208" title="2.0.8" class="md-nav__link">
+    2.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#209" title="2.0.9" class="md-nav__link">
+    2.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2010" title="2.0.10" class="md-nav__link">
+    2.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2011" title="2.0.11" class="md-nav__link">
+    2.0.11
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eveseat/docs/edit/master/docs/changelogs/services.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p><img alt="SeAT" src="http://i.imgur.com/aPPOxSK.png" /></p>
+<h1 id="services-change-logs">services change logs<a class="headerlink" href="#services-change-logs" title="Permanent link">&para;</a></h1>
+<p>Generated with: <code>git log --pretty=format:"%h%&gt;(12)%ad %&lt;(7)%aN%d %s" --date=short</code></p>
+<h3 id="10-pre-alpha">1.0-pre-alpha<a class="headerlink" href="#10-pre-alpha" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>93958d6  2015-11-27 Leon Jacobs (tag: 1.0-pre-alpha) Update README
+666036a  2015-11-27 Leon Jacobs Add method to get corp wallet transactions
+bcb36f7  2015-11-27 Leon Jacobs Fix filter rule reference
+5e579ec  2015-11-27 Leon Jacobs Add methods to get standings and wallet journal
+91163b3  2015-11-27 Leon Jacobs Fix a join
+bab5d59  2015-11-27 Leon Jacobs Add method to get corp market orders
+6b2734d  2015-11-27 Leon Jacobs Add method to get corp killmails
+513c1e5  2015-11-27 Leon Jacobs Add method to get corp industry jobs
+eb0b9d7  2015-11-27 Leon Jacobs Add method to get corp contracts
+3b2e7eb  2015-11-27 Leon Jacobs Add methods to get corp contacts &amp; labels
+057e1d4  2015-11-27 Leon Jacobs Add method to get corp assets
+907870a  2015-11-27 Leon Jacobs Add methods for corp summary pages
+c4a4977  2015-11-27 Leon Jacobs Small refactor to remove attributes instead of making them blank
+0b1ee7a  2015-11-27 Leon Jacobs Add method to cleanup CCP produced HTML
+11e55c6  2015-11-26 Leon Jacobs Add method to list corporations
+3a76e64  2015-11-26 Leon Jacobs Fix typo
+02eea36  2015-11-26 Leon Jacobs Add ability to just dump query and continue load
+c71ca03  2015-11-21 Leon Jacobs Add method to get character standings
+be1c6db  2015-11-21 Leon Jacobs Add method to get character research info
+7d0105c  2015-11-21 Leon Jacobs Add method to get character pi
+6ea00fb  2015-11-21 Leon Jacobs Add methods to get character market orders
+18e3580  2015-11-20 Leon Jacobs Add method comments
+4daabd8  2015-11-20 Leon Jacobs Add method to get character industry
+196e968  2015-11-20 Leon Jacobs Add method to get contract information
+3ad8de1  2015-11-20 Leon Jacobs Add method to get killmails
+2c5ca99  2015-11-20 Leon Jacobs Lock type image to max 32/64px
+0071fa7  2015-11-20 Leon Jacobs Add character contact lists and calendar repositories
+11ebe15  2015-10-30 Leon Jacobs Add character notifications repo
+52807cf  2015-10-30 Leon Jacobs Add the Notification Types Seeder
+6560b34  2015-10-30 Leon Jacobs Add rules to ensure columns can not be tampered with
+bb32b1b  2015-10-30 Leon Jacobs Add Character Assets services
+cc493be  2015-10-30 Leon Jacobs Style fixes
+0e56275  2015-10-30 Leon Jacobs Add Mail Service for Characters
+6fa7631  2015-10-29 Leon Jacobs Add Character Wallet Transactions Service
+bd1b364  2015-10-29 Leon Jacobs Add Wallet Journal Services
+22d7e6f  2015-10-29 Leon Jacobs Add option to auto-detect image types
+f899060  2015-10-29 Leon Jacobs Rename method from Character-&gt;Eve
+d3f6fb7  2015-10-28 Leon Jacobs Add more methods for character information
+46910d1  2015-10-28 Leon Jacobs Fix a table ambiguity problem for characterID
+33463b9  2015-10-27 Leon Jacobs Add more repository methods
+f75cd7c  2015-10-27 Leon Jacobs Add Services for Character Skills
+d35099a  2015-10-09 Leon Jacobs Add security repository
+9bcb126  2015-10-09 Leon Jacobs Add more methods for character info
+71e3864  2015-10-09 Leon Jacobs Add a number formatter
+55a29d2  2015-10-08 Leon Jacobs Add repositories to get character information
+04df3b9  2015-10-08 Leon Jacobs Add a query builder filterable helper
+0fdea02  2015-10-08 Leon Jacobs Add SQL debug helper
+6e32c77  2015-10-06 Leon Jacobs Add Respository to support the Queue
+54cda05  2015-10-04 Leon Jacobs Set extention correctly based on image type
+4172206  2015-10-04 Leon Jacobs Add a service to prepare lazy loaded &lt;img&gt; tags
+89dfbb2  2015-10-01 Leon Jacobs Add user modifiction services
+30bdace  2015-09-30 Leon Jacobs Add repositories used in eveseat/web acl
+a8ff125  2015-09-28 Leon Jacobs Update to match eveseat/eveapi Model refactor
+4a69ce0  2015-09-24 Leon Jacobs Add Config file
+ea84fb0  2015-09-24 Leon Jacobs Add Queue Data Source
+2f60e1d  2015-09-24 Leon Jacobs Add EveApiKeyData service
+467fb42  2015-09-24 Leon Jacobs Update badges
+5779eff  2015-09-24 Leon Jacobs Prepare repository for packagist
+a46f437  2015-09-24 Leon Jacobs Initial commit
+</pre></div>
+
+
+<h3 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>300cdde  2015-11-28 Leon Jacobs (tag: 1.0.0) Update required eveseat package version
+526493c  2015-11-28 Leon Jacobs Style Fixes and Version Bump
+9ded93d  2015-11-28 Leon Jacobs Add registration options
+e5348f0  2015-11-28 Leon Jacobs Update to support new settings features
+f601b60  2015-11-28 Leon Jacobs Move options scope to public
+dcbd238  2015-11-28 Leon Jacobs Add a setting() helper and provide some defaults
+82115c2  2015-11-28 Leon Jacobs Add a settings service
+c72cd8a  2015-11-27 Leon Jacobs Add methods to query corp security info
+5371848  2015-11-27 Leon Jacobs Add method to get corp member tracking
+</pre></div>
+
+
+<h3 id="101">1.0.1<a class="headerlink" href="#101" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>f32b199  2015-12-02 Leon Jacobs (tag: 1.0.1) Version Bump
+9a2fe0f  2015-12-02 Leon Jacobs Allow to get/set settings for another user by id
+71504e9  2015-12-02 Leon Jacobs Add default for email notifications
+8109b5c  2015-12-02 Leon Jacobs Add service for database stored schedules
+d4afc21  2015-12-01 Leon Jacobs Ensure we pass integers to the helper
+</pre></div>
+
+
+<h3 id="102">1.0.2<a class="headerlink" href="#102" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>717f9fb  2015-12-04 Leon Jacobs (tag: 1.0.2) Add server status method
+f2172dc  2015-12-04 Leon Jacobs Update README.md
+8b65137  2015-12-04 Leon Jacobs Add default MFA setting
+</pre></div>
+
+
+<h3 id="103">1.0.3<a class="headerlink" href="#103" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>e1c75bb  2015-12-05 Leon Jacobs (tag: 1.0.3) Version Bump
+</pre></div>
+
+
+<h3 id="104">1.0.4<a class="headerlink" href="#104" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>d087604  2015-12-13 Leon Jacobs (tag: 1.0.4) Version Bump
+d3d6bd0  2015-12-13 Leon Jacobs Add an admin contact setting
+a5b4135  2015-12-12 Leon Jacobs Order jobs by date
+</pre></div>
+
+
+<h3 id="105">1.0.5<a class="headerlink" href="#105" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>af4abdc  2015-12-16 Leon Jacobs (tag: 1.0.5) Version Bump
+cda2f34  2015-12-16 Leon Jacobs Default to english language
+ea02832  2015-12-15 Leon Jacobs Add method to get mail timeline
+28b0933  2015-12-15 Leon Jacobs Suppress errors incase the html is invalid
+012e0e6  2015-12-14 Leon Jacobs Add method to get an email for a character
+</pre></div>
+
+
+<h3 id="106">1.0.6<a class="headerlink" href="#106" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>aa17e7d  2015-12-17 Leon Jacobs (tag: 1.0.6) Version Bump
+691dc5c  2015-12-17 Leon Jacobs Prevent dupe or corp chars from showing
+1b93322  2015-12-17 Leon Jacobs Prevent duplicate entries in corp member tracking
+</pre></div>
+
+
+<h3 id="107">1.0.7<a class="headerlink" href="#107" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>5734db7  2015-12-20 Leon Jacobs (tag: 1.0.7) Version Bump
+e221f72  2015-12-20 Leon Jacobs Add method to get corp bookmarks
+30699d3  2015-12-20 Leon Jacobs Add method to get character bookmarks
+afd7cba  2015-12-18 Leon Jacobs Add method to get character chat channels
+6ca677b  2015-12-17 Leon Jacobs Second attempt at fixing eveseat/seat#7
+</pre></div>
+
+
+<h3 id="1010">1.0.10<a class="headerlink" href="#1010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>e985e13  2015-12-24 Leon Jacobs (tag: 1.0.10) Version Bump
+9e75900  2015-12-24 Leon Jacobs Revert version setting via ~
+cd3878c  2015-12-24 Leon Jacobs (tag: 1.0.9) Version Bump
+a0c30a9  2015-12-24 Leon Jacobs Version Set via ^
+ebd21c7  2015-12-24 Leon Jacobs (tag: 1.0.8) Version Bump
+e7a055d  2015-12-24 Leon Jacobs Set composer versions using ~
+08a50d8  2015-12-24 Leon Jacobs Determine capacity bonus with tower
+aa51300  2015-12-24 Leon Jacobs Temporarily ignore nested groups
+5ff8e0a  2015-12-23 Leon Jacobs Add methods to get starbase related data
+63e9be9  2015-12-21 Leon Jacobs Return paginated results
+</pre></div>
+
+
+<h3 id="108">1.0.8<a class="headerlink" href="#108" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+
+<h3 id="109">1.0.9<a class="headerlink" href="#109" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>cd3878c  2015-12-24 Leon Jacobs (tag: 1.0.9) Version Bump
+a0c30a9  2015-12-24 Leon Jacobs Version Set via ^
+</pre></div>
+
+
+<h3 id="1011">1.0.11<a class="headerlink" href="#1011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>bb1cd45  2015-12-27 Leon Jacobs (tag: 1.0.11) Version Bump
+0d139b2  2015-12-27 Leon Jacobs Allow starbase details to be loaded by starbase_id
+e985e13  2015-12-24 Leon Jacobs (tag: 1.0.10) Version Bump
+9e75900  2015-12-24 Leon Jacobs Revert version setting via ~
+</pre></div>
+
+
+<h3 id="1012">1.0.12<a class="headerlink" href="#1012" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>c3d9aaf  2015-12-28 Leon Jacobs (tag: 1.0.12) Version Bump
+bee194f  2015-12-28 Leon Jacobs Add method to get corporation customs offices
+</pre></div>
+
+
+<h3 id="1013">1.0.13<a class="headerlink" href="#1013" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>e33ed92  2015-12-29 Leon Jacobs (tag: 1.0.13) Version Bump
+582d719  2015-12-29 Leon Jacobs Fix eveseat/seat#28
+</pre></div>
+
+
+<h3 id="1014">1.0.14<a class="headerlink" href="#1014" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>e4d521b  2016-01-26 Leon Jacobs (tag: 1.0.14) Version Bump
+96c9fb5  2016-01-26 Leon Jacobs Update copyright
+c9cd51c  2016-01-26 Leon Jacobs Ensure that people.view role is enforced
+2f1e9e3  2016-01-26 Leon Jacobs Add methods for People groups
+f7bb649  2016-01-06 Leon Jacobs Handle some unicode characters for cases like eveseat/seat#13
+0ad1ffa  2016-01-06 Leon Jacobs Code style fix
+</pre></div>
+
+
+<h3 id="1015">1.0.15<a class="headerlink" href="#1015" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>570bbd0  2016-04-14 Leon Jacobs (tag: 1.0.15) Version Bump
+630b8af  2016-04-13 Leon Jacobs Remove unused pagination and CS fixes
+cbc4206  2016-04-13 dysath  Services for Corporation Ledger queries. (#5)
+b87d364  2016-01-27 Leon Jacobs Order jobs by creation date
+</pre></div>
+
+
+<h3 id="1016">1.0.16<a class="headerlink" href="#1016" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>439fbac  2016-04-29 Leon Jacobs (tag: 1.0.16) Version Bump
+ea240c7  2016-04-29 Leon Jacobs Add defaults for minimum access mask checking settings
+d7b7eaf  2016-04-29 Leon Jacobs Add the search service
+ce085f7  2016-04-29 Leon Jacobs Fix eveseat/seat#93 by filtering corporation_account_balances too
+0c03b8e  2016-04-29 Leon Jacobs Modify timeline method to retrive one specific message
+</pre></div>
+
+
+<h3 id="1017">1.0.17<a class="headerlink" href="#1017" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>e35f552  2016-05-14 Leon Jacobs (tag: 1.0.17) Version Bump
+10c4a86  2016-05-13 Leon Jacobs Set default values for &#39;allow_sso&#39;
+</pre></div>
+
+
+<h3 id="1018">1.0.18<a class="headerlink" href="#1018" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>b3d538d  2016-06-26 Leon Jacobs (tag: 1.0.18) Version Bump
+305a3ab  2016-06-26 Leon Jacobs Sort killmails by newest first.
+2edf0fd  2016-06-26 Leon Jacobs Add module info if a single starbases&#39; info is called
+</pre></div>
+
+
+<h3 id="1019">1.0.19<a class="headerlink" href="#1019" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>b2b9995  2016-07-10 Leon Jacobs (tag: 1.0.19) Version Bump
+744e982  2016-07-10 Leon Jacobs Paginate Killmails
+5711563  2016-07-10 Leon Jacobs Paginate contracts. Part of the fix for eveseat/seat#111
+</pre></div>
+
+
+<h3 id="1020">1.0.20<a class="headerlink" href="#1020" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">cfcefda</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mf">1.0</span><span class="o">.</span><span class="mi">20</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="mi">7</span><span class="n">fa3040</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">missing</span> <span class="kn">import</span> <span class="nn">of</span> <span class="nn">CharacterSheetCorporationTitles</span>
+<span class="n">b4a8080</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Set</span> <span class="n">available</span> <span class="n">options</span> <span class="ow">and</span> <span class="n">defaults</span> <span class="k">for</span> <span class="n">usage</span> <span class="n">tracking</span>
+<span class="n">b2765c6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">analytics</span> <span class="n">Jobs</span> <span class="n">using</span> <span class="n">Google</span> <span class="n">Analytics</span> <span class="n">measurement</span> <span class="n">protocol</span><span class="o">.</span>
+<span class="mi">9</span><span class="n">d23cb6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">22</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="o">*</span> <span class="n">Add</span> <span class="n">corporation</span> <span class="n">titles</span> <span class="n">to</span> <span class="n">character</span> <span class="n">sheet</span> <span class="p">(</span><span class="c1">#7)</span>
+<span class="mi">26</span><span class="n">c1673</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">eveseat</span><span class="o">/</span><span class="n">seat</span><span class="c1">#112 by using an advanced where to group the filter</span>
+<span class="mi">58</span><span class="n">cfc96</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">18</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">the</span> <span class="sb">`seat:queue:clear-expired`</span> <span class="n">scheduled</span> <span class="n">command</span>
+</pre></div>
+
+
+<h3 id="1021">1.0.21<a class="headerlink" href="#1021" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>0ad3ccf  2016-07-23 Leon Jacobs (tag: 1.0.21) Version Bump
+</pre></div>
+
+
+<h3 id="1022">1.0.22<a class="headerlink" href="#1022" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>a0a0c75  2016-07-27 Leon Jacobs (tag: 1.0.22) Version Bump
+02ad71e  2016-07-27 Leon Jacobs Seed the expired job time to run every 6 hours
+</pre></div>
+
+
+<h3 id="1023">1.0.23<a class="headerlink" href="#1023" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>49bc082  2016-10-14 Leon Jacobs (tag: 1.0.23) Version Bump
+a199fa9  2016-10-13 Leon Jacobs Add getCharacterAlliances method
+dfaa83a  2016-08-25 Leon Jacobs Add char and corp minimum mask defaults
+4739b90  2016-08-25 Leon Jacobs Add a default for the `installed_sde` setting
+</pre></div>
+
+
+<h3 id="200-alpha1">2.0.0-alpha1<a class="headerlink" href="#200-alpha1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>95f0453  2016-11-26 Leon Jacobs (tag: 2.0.0-alpha1) Update composer for 2.0 packages and version 2.0.0-alpha1
+3367168  2016-11-25 Leon Jacobs Add more data sources for the dashboard.
+0da12f3  2016-11-25 Leon Jacobs Allow specifying which tags to exclude when cleaning html.
+e87cb20  2016-11-25 Leon Jacobs Fix member tracking counts by using a leftJoin.
+f70db5f  2016-11-25 Leon Jacobs Dont override existing schedules when seeding the database.
+2cbaf0f  2016-11-20 Leon Jacobs Allow carbon helper to be called without an argument.
+41a9b07  2016-11-19 Leon Jacobs Add `updateNote` method.
+a1c72d6  2016-11-19 Leon Jacobs Add Trait that allows adding notes to any model.
+dc81167  2016-11-17 Leon Jacobs Return an unresolved query for datatables to work with.
+e3437ca  2016-11-17 Leon Jacobs Join invTypes to get the contact type
+d804d7e  2016-11-16 Leon Jacobs Return raw query builder objects for use with datatables
+3b1cc16  2016-11-15 Leon Jacobs Prevent overriding existing functions.
+eca05dd  2016-11-15 Leon Jacobs Alloe setting settings values using the helper.
+c62da72  2016-11-13 Leon Jacobs Remove stale usages of the old `Filterable` trait.
+68e28c9  2016-11-13 Leon Jacobs Allow for repo queries to return unresolved.
+5ae8c91  2016-11-11 Leon Jacobs Add flag to return unresolved queries for datatables.
+bdb2ba0  2016-11-08 Leon Jacobs Add Intel repository
+f65548e  2016-11-05 Leon Jacobs Code formatting fixes
+6ccfb97  2016-11-05 Leon Jacobs Paginate market orders
+720e5cb  2016-11-04 Leon Jacobs Use logger() helper
+1ad9cfb  2016-11-04 Leon Jacobs Remove `array_flatten()` as collections are returned
+d8ddbb0  2016-11-04 Leon Jacobs Fix column ambiguity
+d1d46cf  2016-10-30 Leon Jacobs Remove return type as it can be null
+d13d650  2016-10-25 Leon Jacobs Refactor Corporation repo to use structured classes
+ab9f039  2016-10-25 Leon Jacobs Refactor the Character repository to use seperate classes
+3f7a1f9  2016-10-23 Leon Jacobs Return a single value instead of array
+6b0aa6c  2016-10-23 Leon Jacobs Remove usage of `collect()`. Collections are returned by default
+7784321  2016-10-23 Leon Jacobs Update PHP &amp; Laravel dependencies
+1de059b  2016-10-23 Leon Jacobs Log queries based on the value of `DB_DEBUG`
+c5ac762  2016-10-21 Leon Jacobs Revert groupBy changes introduced in 982b8661
+ee0ff98  2016-10-21 Leon Jacobs Upgrade to coduo/php-humanizer 2.0
+869f330  2016-10-21 Leon Jacobs Fix namespace change for humanizer 2.0
+982b866  2016-10-21 Leon Jacobs Fix strict mode groupBy constraints
+3f1f2c5  2016-10-21 Leon Jacobs Make the query debugger listen on the DB facade directly.
+0ff8a45  2016-10-17 Leon Jacobs Fix Job to match L5.3 changes
+ac59839  2016-10-17 Leon Jacobs Rename lists() to pluck()
+5dc3ac7  2016-10-15 Leon Jacobs Get the value with `value()` instead of `pluck()`
+</pre></div>
+
+
+<h3 id="200-alpha2">2.0.0-alpha2<a class="headerlink" href="#200-alpha2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>69ad918  2016-11-26 Leon Jacobs (tag: 2.0.0-alpha2) Drop minimum stability, add prefer-stable and bump to 2.0.0-alpha2.
+</pre></div>
+
+
+<h3 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>b3fdb7a  2016-12-08 Leon Jacobs (tag: 2.0.0) Version Bump! 2.0.0! ⚡️
+cdde3d0  2016-12-08 Leon Jacobs Format and style fixes.
+95eee16  2016-11-30 Leon Jacobs Allow longer values in the global settings.
+b64e55b  2016-11-29 Leon Jacobs Add default for api_constraint
+77822f5  2016-11-29 Leon Jacobs Formatting and style fixes.
+ae73811  2016-11-28 Leon Jacobs Add methods for searching.
+dcc872f  2016-11-28 Leon Jacobs Return a unresolved query.
+ac10ed1  2016-11-28 Leon Jacobs Rename getAllCharactersWithAffiliations method.
+0277069  2016-11-27 Leon Jacobs Move character skills graph info from the Stats to Character repo.
+7a2ca83  2016-11-27 Loïc LEUILLIOT add skills related chart (#10)
+5f2f09f  2016-11-26 AsherST Fix where clause for PI (#11)
+</pre></div>
+
+
+<h3 id="201">2.0.1<a class="headerlink" href="#201" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>e51c35d  2016-12-11 Leon Jacobs (tag: 2.0.1) Version Bump
+2209e71  2016-12-11 Leon Jacobs Remove return type as it can be null too
+eb58671  2016-12-11 Leon Jacobs Fix member tracking query to return correct key statuses.
+22f1d42  2016-12-11 Leon Jacobs Add default value for require_activation
+</pre></div>
+
+
+<h3 id="202">2.0.2<a class="headerlink" href="#202" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>de658a8  2016-12-15 Leon Jacobs (tag: 2.0.2) Version Bump
+aaec7d7  2016-12-15 Leon Jacobs Formatting fixes.
+0bde264  2016-12-15 Loïc LEUILLIOT implement a custom method dedicated to search for ApiKey (#12)
+8203f69  2016-12-14 Leon Jacobs Add function to parse evemail threads.
+</pre></div>
+
+
+<h3 id="203">2.0.3<a class="headerlink" href="#203" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>33be7aa  2016-12-16 Leon Jacobs (tag: 2.0.3) Version Bump
+17fcaec  2016-12-16 Leon Jacobs Add new mail_threads option
+d966f59  2016-12-16 Leon Jacobs Add method to remove job tracking items
+</pre></div>
+
+
+<h3 id="204">2.0.4<a class="headerlink" href="#204" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>9e68e86  2016-12-22 Leon Jacobs (tag: 2.0.4) Version Bump
+9041297  2016-12-22 Leon Jacobs Dont prefix cache keys with the session_id
+</pre></div>
+
+
+<h3 id="205">2.0.5<a class="headerlink" href="#205" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>fc82256  2016-12-22 Leon Jacobs (tag: 2.0.5) Version Bump
+1a56751  2016-12-22 Leon Jacobs Only prefix user keys with the session_id
+</pre></div>
+
+
+<h3 id="206">2.0.6<a class="headerlink" href="#206" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>318fc64  2016-12-28 Leon Jacobs (tag: 2.0.6) Version Bump
+637e566  2016-12-26 Leon Jacobs Add methods to get contract items
+bc09a37  2016-12-26 Leon Jacobs Formatting and code style fixes
+84dfae6  2016-12-26 freedenizen Add assetContents collection for Character Assets view (#14)
+2efc1ff  2016-12-26 Loïc LEUILLIOT including level in skill coverage chart (#13)
+</pre></div>
+
+
+<h3 id="207">2.0.7<a class="headerlink" href="#207" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>462fd5c  2017-01-12 Leon Jacobs (tag: 2.0.7) Version Bump
+0be2e39  2017-01-12 freedenizen Character assets (#16)
+44c6db5  2017-01-04 Leon Jacobs Update styleci config
+e36d874  2017-01-02 Leon Jacobs Apply fixes from StyleCI (#15)
+2ecf750  2017-01-02 Leon Jacobs Add StyleCI configuration &amp; badge
+4a232d1  2017-01-01 Leon Jacobs Style fixes
+</pre></div>
+
+
+<h3 id="208">2.0.8<a class="headerlink" href="#208" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>f0074be  2017-01-22 Leon Jacobs (tag: 2.0.8) Version Bump
+9144305  2017-01-22 Leon Jacobs Apply fixes from StyleCI (#17)
+f29b680  2017-01-22 Leon Jacobs Add `childContentCount` field for assets
+42adef9  2017-01-20 Leon Jacobs Add codeclimate configuration
+</pre></div>
+
+
+<h3 id="209">2.0.9<a class="headerlink" href="#209" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>1095543  2017-04-17 Leon Jacobs (tag: 2.0.9) Version Bump
+dc46c73  2017-02-19 moe-alabel Modified cron statements to proper format. Changed from 6 positions to 5 (#18)
+</pre></div>
+
+
+<h3 id="2010">2.0.10<a class="headerlink" href="#2010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>3feccc6  2017-07-02 Leon Jacobs (tag: 2.0.10) Version Bump
+eb02e76  2017-07-02 Loïc LEUILLIOT avoid null exception on assetlist_locations for starbases trait (#22)
+4358497  2017-07-02 BenH    Added support for the &#39;Render&#39; type (#23)
+</pre></div>
+
+
+<h3 id="2011">2.0.11<a class="headerlink" href="#2011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>4658230  2017-08-12 Leon Jacobs (tag: 2.0.11, origin/master, origin/HEAD, master) Version Bump
+d1bc5b3  2017-08-12 Leon Jacobs Remove an unused variable and style fixes.
+654e4da  2017-08-12 Loïc LEUILLIOT add ACL filters on dashboard stats (#25)
+a65f4a4  2017-08-12 Leon Jacobs Style fixes
+f4e1c22  2017-08-12 Loïc LEUILLIOT optimise top mail query by dropping join table and exploit getAffiliationMap in order to retrieve the user character IDs (#24)
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../notifications/" title="Notifications" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Notifications
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../web/" title="Web" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Web
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2018 Leon Jacobs
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/eveseat/seat" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
