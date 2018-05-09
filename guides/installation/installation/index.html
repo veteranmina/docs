@@ -61,6 +61,10 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../../../css/extra_typo.css">
+    
+      <link rel="stylesheet" href="../../../css/extra_tabs.css">
+    
     
   </head>
   
@@ -333,6 +337,13 @@
         <li class="md-nav__item">
   <a href="#installer-seat-tool" title="Installer (SeAT Tool)" class="md-nav__link">
     Installer (SeAT Tool)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-installation" title="Manual Installation" class="md-nav__link">
+    Manual Installation
   </a>
   
 </li>
@@ -987,6 +998,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#manual-installation" title="Manual Installation" class="md-nav__link">
+    Manual Installation
+  </a>
+  
+</li>
+      
       
       
       
@@ -1020,17 +1038,26 @@
 <p>Make sure you review the <a href="../getting_started/#hardware-requirements">hardware</a> and <a href="../getting_started/#software-requirements">software</a> requirements sections before installing anything intended for production use!</p>
 </div>
 <h2 id="docker-recommended">Docker (recommended)<a class="headerlink" href="#docker-recommended" title="Permanent link">&para;</a></h2>
-<p>WIP</p>
+<p>Getting SeAT installed via Docker is the recommended way of running SeAT. Using docker, all of SeAT's dependencies is neatly abstracted away from your hosts operating system and does not conflict with any pre-existing software you might have on your server. With a little bit of extra work, Docker installations are also possible on Windows.</p>
+<p>Regardless if you have <code>docker</code> &amp; <code>docker-compose</code> installed on your Linux server, the following script will install them if needed and then download the SeAT <code>docker-compose.yml</code> and <code>.env</code> files to <code>/opt/seat-docker</code> on your server:</p>
+<div class="codehilite"><pre><span></span>bash &lt;<span class="o">(</span>curl -fsSL https://git.io/seat-docker<span class="o">)</span>
+</pre></div>
+
+
+<p>Once downloaded, <code>docker-compose up -d</code> is run from that folder to start the SeAT stack. To see this script in action on a fresh Digital Ocean VPS, check out the following asciinema:</p>
+<script src="https://asciinema.org/a/c0EM0kQnj86JkNX40TBdhA4Ua.js" id="asciicast-c0EM0kQnj86JkNX40TBdhA4Ua" async></script>
+
+<p>Once the docker installation is complete, you should have SeAT available on the server, listening on port 8080. For more detailed docker related information, please refer to the <a href="../../../guides/installation/docker/">Docker</a> section.</p>
 <h2 id="installer-seat-tool">Installer (SeAT Tool)<a class="headerlink" href="#installer-seat-tool" title="Permanent link">&para;</a></h2>
 <p>A semi automated installation option for Debian 8 / 9, Ubuntu LTS versions and CentOS 7 is available. To get started with this method, a helper script should be downloaded and run.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This installer assumes that <em>nothing else</em> is configured on the host operating system. If you have an existing database server or web server on the host this script is run on there is a high chance it will fail!</p>
-</div>
 <div class="codehilite"><pre><span></span>bash &lt;<span class="o">(</span>curl -fsSL https://git.io/seat-installer<span class="o">)</span>
 </pre></div>
 
 
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This installer assumes that <em>nothing else</em> is configured on the host operating system. If you have an existing database server or web server on the host this script is run on there is a high chance it will fail!</p>
+</div>
 <p>This will ask you to choose your operating system in order to prepare the <code>seat</code> tool for use.</p>
 <p>Example usage:</p>
 <div class="codehilite"><pre><span></span>$ bash &lt;<span class="o">(</span>curl -fsSL https://git.io/seat-installer<span class="o">)</span>
@@ -1041,7 +1068,28 @@
 </pre></div>
 
 
-<p>WIP</p>
+<p>Once the preparations are done, the installer will prompt you to run <code>seat install:production</code>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>During the beta of SeAT 3x, please run <code>seat install:production --minimum-stability beta</code> instead. This will tell the installer that versions that are marked as non-stable is ok to use.</p>
+</div>
+<h2 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">&para;</a></h2>
+<p>Finally, you can always install SeAT manually. You will need to get PHP 7.1, MariaDB, Redis and a web server such as nginx running. Guides for popular Linux distributions such as Debian, Ubuntu and CentOS can be found in the sidebar, but if those distributions aren't your cup of tea, follow these steps to get going:</p>
+<ul>
+<li>Install PHP 7.1.</li>
+<li>Install the latest MariaDB / MySQL server.</li>
+<li>Install Redis server.</li>
+<li>Install the <a href="https://getcomposer.org/">composer</a> PHP dependency manager.</li>
+<li>Choose where you want the SeAT sources to live and start the download with <code>composer create-project eveseat/seat</code>.</li>
+<li>Once installed, <code>cd</code> to the new <code>seat/</code> directory and publish migrations and assets with <code>php artisan vendor:publish --force --all</code>.</li>
+<li>If you want the Swagger API documentation, run <code>php artisan l5-swagger:generate</code>.</li>
+<li>Update the <code>.env</code> file with your database settings. Ideally SeAT should have full control over only its own database (not the entire database server);</li>
+<li>Run the database migrations with <code>php artisan migrate</code>.</li>
+<li>Update the EVE Static Data tables with <code>php artisan eve:update-sde -n</code>.</li>
+<li>Run the SeAT schedule seeder with <code>php artisan db:seed --class=Seat\\Services\\database\\seeds\\ScheduleSeeder</code>.</li>
+<li>Configure a web server to serve the <code>public/</code> directory to the world.</li>
+<li>Download supervisord and have it keep the <code>php artisan horizon</code> command alive. This will allow you to process jobs.</li>
+</ul>
                 
                   
                 
@@ -1128,6 +1176,8 @@
       <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/extra_tabs.js"></script>
       
     
     

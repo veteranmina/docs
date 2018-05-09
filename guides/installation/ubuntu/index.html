@@ -61,6 +61,10 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../../../css/extra_typo.css">
+    
+      <link rel="stylesheet" href="../../../css/extra_tabs.css">
+    
     
   </head>
   
@@ -1283,26 +1287,27 @@ For now, we're relying on PHP 7.1 due to issues with Laravel on PHP 7.2 on some 
 We will add ondrej PPA which is very popular and caters for most php versions.</p>
 <p>Let's start by using an editor to create the file <code>/etc/apt/source.list.d/php.list</code> (<code>nano</code> or <code>vi</code> works well for such things).
 Inside the newly created file, simply paste the block bellow :</p>
-<ul class="nav nav-tabs">
-<li class="active"><a data-toggle="tab" data-target="#phpppa_xenial">Xenial 16.04</a></li>
-<li><a data-toggle="tab" data-target="#phpppa_artful">Artful 17.10</a></li>
-<li><a data-toggle="tab" data-target="#phpppa_bionic">Bionic 18.04</a></li>
+<section class="mdc-tabs">
+<ul class="mdc-tab-bar">
+  <li class="mdc-tab active"><a role="tab" data-toggle="tab">Xenial 16.04</a></li>
+  <li class="mdc-tab"><a role="tab" data-toggle="tab">Artful 17.10</a></li>
+  <li class="mdc-tab"><a role="tab" data-toggle="tab">Bionic 18.04</a></li>
 </ul>
-
-<div class="tab-content">
-<div id="phpppa_xenial" class="tab-pane fade in active" markdown="1">
+<div class="mdc-panels">
+<div role="tabpanel" class="mdc-panel active">
 <pre><code class="bash hljs">deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main
 deb-src http://ppa.launchpad.net/ondrej/php/ubuntu xenial main</code></pre>
 </div>
-<div id="phpppa_artful" class="tab-pane" markdown="1">
+<div role="tabpanel" class="mdc-panel">
 <pre><code class="bash hljs">deb http://ppa.launchpad.net/ondrej/php/ubuntu artful main
 deb-src http://ppa.launchpad.net/ondrej/php/ubuntu artful main</code></pre>
 </div>
-<div id="phpppa_bionic" class="tab-pane fade" markdown="1">
+<div role="tabpanel" class="mdc-panel">
 <pre><code class="bash hljs">deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
 deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main</code></pre>
 </div>
 </div>
+</section>
 
 <p>Next, we will have to download the repository GPG key and add it into our keychain</p>
 <div class="codehilite"><pre><span></span>apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4F4EA0AAE5267A6C
@@ -1447,10 +1452,10 @@ chown seat:seat -R /var/www/seat
 </table>
 <p>Now, we will publish assets and seed the SeAT database. Let's do this with the following commands :</p>
 <ul>
-<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan vendor:publish --force --all'</code> this will publish all package assets, including horizon</li>
-<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan migrate'</code> it will generate SeAT database structure</li>
-<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan db:seed --class=Seat\\Services\\database\\seeds\\ScheduleSeeder'</code> this will seed the scheduling table used for jobs</li>
-<li><code>sudo -H -u seat bash -c 'php /var/www/seatartisan eve:update-sde'</code> it will download latest SDE data</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seat/artisan vendor:publish --force --all'</code> this will publish all package assets, including horizon</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seat/artisan migrate'</code> it will generate SeAT database structure</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seat/artisan db:seed --class=Seat\\Services\\database\\seeds\\ScheduleSeeder'</code> this will seed the scheduling table used for jobs</li>
+<li><code>sudo -H -u seat bash -c 'php /var/www/seat/artisan eve:update-sde'</code> it will download latest SDE data</li>
 </ul>
 <h3 id="supervisor">Supervisor<a class="headerlink" href="#supervisor" title="Permanent link">&para;</a></h3>
 <p>SeAT relies on supervisor in order to keep the Horizon process up. Horizon is the new queue backend in SeAT 3.0.</p>
@@ -1667,6 +1672,8 @@ service nginx reload
       <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/extra_tabs.js"></script>
       
     
     
