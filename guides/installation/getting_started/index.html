@@ -1062,11 +1062,28 @@
 </ul>
 <h2 id="hardware-requirements">Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">&para;</a></h2>
 <p>As far as hardware goes, there isn't really a hard and fast rule on what is needed. The more resources you make available, the faster API updates will occur. However, there are some minimum <em>recommended</em> specifications.</p>
-<ul>
-<li>Memory            : 1GB of RAM. Less can work, it will just be <em>really</em>  slow.</li>
-<li>Hard Drive Space  : 10GB (used mostly by the database and the EVE API caching)</li>
-<li>Operating System  : Any linux distribution will work with SeAT (depending on how you choose to install). For Windows, the only option available is <a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a> with Linux containers</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory</td>
+<td>1GB of RAM with a swap file. More is better.</td>
+</tr>
+<tr>
+<td>Hard Drive Space</td>
+<td>10GB (used mostly by the database and the EVE API caching). Again, more is better. Monitor this closely as your installation grows!</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Any linux distribution will work with SeAT (depending on how you choose to install). For Windows, the only option available is <a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a> with Linux containers</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you intend to process a large amount of data, plan your storage accordingly. The SeAT database can grow incredibly quickly depending on the amount of tokens you process.</p>
