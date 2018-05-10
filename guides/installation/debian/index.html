@@ -70,7 +70,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -1480,7 +1480,7 @@ a description of each parameter.</p>
  - <code>sudo -H -u seat bash -c 'php /var/www/seat/artisan vendor:publish --force --all'</code> this will publish all package assets, including horizon
  - <code>sudo -H -u seat bash -c 'php /var/www/seat/artisan migrate'</code> it will generate SeAT database structure
  - <code>sudo -H -u seat bash -c 'php /var/www/seat/artisan db:seed --class=Seat\\Services\\database\\seeds\\ScheduleSeeder'</code> this will seed the scheduling table used for jobs
- - <code>sudo -H -u seat bash -c 'php /var/www/seat/artisan eve:update-sde'</code> it will download latest SDE data</p>
+ - <code>sudo -H -u seat bash -c 'php /var/www/seat/artisan eve:update:sde'</code> it will download latest SDE data</p>
 <h3 id="supervisor">Supervisor<a class="headerlink" href="#supervisor" title="Permanent link">&para;</a></h3>
 <p>SeAT relies on supervisor in order to keep the Horizon process up. Horizon is the new queue backend in SeAT 3.0.</p>
 <div class="codehilite"><pre><span></span>apt-get install supervisor

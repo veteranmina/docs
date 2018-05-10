@@ -70,7 +70,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -1143,6 +1143,11 @@
 </div>
 <h2 id="docker-requirements">Docker Requirements<a class="headerlink" href="#docker-requirements" title="Permanent link">&para;</a></h2>
 <p>In terms of performance, the same hardware requirements apply to docker installations as those that choose otherwise. For information about the requirements for SeAT, please see <a href="../../../guides/installation/getting_started/#hardware-requirements">this</a> page. The only major difference between docker and other installation options is that the containers themselves may take up a few hundred MB's of extra space. In most cases this should be a non-issue.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When considering a VPS provider, make sure you choose one that does not make use of OpenVZ or similar operating-system level virtualization technologies. These virtualization technologies limit you in terms of kernel access as they purely containerize an existing Linux installation. </p>
+<p>For a successful docker installation, choose a provider that uses para-virtualized technologies such as KVM, VMWare or XEN allowing you full control to the instance (and therefor the kernel itself). Examples of such providers are <a href="https://www.digitalocean.com/">Digital Ocean</a>, <a href="https://www.linode.com/">Linode</a> and <a href="https://www.vultr.com/">Vultr</a>.</p>
+</div>
 <h2 id="internal-container-setup-overview">Internal Container Setup Overview<a class="headerlink" href="#internal-container-setup-overview" title="Permanent link">&para;</a></h2>
 <p>The setup for SeAT's docker installation is built on top of <a href="https://docs.docker.com/compose/">docker-compose</a>. With docker-compose, we can use a single <code>docker-compose.yml</code> file to define the entire stack complete with dependencies required to run SeAT. A pre-built and recommended compose file (which is also used by the bootstrapping script) is hosted in the scripts repository <a href="https://github.com/eveseat/scripts/tree/master/docker-compose">here</a>.</p>
 <p>The previously mentioned compose file is really simple. A high level overview of its contents is:</p>
@@ -1154,15 +1159,44 @@
 <li><code>mariadb-data</code>: This is the <em>most important</em> volume as it contains all of the database data. This is the one volume that you should configure a backup solution for!</li>
 </ul>
 </li>
-<li>Six services (or containers) are used within the SeAT docker stack. Two of the services are pulled directly from <a href="https://hub.docker.com/">Dockerhub</a>. Four others are custom build and also hosted on Dockerhub. The containers are:<ul>
-<li><code>mariadb:10.3</code>: <a href="https://hub.docker.com/_/mariadb/">https://hub.docker.com/_/mariadb/</a></li>
-<li><code>redis:3</code>: <a href="https://hub.docker.com/_/redis/">https://hub.docker.com/_/redis/</a></li>
-<li><code>eveseat/eveseat-nginx</code>: <a href="https://hub.docker.com/r/eveseat/eveseat-nginx/">https://hub.docker.com/r/eveseat/eveseat-nginx/</a></li>
-<li><code>eveseat/eveseat-app</code>: <a href="https://hub.docker.com/r/eveseat/eveseat-app/">https://hub.docker.com/r/eveseat/eveseat-app/</a></li>
-<li><code>eveseat/eveseat-worker</code>: <a href="https://hub.docker.com/r/eveseat/eveseat-worker/">https://hub.docker.com/r/eveseat/eveseat-worker/</a></li>
-<li><code>eveseat/eveseat-cron</code>: <a href="https://hub.docker.com/r/eveseat/eveseat-cron/">https://hub.docker.com/r/eveseat/eveseat-cron/</a></li>
+<li>Six services (or containers) are used within the SeAT docker stack. Two of the services are pulled directly from <a href="https://hub.docker.com/">Dockerhub</a>.
+Four others are custom build and also hosted on DockerHub. Those containers are exposed in the table bellow :</li>
 </ul>
-</li>
+<table>
+<thead>
+<tr>
+<th>Image Name</th>
+<th>Image Repository</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mariadb:10.3</code></td>
+<td><a href="https://hub.docker.com/_/mariadb/">https://hub.docker.com/_/mariadb/</a></td>
+</tr>
+<tr>
+<td><code>redis:3</code></td>
+<td><a href="https://hub.docker.com/_/redis/">https://hub.docker.com/_/redis/</a></td>
+</tr>
+<tr>
+<td><code>eveseat/eveseat-nginx</code></td>
+<td><a href="https://hub.docker.com/r/eveseat/eveseat-nginx/">https://hub.docker.com/r/eveseat/eveseat-nginx/</a></td>
+</tr>
+<tr>
+<td><code>eveseat/eveseat-app</code></td>
+<td><a href="https://hub.docker.com/r/eveseat/eveseat-app/">https://hub.docker.com/r/eveseat/eveseat-app/</a></td>
+</tr>
+<tr>
+<td><code>eveseat/eveseat-worker</code></td>
+<td><a href="https://hub.docker.com/r/eveseat/eveseat-worker/">https://hub.docker.com/r/eveseat/eveseat-worker/</a></td>
+</tr>
+<tr>
+<td><code>eveseat/eveseat-cron</code></td>
+<td><a href="https://hub.docker.com/r/eveseat/eveseat-cron/">https://hub.docker.com/r/eveseat/eveseat-cron/</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
 <li>The environment is configured using a top level <code>.env</code> file (not to be confused with the SeAT specific <code>.env</code> file (which should be transparent to a docker user anyways.))</li>
 <li>Only two ports are exposed by default. Those are <code>tcp/8080</code> and <code>tcp/8443</code>. These can be connected to in order to access the SeAT web interface.</li>
 <li>All containers are configured to restart on failure, so if your server reboots or a container dies for whatever reason it should automatically start up again.</li>
