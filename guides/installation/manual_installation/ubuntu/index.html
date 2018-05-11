@@ -464,12 +464,18 @@
     Getting started
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#eve-application" title="Eve Application" class="md-nav__link">
     Eve Application
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -478,51 +484,52 @@
     Basics
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#database" title="Database" class="md-nav__link">
     Database
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#php" title="PHP" class="md-nav__link">
     PHP
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#redis" title="Redis" class="md-nav__link">
     Redis
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#seat-download" title="SeAT Download" class="md-nav__link">
     SeAT Download
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#seat-setup" title="SeAT Setup" class="md-nav__link">
     SeAT Setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#supervisor" title="Supervisor" class="md-nav__link">
     Supervisor
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#web-service" title="Web Service" class="md-nav__link">
     Web Service
   </a>
@@ -548,11 +555,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#admin-login" title="Admin Login" class="md-nav__link">
     Admin Login
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1209,12 +1221,18 @@
     Getting started
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#eve-application" title="Eve Application" class="md-nav__link">
     Eve Application
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1223,51 +1241,52 @@
     Basics
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#database" title="Database" class="md-nav__link">
     Database
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#php" title="PHP" class="md-nav__link">
     PHP
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#redis" title="Redis" class="md-nav__link">
     Redis
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#seat-download" title="SeAT Download" class="md-nav__link">
     SeAT Download
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#seat-setup" title="SeAT Setup" class="md-nav__link">
     SeAT Setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#supervisor" title="Supervisor" class="md-nav__link">
     Supervisor
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#web-service" title="Web Service" class="md-nav__link">
     Web Service
   </a>
@@ -1293,11 +1312,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#admin-login" title="Admin Login" class="md-nav__link">
     Admin Login
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1323,16 +1347,12 @@
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
 <h1 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h1>
 <p>This guide attempts to explain how to manually install SeAT onto an <strong>Ubuntu</strong> Server.
-A small amount of Linux experience is preferred when it comes to this guide, all though it is not entirely mandatory.
-This guide assumes you want all of the available SeAT components installed (which is the default).</p>
-<h3 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h3>
-<p>We are going to assume you have root access to a fresh Ubuntu Server. Typically access is gained via SSH.
-All of the below commands are to be entered in the SSH terminal session for the installation &amp; configuration of SeAT.
-If the server you want to install SeAT on is being used for other things too (such as hosting MySQL databases and or websites), then please keep that in mind while following this guide.</p>
+A small amount of Linux experience is preferred when it comes to this guide, all though it is not entirely mandatory. This guide assumes you want all of the available SeAT components installed (which is the default).</p>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>We are going to assume you have root access to a fresh Ubuntu Server. Typically access is gained via SSH. All of the below commands are to be entered in the SSH terminal session for the installation &amp; configuration of SeAT. If the server you want to install SeAT on is being used for other things too (such as hosting MySQL databases and or websites), then please keep that in mind while following this guide.</p>
 <p>Packages are installed using the <code>aptitude</code> package manager as the <code>root</code> user.</p>
 <h3 id="eve-application">Eve Application<a class="headerlink" href="#eve-application" title="Permanent link">&para;</a></h3>
-<p>SeAT 3.0 consumes ESI in order to retrieve information. Before you can make any authenticated calls to ESI, you have to create an <code>eve application</code>. To do so, browse to https://developers.eveonline.com and login using the button on top right corner.
-Once done, on the top menu, click on <code>applications</code> then create a new one with <code>create new application</code> button.</p>
+<p>SeAT 3.0 consumes ESI in order to retrieve information. Before you can make any authenticated calls to ESI, you have to create an <code>eve application</code>. To do so, browse to https://developers.eveonline.com and login using the button on top right corner. Once done, on the top menu, click on <code>applications</code> then create a new one with <code>create new application</code> button.</p>
 <p>Fill the initial form with whatever you want (<code>name</code> and <code>description</code>) but keep in mind that this information will be showed to the user while they sign in as well as when they review third party applications that have access to their account information.</p>
 <ul>
 <li>In the <code>Connection Type</code> section, check <code>Authentication &amp; API Access</code> and add scopes from which you want information. (you need only those starting by <code>esi</code>).</li>
@@ -1340,7 +1360,7 @@ Once done, on the top menu, click on <code>applications</code> then create a new
 <li>Finally, click on <code>Create application</code> button, back to <code>applications</code> and near the created application, hit the <code>view application</code> button.</li>
 </ul>
 <p>Take note of the <code>Client ID</code>, <code>Secret Key</code>, <code>Callback URL</code> fields which will be required at a later stage in this documentation.</p>
-<h3 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h3>
+<h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>We will ensuring that your system is up to date before starting with package installation. So, let's start with basics :</p>
 <ul>
 <li><code>apt-get update</code> to refresh the repositories cache.</li>
@@ -1349,16 +1369,13 @@ Once done, on the top menu, click on <code>applications</code> then create a new
 <li><code>apt-get autoremove</code> (after the reboot) to cleanup any unneeded packages.</li>
 </ul>
 <h3 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h3>
-<p>SeAT relies <strong>heavily</strong> on a database to function.
-Everything it learns is stored here, along with things such as user accounts for your users. It comes without saying that database security is a very important aspect too. So, ensure that you choose very strong passwords for your installation where required.</p>
+<p>SeAT relies <strong>heavily</strong> on a database to function. Everything it learns is stored here, along with things such as user accounts for your users. It comes without saying that database security is a very important aspect too. So, ensure that you choose very strong passwords for your installation where required.</p>
 <p>This document describes using MariaDB, but you can use MySQL as well. Just double check the requirements.</p>
 <p><code>curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash</code> this script provided by MariaDB team will setup your repositories properly</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>At the time when this document was written, MariaDB as not available on Ubuntu 18.04 Bionic.
-The package version available in main repository does not meet minimum requirement as SeAT 3.0 requires at least
-version 10.2.7 or higher whereas official repository only provides 10.1.29. In order to install SeAT,
-use MySQL instead.</p>
+The package version available in main repository does not meet minimum requirement as SeAT 3.0 requires at least version 10.2.7 or higher whereas official repository only provides 10.1.29. In order to install SeAT, use MySQL instead.</p>
 </div>
 <p>Lets install the database server:</p>
 <div class="codehilite"><pre><span></span>apt-get install mariadb-server
@@ -1368,8 +1385,7 @@ use MySQL instead.</p>
 <p>Next, we are going to secure the database server by removing anonymous access and setting a <code>root</code> password.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The database <code>root</code> password should not be confused with the operating systems <code>root</code> passwords.
-They are both completely different. They should also not be the same password.</p>
+<p>The database <code>root</code> password should not be confused with the operating systems <code>root</code> passwords. They are both completely different. They should also not be the same password.</p>
 </div>
 <p>To secure the database, run:</p>
 <div class="codehilite"><pre><span></span>mysql_secure_installation
@@ -1414,18 +1430,13 @@ Reload privilege tables now? <span class="o">[</span>Y/n<span class="o">]</span>
 </pre></div>
 
 
-<p>That concludes the installation of the database server and securing it.
-Next, we need to create an actual database for SeAT to use on the server.
-For that we need to use the MySQL command line client and enter a few commands to create the database and the user that will be accessing it.
-Let get to it.</p>
+<p>That concludes the installation of the database server and securing it. Next, we need to create an actual database for SeAT to use on the server. For that we need to use the MySQL command line client and enter a few commands to create the database and the user that will be accessing it. Let get to it.</p>
 <p>Fire up the MySQL client by running:</p>
 <div class="codehilite"><pre><span></span>mysql -uroot -p
 </pre></div>
 
 
-<p>This will prompt you for a password.
-Use the password you configured for the <code>root</code> account when we ran <code>mysql_secure_installation</code>.
-This will most probably be the last time you need to use this password :)</p>
+<p>This will prompt you for a password. Use the password you configured for the <code>root</code> account when we ran <code>mysql_secure_installation</code>. This will most probably be the last time you need to use this password :)</p>
 <p>If the password was correct, you should see a prompt similar to the one below:</p>
 <div class="codehilite"><pre><span></span><span class="o">[</span>...<span class="o">]</span>
 mysql&gt;
@@ -1466,9 +1477,7 @@ Finally, we will reload sql server permission cache</p>
 <p>Remember the password for the <code>seat</code> database user as we will need it later to configure SeAT.</p>
 </div>
 <h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Since SeAT is a PHP application, we will to install php packages.
-For now, we're relying on PHP 7.1 due to issues with Laravel on PHP 7.2 on some methods.
-We will add ondrej PPA which is very popular and caters for most php versions.</p>
+<p>Since SeAT is a PHP application, we will to install php packages. For now, we're relying on PHP 7.1 due to issues with Laravel on PHP 7.2 on some methods. We will add ondrej PPA which is very popular and caters for most php versions.</p>
 <p>Let's start by using an editor to create the file <code>/etc/apt/source.list.d/php.list</code> (<code>nano</code> or <code>vi</code> works well for such things).
 Inside the newly created file, simply paste the block bellow :</p>
 <section class="mdc-tabs">
@@ -1509,15 +1518,13 @@ deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main</code></pre>
 
 
 <h3 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
-<p>SeAT makes use of <a href="http://redis.io/">Redis</a> as a cache and message broker for the Queue backend.
-Installing it is really easy. Do it with:</p>
+<p>SeAT makes use of <a href="http://redis.io/">Redis</a> as a cache and message broker for the Queue back end. Installing it is really easy. Do it with:</p>
 <div class="codehilite"><pre><span></span>apt-get install redis-server
 </pre></div>
 
 
 <h3 id="seat-download">SeAT Download<a class="headerlink" href="#seat-download" title="Permanent link">&para;</a></h3>
-<p>Here we go, all requirements are now met. We will start installing SeAT.
-Start with <code>git</code> and <code>composer</code> which will handle our php package dependencies and download SeAT from our repositories.</p>
+<p>Here we go, all requirements are now met. We will start installing SeAT. Start with <code>git</code> and <code>composer</code> which will handle our php package dependencies and download SeAT from our repositories.</p>
 <div class="codehilite"><pre><span></span>apt-get install git
 curl -sS https://getcomposer.org/installer <span class="p">|</span> php -- --install-dir<span class="o">=</span>/usr/local/bin --filename<span class="o">=</span>composer <span class="o">&amp;&amp;</span> <span class="nb">hash</span> -r
 </pre></div>
@@ -1647,8 +1654,7 @@ chown seat:seat -R /var/www/seat
 </pre></div>
 
 
-<p>Next, we will create a dedicated configuration file which will ask supervisor to keep an eye on Horizon.
-Use your favorite editor in order to spawn the file at the following path <code>/etc/supervisor/conf.d/seat.conf</code></p>
+<p>Next, we will create a dedicated configuration file which will ask supervisor to keep an eye on Horizon. Use your favorite editor in order to spawn the file at the following path <code>/etc/supervisor/conf.d/seat.conf</code></p>
 <p>Inside the newly created file, add the following configuration items:</p>
 <div class="codehilite"><pre><span></span><span class="o">[</span>program:seat<span class="o">]</span>
 <span class="nv">command</span><span class="o">=</span>/usr/bin/php /var/www/seat/artisan horizon
@@ -1680,9 +1686,7 @@ Use your favorite editor in order to spawn the file at the following path <code>
 
 <h3 id="web-service">Web Service<a class="headerlink" href="#web-service" title="Permanent link">&para;</a></h3>
 <p>The SeAT web interface requires a web server to serve the HTML goodies it has. We highly encourage you to use nginx and will be covered in this document. You don't <strong>have</strong> to use it, so if you prefer something else, feel free.</p>
-<p>The SeAT web interface requires a web server to serve the HTML goodies it has. We highly encourage you to use 
-<a href="../../../../guides/installation/basic_installation/nginx">nginx</a> or <a href="../../../../guides/installation/basic_installation/traefik">traefik</a>
-and these we will covered in the next few pages. You don't have to use it, so if you prefer something else, feel free.</p>
+<p>The SeAT web interface requires a web server to serve the HTML goodies it has. We highly encourage you to use <a href="../../../../guides/installation/basic_installation/nginx">nginx</a> or <a href="../../../../guides/installation/basic_installation/traefik">traefik</a> and these we will covered in the next few pages. You don't have to use it, so if you prefer something else, feel free.</p>
 <h4 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h4>
 <p>Let's install nginx :</p>
 <div class="codehilite"><pre><span></span>apt-get install nginx php7.1-fpm
@@ -1721,7 +1725,7 @@ and these we will covered in the next few pages. You don't have to use it, so if
 </tr>
 </tbody>
 </table>
-<p>Once done, you can create a new configuration file into nginx to server SeAT called <code>/etc/nginx/site-availables/seat</code> </p>
+<p>Once done, you can create a new configuration file into nginx to server SeAT called <code>/etc/nginx/site-available/seat</code></p>
 <p>And put the content bellow inside</p>
 <div class="codehilite"><pre><span></span>server <span class="o">{</span>
     listen <span class="m">80</span><span class="p">;</span>
@@ -1849,7 +1853,7 @@ service nginx reload
 </pre></div>
 
 
-<p>your configuration file should look similar to this:</p>
+<p>Your configuration file should look similar to this:</p>
 <div class="codehilite"><pre><span></span>&lt;VirtualHost *:80&gt;
         ServerAdmin email@yourdomain.com
         ServerNAme yourdomain.com
