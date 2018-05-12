@@ -1702,7 +1702,7 @@ and will be covered in this document. You don't <strong>have</strong> to use it,
 </tr>
 </tbody>
 </table>
-<p>Once done, you can create a new configuration file into nginx to server SeAT called <code>/etc/nginx/site-availables/seat</code> </p>
+<p>Once done, you can create a new configuration file into nginx to server SeAT called <code>/etc/nginx/sites-available/seat</code> </p>
 <p>And put the content bellow inside:</p>
 <div class="codehilite"><pre><span></span>server <span class="o">{</span>
     listen <span class="m">80</span><span class="p">;</span>
@@ -1731,7 +1731,7 @@ and will be covered in this document. You don't <strong>have</strong> to use it,
 
 
 <p>Let's symlink to the active config and drop the default one :</p>
-<div class="codehilite"><pre><span></span>ln -s /etc/nginx/sites-availabe/seat /etc/nginx/sites-enabled/seat
+<div class="codehilite"><pre><span></span>ln -s /etc/nginx/sites-available/seat /etc/nginx/sites-enabled/seat
 rm /etc/nginx/sites-enabled/default
 </pre></div>
 
