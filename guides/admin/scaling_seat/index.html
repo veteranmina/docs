@@ -256,8 +256,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../general/requirements/" title="Hardware / Software Requirements" class="md-nav__link">
-      Hardware / Software Requirements
+    <a href="../../../general/requirements/" title="Requirements" class="md-nav__link">
+      Requirements
     </a>
   </li>
 
@@ -619,8 +619,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#seat-component" title="seat component" class="md-nav__link">
-    seat component
+  <a href="#seat-component" title="SeAT component" class="md-nav__link">
+    SeAT component
   </a>
   
 </li>
@@ -652,8 +652,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#more-complicated-scaled-setup" title="more complicated scaled setup" class="md-nav__link">
-    more complicated scaled setup
+  <a href="#more-complicated-scaled-setup" title="More complicated scaled setup" class="md-nav__link">
+    More complicated scaled setup
   </a>
   
 </li>
@@ -1212,8 +1212,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#seat-component" title="seat component" class="md-nav__link">
-    seat component
+  <a href="#seat-component" title="SeAT component" class="md-nav__link">
+    SeAT component
   </a>
   
 </li>
@@ -1245,8 +1245,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#more-complicated-scaled-setup" title="more complicated scaled setup" class="md-nav__link">
-    more complicated scaled setup
+  <a href="#more-complicated-scaled-setup" title="More complicated scaled setup" class="md-nav__link">
+    More complicated scaled setup
   </a>
   
 </li>
@@ -1315,7 +1315,7 @@ This document aims to share some <em>need to knows</em> before embarking on a ti
 <p>A <em>server</em> is defined as any VPS, hardware, docker container, or other form of virtualization.
 When talking performance though, keep in mind that there will probably be very little performance gains when everything 
 runs on the same physical hardware instance.</p>
-<h3 id="seat-component">seat component<a class="headerlink" href="#seat-component" title="Permanent link">&para;</a></h3>
+<h3 id="seat-component">SeAT component<a class="headerlink" href="#seat-component" title="Permanent link">&para;</a></h3>
 <p>A <em>SeAT Component</em> is a collection of SeAT packages and configurations that is responsible for performing a specific task.
 Tasks include the SeAT Web Interface, the job workers or dispatchers.</p>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
@@ -1347,7 +1347,7 @@ The gist of it is that we simply add more <em>queue worker</em> components to th
 <p><img alt="simple scale" src="https://i.imgur.com/y1XSxIp.png" /></p>
 <p>Installing a new <a href="#server">server</a> with only the queue worker component setup can bring a significant speed boost into the environment.
 A new queue worker could be configured to run an extra 4-6 jobs. This queue worker must be configured to make use of the <a href="#immutable-resources">immutable resources</a>.</p>
-<h2 id="more-complicated-scaled-setup">more complicated scaled setup<a class="headerlink" href="#more-complicated-scaled-setup" title="Permanent link">&para;</a></h2>
+<h2 id="more-complicated-scaled-setup">More complicated scaled setup<a class="headerlink" href="#more-complicated-scaled-setup" title="Permanent link">&para;</a></h2>
 <p>Of course, one can totally go full nelson and explode all of the components in use.
 Below is an example deployment (with data flow links, red for redis, blue for MariaDB) that shows how each SeAT component can live on its own server.</p>
 <p><img alt="complex scale" src="https://i.imgur.com/ZvCYCCE.png" /></p>
