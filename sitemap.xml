@@ -134,8 +134,26 @@
     
         
     <url>
-     <loc>https://github.com/eveseat/docs</loc>
-     <lastmod></lastmod>
+     <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/webserver/</loc>
+     <lastmod>2018-05-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/traefik/</loc>
+     <lastmod>2018-05-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/nginx/</loc>
+     <lastmod>2018-05-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/apache/</loc>
+     <lastmod>2018-05-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
