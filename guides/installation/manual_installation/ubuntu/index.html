@@ -1372,11 +1372,6 @@ A small amount of Linux experience is preferred when it comes to this guide, all
 <p>SeAT relies <strong>heavily</strong> on a database to function. Everything it learns is stored here, along with things such as user accounts for your users. It comes without saying that database security is a very important aspect too. So, ensure that you choose very strong passwords for your installation where required.</p>
 <p>This document describes using MariaDB, but you can use MySQL as well. Just double check the requirements.</p>
 <p><code>curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash</code> this script provided by MariaDB team will setup your repositories properly</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>At the time when this document was written, MariaDB as not available on Ubuntu 18.04 Bionic.
-The package version available in main repository does not meet minimum requirement as SeAT 3.0 requires at least version 10.2.7 or higher whereas official repository only provides 10.1.29. In order to install SeAT, use MySQL instead.</p>
-</div>
 <p>Lets install the database server:</p>
 <div class="codehilite"><pre><span></span>apt-get install mariadb-server
 </pre></div>
@@ -1986,6 +1981,8 @@ sudo service apache2 reload
       
     
     
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-119530306-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>
