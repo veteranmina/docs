@@ -18,19 +18,11 @@
     
 
     
-        
     <url>
      <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/installation/</loc>
      <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    <url>
-     <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/esi/</loc>
-     <lastmod>2018-05-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
@@ -71,6 +63,12 @@
         
     <url>
      <loc>https://github.com/eveseat/docs/guides/admin/docker/</loc>
+     <lastmod>2018-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/basic_installation/esi/</loc>
      <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
