@@ -54,13 +54,7 @@
     </url>
         
     <url>
-     <loc>https://github.com/eveseat/docs/guides/installation/manual_installation/centos6/</loc>
-     <lastmod>2018-05-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://github.com/eveseat/docs/guides/installation/manual_installation/centos7/</loc>
+     <loc>https://github.com/eveseat/docs/guides/installation/manual_installation/centos/</loc>
      <lastmod>2018-05-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
