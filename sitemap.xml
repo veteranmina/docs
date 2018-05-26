@@ -88,6 +88,12 @@
     </url>
         
     <url>
+     <loc>https://github.com/eveseat/docs/guides/admin/env_reference/</loc>
+     <lastmod>2018-05-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://github.com/eveseat/docs/guides/admin/job_queue_flow/</loc>
      <lastmod>2018-05-26</lastmod>
      <changefreq>daily</changefreq>
