@@ -347,30 +347,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../docker/" title="Docker (recommended)" class="md-nav__link">
-      Docker (recommended)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ubuntu/" title="Ubuntu" class="md-nav__link">
-      Ubuntu
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -663,6 +639,30 @@
   <li class="md-nav__item">
     <a href="../debian/" title="Debian" class="md-nav__link">
       Debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ubuntu/" title="Ubuntu" class="md-nav__link">
+      Ubuntu
     </a>
   </li>
 
@@ -1622,7 +1622,7 @@
 <p>This guide only caters for CentOS 7. If you <em>really</em> want to run CentOS 6, you would either need to adapt this installation guide with the appropriate init scripts, or use the SeAT tool for installation.</p>
 </div>
 <h1 id="centos-7">Centos 7<a class="headerlink" href="#centos-7" title="Permanent link">&para;</a></h1>
-<p>This guide attempts to explain how to manually install SeAT onto a <strong>CentOS</strong> Server. A small amount of Linux experience is preferred when it comes to this guide, all though it is not entirely mandatory.</p>
+<p>This guide attempts to explain how to manually install SeAT onto a <strong>CentOS</strong> Server. A small amount of Linux experience is preferred when it comes to this guide, although it is not entirely mandatory.</p>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>We are going to assume you have root access to a fresh CentOS Server. Typically access is gained via SSH. All of the below commands are to be entered in the SSH terminal session for the installation &amp; configuration of SeAT. If the server you want to install SeAT on is being used for other things too (such as hosting MySQL databases and or websites), then please keep that in mind while following this guide.</p>
 <p>Packages are installed using the <code>yum</code> package manager as the <code>root</code> user.</p>
@@ -2069,7 +2069,7 @@ systemctl restart php-fpm.service
 
 
 <p>You'll get a link after the command has finished running which looks similar to the one bellow:</p>
-<div class="codehilite"><pre><span></span>root@ubuntu:/var/www/seat# sudo -H -u nginx bash -c &#39;php /var/www/seat/artisan seat:admin:login&#39;
+<div class="codehilite"><pre><span></span>[root@localhost nginx]# sudo -H -u nginx bash -c &#39;php /var/www/seat/artisan seat:admin:login&#39;
 SeAT Admin Login URL Generator
 User &#39;admin&#39; does not exist. It will be created.
 Searching for the &#39;Superuser&#39; role
@@ -2116,7 +2116,7 @@ http://localhost/auth/login/admin/9G3sb8hjMvrbIJrIf10KKtIj1c8e9mL5
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ubuntu/" title="Ubuntu" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../getting_started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2125,7 +2125,7 @@ http://localhost/auth/login/admin/9G3sb8hjMvrbIJrIf10KKtIj1c8e9mL5
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Ubuntu
+                Getting Started
               </span>
             </div>
           </a>
