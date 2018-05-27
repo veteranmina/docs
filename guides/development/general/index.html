@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#developers-guides-general-guide" tabindex="1" class="md-skip">
+      <a href="#general-development-guide" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1129,16 +1129,16 @@
                 
                 
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
-<h1 id="developers-guides-general-guide">Developers Guides - General Guide<a class="headerlink" href="#developers-guides-general-guide" title="Permanent link">&para;</a></h1>
+<h1 id="general-development-guide">General Development Guide<a class="headerlink" href="#general-development-guide" title="Permanent link">&para;</a></h1>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <p>So, you have a bug / feature / curiosity to test out. Hopefully this article will help you quickly get set up to do that!</p>
-<p>SeAT packages are developed as a standalone packages. The general idea being that you should be including them in the main <code>seat</code> projects <code>composer.json</code> like <a href="https://github.com/eveseat/seat/blob/master/composer.json#L11">here</a>. This of course will install all of the sources in the projects <code>vendor/</code> directory, though this is not always ideal from a development perspective.</p>
-<p>Instead, you can decide to follow the next few stops to create a loadable package directory, that you can commit to your fork. Below is generally how I have developed the packages.</p>
+<p>SeAT packages are developed as a standalone packages. The general idea being that you should be including them in the main <code>seat</code> projects <code>composer.json</code> like <a href="https://github.com/eveseat/seat/blob/c80f13440ff67d1d21b484a9922893cf67cf7e43/composer.json#L21-L26">here</a>. This of course will install all of the sources in the projects <code>vendor/</code> directory, though this is not always ideal from a development perspective.</p>
+<p>Instead, you may decide to follow the next few steps to create a loadable package directory that you can commit to your fork. The following flow is generally how I work on the SeAT packages:</p>
 <ul>
 <li>From the main <a href="https://github.com/eveseat/seat">seat</a> project, create a sub folder called <code>packages</code>. For clarities sake, this folder will be at the same level as say the <code>app</code> folder as well as the <code>composer.json</code> file.</li>
 <li>Next, I like to create the vendors directory for the package I am going to work on, so, create a folder in under <code>packages</code> and call it <code>eveseat</code>. (This is optional. If you skip it, make sure you keep that in mind when setting up the autoloader later).</li>
 <li>Clone your fork under the <code>eveseat</code> folder.</li>
-<li>Next, we move back to the original composer.json file, and add the following for PSR-4 class mapping (for the eveapi package):</li>
+<li>Next, we move back to the original <code>composer.json</code> file, and add the following for PSR-4 class mapping (for the eveapi package):</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="s2">&quot;psr-4&quot;</span><span class="err">:</span> <span class="p">{</span>
     <span class="nt">&quot;App\\&quot;</span><span class="p">:</span> <span class="s2">&quot;app/&quot;</span><span class="p">,</span>
@@ -1151,7 +1151,7 @@
 <li>Set up the autoloader by running <code>composer dump-autoload</code></li>
 <li>You should now have the <code>Seat\Eveapi</code> namespace autoloaded and ready for your testing :D</li>
 </ul>
-<p>Take special not of any dependencies that may be missing. You can resolve them by adding them to your <code>composer.json</code> and running <code>composer update</code>.</p>
+<p>Take special note of any dependencies that may be missing. You can resolve them by adding them to your <code>composer.json</code> and running <code>composer update</code>.</p>
                 
                   
                 

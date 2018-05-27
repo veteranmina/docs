@@ -930,8 +930,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#routes-access-control" title="Routes - access control" class="md-nav__link">
-    Routes - access control
+  <a href="#routes" title="Routes" class="md-nav__link">
+    Routes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control" title="Access Control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware" title="Middleware" class="md-nav__link">
+    Middleware
   </a>
   
 </li>
@@ -940,11 +955,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware" title="Middleware" class="md-nav__link">
-    Middleware
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -957,29 +970,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#views-sidebar-menu" title="Views - sidebar menu" class="md-nav__link">
-    Views - sidebar menu
+  <a href="#sidebar-menu" title="Sidebar menu" class="md-nav__link">
+    Sidebar menu
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#views-character-submenus" title="Views - character submenus" class="md-nav__link">
-    Views - character submenus
+  <a href="#character-submenus" title="Character submenus" class="md-nav__link">
+    Character submenus
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#views-corporation-submenus" title="Views - corporation submenus" class="md-nav__link">
-    Views - corporation submenus
+  <a href="#corporation-submenus" title="Corporation submenus" class="md-nav__link">
+    Corporation submenus
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#views-bootstrapping-menu-items" title="Views - bootstrapping menu items" class="md-nav__link">
-    Views - bootstrapping menu items
+  <a href="#bootstrapping-menu-items" title="Bootstrapping menu items" class="md-nav__link">
+    Bootstrapping menu items
   </a>
   
 </li>
@@ -1263,8 +1276,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#routes-access-control" title="Routes - access control" class="md-nav__link">
-    Routes - access control
+  <a href="#routes" title="Routes" class="md-nav__link">
+    Routes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control" title="Access Control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware" title="Middleware" class="md-nav__link">
+    Middleware
   </a>
   
 </li>
@@ -1273,11 +1301,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware" title="Middleware" class="md-nav__link">
-    Middleware
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1290,29 +1316,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#views-sidebar-menu" title="Views - sidebar menu" class="md-nav__link">
-    Views - sidebar menu
+  <a href="#sidebar-menu" title="Sidebar menu" class="md-nav__link">
+    Sidebar menu
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#views-character-submenus" title="Views - character submenus" class="md-nav__link">
-    Views - character submenus
+  <a href="#character-submenus" title="Character submenus" class="md-nav__link">
+    Character submenus
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#views-corporation-submenus" title="Views - corporation submenus" class="md-nav__link">
-    Views - corporation submenus
+  <a href="#corporation-submenus" title="Corporation submenus" class="md-nav__link">
+    Corporation submenus
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#views-bootstrapping-menu-items" title="Views - bootstrapping menu items" class="md-nav__link">
-    Views - bootstrapping menu items
+  <a href="#bootstrapping-menu-items" title="Bootstrapping menu items" class="md-nav__link">
+    Bootstrapping menu items
   </a>
   
 </li>
@@ -1351,28 +1377,27 @@
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
 <h1 id="developers-guides-package-development">Developers Guides - Package Development<a class="headerlink" href="#developers-guides-package-development" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>So, you want to write a SeAT package? Hopefully this guide helps you along the way!<br />
-This guide was written while writing the API package for SeAT <a href="https://github.com/eveseat/api">here</a>. I figured it would be best to try and capture the process as I am going through it to help in case I miss any important details.</p>
+<p>So, you want to write a SeAT package? Hopefully this guide helps you along the way! This guide was written while writing the API package for SeAT <a href="https://github.com/eveseat/api">here</a>. I figured it would be best to try and capture the process to help in case I miss any important details.</p>
 <h2 id="background-notes">Background notes<a class="headerlink" href="#background-notes" title="Permanent link">&para;</a></h2>
-<p>I think its important to keep in mind a few things about how SeAT is put together. The most important being a brief description of what each core package offers, and how you can integrate with them. For a breakdown on what the core packages provide, please refer the to breakdown <a href="../Core-Package-Breakdown">here</a>.</p>
-<p>SeAT 2.x is written on <a href="http://laravel.com/docs/5.3">Laravel 5.3 LTS</a>. A <strong>very</strong> good thing to do would be to actually read the documentation top-&gt;bottom and get an idea of what is possible with the framework. SeAT core packages make heavy use of many of the features, based directly of what has been interpreted by this very documentation.</p>
+<p>I think its important to keep in mind a few things about how SeAT is put together. The most important being a brief description of what each core package offers, and how you can integrate with them. For a breakdown on what the core packages provide, please refer the to breakdown <a href="../../../guides/development/package_breakdown/">here</a>.</p>
+<p>SeAT 3 is written on <a href="http://laravel.com/docs/5.5">Laravel 5.5</a>. A <strong>very</strong> good thing to do would be to actually read the documentation top-&gt;bottom and get an idea of what is possible with the framework. SeAT core packages make heavy use of many of the features, based directly of what has been interpreted by this very documentation.</p>
 <p>If you really want to start contributing packages, but juts cant get your head around this whole Laravel thing, then I can suggest you have a look at this excellent free course material covering the basics of what you will encounter in the SeAT codebase. <a href="https://laracasts.com/series/laravel-5-fundamentals">https://laracasts.com/series/laravel-5-fundamentals</a></p>
 <h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<p>In order to avoid conflicts with SeAT core, here are a few best practices which should help develop packages in isolation and prevent inconvenient conflicts in the future.</p>
+<p>No doubt, there are no limits to what code you can write, how you structure it and how you name things. However, the last thing you want is to have conflicts with the SeAT core, or someone elses package! The following list contains some tips to help you avoid those conflicts and to help people better discover your packages:</p>
 <ul>
 <li>Prefix your github repository name with <code>seat</code> eg: <code>seat-teamspeak</code>.</li>
 <li>Tag your github repository with <code>seat</code>.</li>
 <li>Use a unique package namespace such as <code>Author\Seat\Package\</code> eg: <code>Warlof\Seat\Teamspeak\</code>.</li>
 <li>Prefix your database table names with something unique to your package. eg <code>warlof_teamspeak_users</code>.</li>
-<li>Do not modify core tables. This will break future updates for users of you package.</li>
+<li>Do not modify core tables. This will break future updates for users of your package.</li>
 <li>Prefix your settings with both an author and package eg: <code>warlof.teamspeak.address</code>.</li>
 <li>Prefix redis records with both author and package eg: <code>warlof.teamspeak.channels</code>.</li>
 <li>In your <code>composer.json</code> file, set the <code>type</code> to <code>seat-plugin</code>.</li>
 </ul>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<p>The very first thing to do is prepare the empty git repository on say Github, as well as the composer package itself. Clone a clean repo, and run <code>composer init</code>, answering any questions. Once that is done, edit the resultant <code>composer.json</code> and prepare the <code>autoload</code> block. SeAT core follows the <a href="http://www.php-fig.org/psr/psr-4/">PSR-4</a> autoloading standard. I will suggest you do the same. For some more detailed composer info, refer to the docs <a href="https://getcomposer.org/doc/01-basic-usage.md">here</a>. For the API package, I am going to autoload <strong>Seat\Api</strong> from the <code>src</code> directory using PSR-4.</p>
+<p>The very first thing to do is prepare the empty git repository on say Github, as well as the composer package itself. Clone a clean repository, and run <code>composer init</code>, answering any questions. Once that is done, edit the resultant <code>composer.json</code> and prepare the <code>autoload</code> block. SeAT core follows the <a href="http://www.php-fig.org/psr/psr-4/">PSR-4</a> autoloading standard. I will suggest you do the same. For some more detailed composer info, refer to the docs <a href="https://getcomposer.org/doc/01-basic-usage.md">here</a>. For the API package, I am going to autoload <strong>Seat\Api</strong> from the <code>src</code> directory using PSR-4.</p>
 <h2 id="service-provider">Service provider<a class="headerlink" href="#service-provider" title="Permanent link">&para;</a></h2>
-<p>As mentioned in the package breakdowns <a href="../Core-Package-Breakdown">here</a>, the <em>eveseat/seat</em> repository bootstraps the packages via service providers. This is actually a Laravel convention that SeAT just follows. To get our package ready, we need to create a service provider. Thankfully there is a command to stub a new one for us. For the API package, I just ran <code>php artisan make:provider ApiServiceProvider</code> and copied the resultant file from <code>app/Providers</code> to my packages <code>src/</code> directory. Our packages file structure now looks as follows:</p>
+<p>As mentioned in the package breakdowns <a href="../../../guides/development/package_breakdown/">here</a>, the <em>eveseat/seat</em> repository bootstraps packages via service providers or package discovery. This is actually a Laravel convention that SeAT just follows. To get our package ready, we need to create a service provider. Thankfully there is a command to stub a new one for us. For the API package, I just ran <code>php artisan make:provider ApiServiceProvider</code> and copied the resultant file from <code>app/Providers</code> to my packages <code>src/</code> directory. Our packages file structure now looks as follows:</p>
 <div class="codehilite"><pre><span></span>├── composer.json
 └── src
     └── ApiServiceProvider.php
@@ -1396,12 +1421,11 @@ This guide was written while writing the API package for SeAT <a href="https://g
 </pre></div>
 
 
-<p>This will obviously change as we progress making the package.</p>
+<p>This will obviously change as we progress building the package.</p>
 <h2 id="routes-and-controllers">Routes and controllers<a class="headerlink" href="#routes-and-controllers" title="Permanent link">&para;</a></h2>
-<p>To start testing the API, we need to add a route and controller to process some requests and responses. My routes.php will have a global <code>Route::group()</code> to encapsulate the routes in the <strong>Seat\Api</strong> namespace as well as prefix them with <code>api/</code>.</p>
+<p>To start testing the API, we need to add a route and controller to process some requests and responses. My <code>routes.php</code> file will have a global <code>Route::group()</code> to encapsulate the routes in the <strong>Seat\Api</strong> namespace as well as prefix them with <code>api/</code>.</p>
 <div class="codehilite"><pre><span></span><span class="x">// File: routes.php</span>
-<span class="x">Route::group([</span>
-<span class="x">    &#39;namespace&#39; =&gt; &#39;Seat\Api\Http\Controllers&#39;,</span>
+<span class="x">Route::group([ &#39;namespace&#39; =&gt; &#39;Seat\Api\Http\Controllers&#39;,</span>
 <span class="x">    &#39;prefix&#39; =&gt; &#39;api&#39;</span>
 <span class="x">], function () {</span>
 
@@ -1427,8 +1451,9 @@ This guide was written while writing the API package for SeAT <a href="https://g
 
 
 <p>As a final test, I check that my route is accessible from a booted SeAT app. :)  </p>
-<h3 id="routes-access-control">Routes - access control<a class="headerlink" href="#routes-access-control" title="Permanent link">&para;</a></h3>
-<p>Obviously, some routes are not for everyones eyes. SeAT comes with middleware that can be used to filter out requests that may not be authorized for your route. As can be seen in the example below (from <a href="https://github.com/eveseat/api/blob/master/src/Http/routes.php#L28">here</a>), we are filtering out requests to <code>api-admin</code> for only superusers.</p>
+<h3 id="routes">Routes<a class="headerlink" href="#routes" title="Permanent link">&para;</a></h3>
+<h4 id="access-control">Access Control<a class="headerlink" href="#access-control" title="Permanent link">&para;</a></h4>
+<p>Obviously, some routes are not for everyone's eyes. SeAT comes with middleware that can be used to filter out requests that may not be authorized for your route. As can be seen in the example below (from <a href="https://github.com/eveseat/api/blob/e8c713740fc571683130379acff0f39736b937ad/src/Http/routes.php#L32">here</a>), we are filtering out requests to <code>api-admin</code> for only superusers.</p>
 <div class="codehilite"><pre><span></span><span class="x">Route::group([</span>
 <span class="x">        &#39;namespace&#39;  =&gt; &#39;Admin&#39;,</span>
 <span class="x">        &#39;middleware&#39; =&gt; &#39;bouncer:superuser&#39;, // The ACL specification.</span>
@@ -1441,8 +1466,8 @@ This guide was written while writing the API package for SeAT <a href="https://g
 </pre></div>
 
 
-<p>I suggest you have a look at the <code>eveseat/web</code> packages routes definitions for more examples on how the middlewares are used. <a href="https://github.com/eveseat/web/tree/master/src/Http/Routes">https://github.com/eveseat/web/tree/master/src/Http/Routes</a></p>
-<h2 id="middleware">Middleware<a class="headerlink" href="#middleware" title="Permanent link">&para;</a></h2>
+<p>I suggest you have a look at the <code>eveseat/web</code> packages routes definitions for more examples on how the middleware is used. <a href="https://github.com/eveseat/web/tree/master/src/Http/Routes">https://github.com/eveseat/web/tree/master/src/Http/Routes</a></p>
+<h4 id="middleware">Middleware<a class="headerlink" href="#middleware" title="Permanent link">&para;</a></h4>
 <p>To auth our API requests, we are going to go with token based authentication for now. We want users to present us with a <code>X-Token</code> header (from a valid allowed src IP address) before they may proceed with their request. To do this, we will filter requests using middleware. Thankfully, again, Laravel comes with a command to stub us some empty middleware. Run <code>php artisan make:middleware ApiToken</code> and copy it to your projects <code>Middleware</code> folder. Next we should register the middleware in our service provider. I do this by adding a method and calling it in <code>boot()</code>.</p>
 <p>See the complete middleware <a href="https://github.com/eveseat/api/blob/master/src/Http/Middleware/ApiToken.php">here</a></p>
 <div class="codehilite"><pre><span></span><span class="x">/**</span>
@@ -1462,10 +1487,9 @@ This guide was written while writing the API package for SeAT <a href="https://g
 
 
 <h2 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h2>
-<p>Although almost all of our interfacing with this package will be via the json api endpoints, we need to add a few routes that will give an administrator the ability to generate API tokens, as well as view logs etc. As mentioned, this will be for an administrator, so we will re-use the ACL features provided by the <code>eveseat/web</code> package to ensure that only admins an access our api-admin routes.<br />
-Views live in <code>resources/views</code> and are bootstrapped to the <code>api</code> namespace in the service provider. See the service provider <a href="https://github.com/eveseat/api/blob/master/src/ApiServiceProvider.php">here</a> for an example.</p>
+<p>Although almost all of our interfacing with this package will be via the json api endpoints, we need to add a few routes that will give an administrator the ability to generate API tokens as well as view logs etc. This will be for an administrator, so we will re-use the ACL features provided by the <code>eveseat/web</code> package to ensure that only admins an access our api-admin routes. Views live in <code>resources/views</code> and are bootstrapped to the <code>api</code> namespace in the service provider. See the service provider <a href="https://github.com/eveseat/api/blob/master/src/ApiServiceProvider.php">here</a> for an example.</p>
 <p>Note how we are re-using views that exist in the <code>web</code> namespace. All we have to do is extend one of the <a href="https://github.com/eveseat/web/tree/master/src/resources/views/layouts/grids">grids</a> like <a href="https://github.com/eveseat/api/blob/master/src/resources/views/list.blade.php#L1">here</a> and start without our blade template.</p>
-<h3 id="views-sidebar-menu">Views - sidebar menu<a class="headerlink" href="#views-sidebar-menu" title="Permanent link">&para;</a></h3>
+<h3 id="sidebar-menu">Sidebar menu<a class="headerlink" href="#sidebar-menu" title="Permanent link">&para;</a></h3>
 <p>Integrating with the sidebar is also really easy. All you have to do is create a config file, bootstrap it in the service provider and viola. The config file itself has a set structure for the <code>web</code> package to interpret and can be seen <a href="https://github.com/eveseat/api/blob/master/src/Config/package.sidebar.php">here</a>.</p>
 <div class="codehilite"><pre><span></span><span class="x">return [</span>
 <span class="x">    &#39;api&#39; =&gt; [</span>
@@ -1486,7 +1510,7 @@ Views live in <code>resources/views</code> and are bootstrapped to the <code>api
 
 
 <p>The format is generally an array, whereby the first key is the name of your package (<code>api</code> in this case). Thereafter you can specify the main entry, and any sub entries you want to add. The <code>route</code> key should refer to the named route. The sidebar loader will resolve the route itself for you. If you have any permissions requirements for your package, the <code>permission</code> key can be used together with a required SeAT permission to render the view.</p>
-<h3 id="views-character-submenus">Views - character submenus<a class="headerlink" href="#views-character-submenus" title="Permanent link">&para;</a></h3>
+<h3 id="character-submenus">Character submenus<a class="headerlink" href="#character-submenus" title="Permanent link">&para;</a></h3>
 <p>Integrating with the character sub menus is also really easy. Just like the sidebar, all you have to do is create a config file, bootstrap it in the service provider and viola. The namespace should be named <code>package.character.menu</code> in your service provider. A sample config file can be seen below:</p>
 <div class="codehilite"><pre><span></span><span class="x">// file: package.character.menu.php</span>
 
@@ -1501,7 +1525,7 @@ Views live in <code>resources/views</code> and are bootstrapped to the <code>api
 </pre></div>
 
 
-<h3 id="views-corporation-submenus">Views - corporation submenus<a class="headerlink" href="#views-corporation-submenus" title="Permanent link">&para;</a></h3>
+<h3 id="corporation-submenus">Corporation submenus<a class="headerlink" href="#corporation-submenus" title="Permanent link">&para;</a></h3>
 <p>Integrating with the corporation sub menus is also really easy. Just like the sidebar and character menus, all you have to do is create a config file, bootstrap it in the service provider and viola. The namespace should be named <code>package.corporation.menu</code> in your service provider. A sample config file can be seen below:</p>
 <div class="codehilite"><pre><span></span><span class="x">// file: package.corporation.menu.php</span>
 
@@ -1516,7 +1540,7 @@ Views live in <code>resources/views</code> and are bootstrapped to the <code>api
 </pre></div>
 
 
-<h3 id="views-bootstrapping-menu-items">Views - bootstrapping menu items<a class="headerlink" href="#views-bootstrapping-menu-items" title="Permanent link">&para;</a></h3>
+<h3 id="bootstrapping-menu-items">Bootstrapping menu items<a class="headerlink" href="#bootstrapping-menu-items" title="Permanent link">&para;</a></h3>
 <p>In the above items, we refer to the files needing to be <em>bootstrapped</em> via the service provider. All this really means is that we have to tell the Laravel application where to find configuration information for a namespace. So, if we wanted to add a sidebar item, we would add the following line to the <code>register()</code> method of the service provider:</p>
 <div class="codehilite"><pre><span></span><span class="x">// Include this packages menu items</span>
 <span class="x">$this-&gt;mergeConfigFrom(__DIR__ . &#39;/Config/package.sidebar.php&#39;, &#39;package.sidebar&#39;);</span>

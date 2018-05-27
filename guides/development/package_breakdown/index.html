@@ -872,6 +872,61 @@
     Understanding the core SeAT packages
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eveseatapi" title="eveseat/api" class="md-nav__link">
+    eveseat/api
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatconsole" title="eveseat/console" class="md-nav__link">
+    eveseat/console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseateveapi" title="eveseat/eveapi" class="md-nav__link">
+    eveseat/eveapi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatnotifications" title="eveseat/notifications" class="md-nav__link">
+    eveseat/notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatweb" title="eveseat/web" class="md-nav__link">
+    eveseat/web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatseat" title="eveseat/seat" class="md-nav__link">
+    eveseat/seat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatservices" title="eveseat/services" class="md-nav__link">
+    eveseat/services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -1107,6 +1162,61 @@
     Understanding the core SeAT packages
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eveseatapi" title="eveseat/api" class="md-nav__link">
+    eveseat/api
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatconsole" title="eveseat/console" class="md-nav__link">
+    eveseat/console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseateveapi" title="eveseat/eveapi" class="md-nav__link">
+    eveseat/eveapi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatnotifications" title="eveseat/notifications" class="md-nav__link">
+    eveseat/notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatweb" title="eveseat/web" class="md-nav__link">
+    eveseat/web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatseat" title="eveseat/seat" class="md-nav__link">
+    eveseat/seat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eveseatservices" title="eveseat/services" class="md-nav__link">
+    eveseat/services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -1131,44 +1241,36 @@
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
 <h1 id="developers-guides-core-package-breakdown">Developers Guides - Core Package Breakdown<a class="headerlink" href="#developers-guides-core-package-breakdown" title="Permanent link">&para;</a></h1>
 <h2 id="understanding-the-core-seat-packages">Understanding the core SeAT packages<a class="headerlink" href="#understanding-the-core-seat-packages" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>eveseat/api</strong> <a href="https://github.com/eveseat/api">link</a><br />
-Namespace: <strong>Seat\Api</strong><br />
-This repository contains all of the SeAT Api Endpoints. A full description of available methods can be found here: [[SeAT API Reference|SeAT-API-Reference]]</p>
-</li>
-<li>
-<p><strong>eveseat/console</strong> <a href="https://github.com/eveseat/console">link</a><br />
-Namespace: <strong>Seat\Console</strong><br />
-This repository contains all of the SeAT console applications. Console apps are accessed via the <code>artisan</code> command line eg: <code>php artisan seat:version</code>. The console applications typically make use of repository classes (more on these later) in the <em>eveseat/services</em> repo to retrieve and set information from the database. For more information on how to write a Laravel Console Command, see the <a href="http://laravel.com/docs/5.1/artisan">documentation here</a></p>
-</li>
-<li>
-<p><strong>eveseat/eveapi</strong> <a href="https://github.com/eveseat/eveapi">link</a><br />
-Namespace: <strong>Seat\Eveapi</strong><br />
-This repository is the heart of the EVE API update logic. It is responsible for doing the <strong>actual</strong> update work, pulling the EVE API XML documents, parsing them and storing the resultant data in the database. Most of the date models live in this repository</p>
-</li>
-<li>
-<p><strong>eveseat/notifications</strong> <a href="https://github.com/eveseat/notifications">link</a><br />
-Namespace: <strong>Seat\Notifications</strong><br />
-This repository contains a set of scheduled jobs that perform notifications type tasks. A notification can be something as simple as an alert about a corporation member that has been inactive for a period of time.</p>
-</li>
-<li>
-<p><strong>eveseat/web</strong> <a href="https://github.com/eveseat/eveapi">link</a><br />
-Namespace: <strong>Seat\Eveapi</strong><br />
-This repository contains the web interface for SeAT. It contains by far the most complex <a href="https://github.com/eveseat/web/blob/master/src/WebServiceProvider.php">service provider</a> and will undoubtedly become the prime example/reference when developing packages for SeAT. This package is also the only one that has a permissions / ACL concept. Refer the to the permissions wiki document for more information.</p>
-</li>
-<li>
-<p><strong>eveseat/seat</strong> <a href="https://github.com/eveseat/seat">link</a><br />
-Namespace: <strong>App</strong><br />
-This is the main SeAT repository. It does not really contain much logic. It should actually be seen as the glue between all of the packages. This is the repository that is cloned when a new installation is done.<br />
-The most important part of this repository is the service providers that are bootstrapped with the application. The <a href="https://github.com/eveseat/seat/blob/master/config/app.php#L111">providers array</a> has the default Laravel providers as well as the SeAT providers at the end. These providers tell the application where to find routes, views, configs etc. For more detailed information, refer to the <a href="http://laravel.com/docs/5.1/providers">Laravel 5.1 documentation</a>. When you write your package, the user will have to add your provider to this very providers array for the package to become available, just like the SeAT core packages.</p>
-</li>
-<li>
-<p><strong>eveseat/services</strong> <a href="https://github.com/eveseat/services">link</a><br />
-Namespace: <strong>Seat\Services</strong><br />
-This repository contains 'services'. A service is defined as any form of helper and or repository that other packages can depend on. The <em>eveseat/web</em> package (amongst others) make heavy use of the repository classes in this package.</p>
-</li>
-</ul>
+<p>This section aims to describe the functional differences between the various SeAT packages.</p>
+<h3 id="eveseatapi">eveseat/api<a class="headerlink" href="#eveseatapi" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>Seat\Api</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/api">link</a></p>
+<p>This repository contains all of the SeAT Api Endpoints, as well as the routes and views for API key management.</p>
+<h3 id="eveseatconsole">eveseat/console<a class="headerlink" href="#eveseatconsole" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>Seat\Console</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/console">link</a></p>
+<p>This repository contains all of the SeAT console applications. Console apps are accessed via the <code>artisan</code> command line eg: <code>php artisan seat:version</code>. Console applications typically make use of repository classes (more on these later) that live in the <em>eveseat/services</em> source code repository to retrieve and set information from the database. For more information on how to write a Laravel Console Command, see the <a href="http://laravel.com/docs/5.5/artisan">documentation here</a></p>
+<h3 id="eveseateveapi">eveseat/eveapi<a class="headerlink" href="#eveseateveapi" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>Seat\Eveapi</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/eveapi">link</a></p>
+<p>This repository is the heart of the API update logic. It is responsible for doing the <strong>actual</strong> update work, pulling the EVE API documents from ESI, parsing them and storing the resultant data in the database. Most of the data models live in this repository too.</p>
+<h3 id="eveseatnotifications">eveseat/notifications<a class="headerlink" href="#eveseatnotifications" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>Seat\Notifications</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/notifications">link</a></p>
+<p>This repository contains a set of scheduled jobs that perform notifications type tasks. A notification can be something as simple as an alert about a corporation member that has been inactive for a period of time.</p>
+<h3 id="eveseatweb">eveseat/web<a class="headerlink" href="#eveseatweb" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>Seat\Eveapi</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/eveapi">link</a></p>
+<p>This repository contains the web interface for SeAT. It contains by far the most complex <a href="https://github.com/eveseat/web/blob/master/src/WebServiceProvider.php">service provider</a> and will undoubtedly become the prime example/reference when developing packages for SeAT. This package is also the only one that has a permissions / ACL concept. Refer the to the permissions document for more information.</p>
+<h3 id="eveseatseat">eveseat/seat<a class="headerlink" href="#eveseatseat" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>App</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/seat">link</a></p>
+<p>This is the main SeAT repository. It does not really contain much logic. In fact, it should just be seen as the glue between all of the core packages. This is the repository that is cloned when a new installation is done.</p>
+<p>The most important part of this repository is the service providers that are bootstrapped with the application. The <a href="https://github.com/eveseat/seat/blob/39ff75beb8185acd46f8490129e9178a9f190a70/config/app.php#L168">providers array</a> has the default Laravel providers as well as the SeAT providers at the end. These providers tell the application where to find routes, views, configs etc. For more detailed information about providers, refer to the <a href="http://laravel.com/docs/5.5/providers">Laravel 5.5 documentation</a>. When you write your package though, you should make use of package discovery as described in the <a href="https://laravel.com/docs/5.5/packages#package-discovery">Laravel 5.5 documenation</a>. This will make the installation of your package super simple without the need to edit any files.</p>
+<h3 id="eveseatservices">eveseat/services<a class="headerlink" href="#eveseatservices" title="Permanent link">&para;</a></h3>
+<p>Namespace: <strong>Seat\Services</strong></p>
+<p>Source Code: <a href="https://github.com/eveseat/services">link</a></p>
+<p>This repository contains 'services'. A service is defined as any form of helper and or repository that other packages can depend on. The <em>eveseat/web</em> package (amongst others) make heavy use of the repository classes in this package.</p>
                 
                   
                 
