@@ -390,6 +390,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#composer-and-seat" title="Composer and SeAT" class="md-nav__link">
+    Composer and SeAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-seat" title="Setup SeAT" class="md-nav__link">
+    Setup SeAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webserver" title="Webserver" class="md-nav__link">
+    Webserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esi-and-sso-configuration" title="ESI and SSO Configuration" class="md-nav__link">
+    ESI and SSO Configuration
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1130,6 +1158,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#composer-and-seat" title="Composer and SeAT" class="md-nav__link">
+    Composer and SeAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-seat" title="Setup SeAT" class="md-nav__link">
+    Setup SeAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webserver" title="Webserver" class="md-nav__link">
+    Webserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esi-and-sso-configuration" title="ESI and SSO Configuration" class="md-nav__link">
+    ESI and SSO Configuration
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1174,6 +1230,7 @@
 </pre></div>
 
 
+<h3 id="composer-and-seat">Composer and SeAT<a class="headerlink" href="#composer-and-seat" title="Permanent link">&para;</a></h3>
 <p>Next, we need <a href="https://getcomposer.org/">composer</a> that you can install with:</p>
 <div class="codehilite"><pre><span></span>curl -sS https://getcomposer.org/installer <span class="p">|</span> php -- --install-dir<span class="o">=</span>/usr/local/bin --filename<span class="o">=</span>composer <span class="o">&amp;&amp;</span> <span class="nb">hash</span> -r
 </pre></div>
@@ -1184,6 +1241,7 @@
 </pre></div>
 
 
+<h3 id="setup-seat">Setup SeAT<a class="headerlink" href="#setup-seat" title="Permanent link">&para;</a></h3>
 <p>Once installed, <code>cd</code> to the new <code>seat/</code> directory and publish migrations and assets with:</p>
 <div class="codehilite"><pre><span></span>php artisan vendor:publish --force --all
 </pre></div>
@@ -1210,8 +1268,10 @@
 </pre></div>
 
 
+<h3 id="webserver">Webserver<a class="headerlink" href="#webserver" title="Permanent link">&para;</a></h3>
 <p>Configure a web server to serve the <code>seat/public/</code> directory to the world. Dont serve the root <code>seat</code> directory as this will expose your <code>.env</code> file with your database password and SSO secrets in it.</p>
 <p>Next, download and configure supervisord and have it keep the <code>php artisan horizon</code> command alive. This will allow you to process jobs.</p>
+<h3 id="esi-and-sso-configuration">ESI and SSO Configuration<a class="headerlink" href="#esi-and-sso-configuration" title="Permanent link">&para;</a></h3>
 <p>Finally, setup the ESI / SSO environment as described in <a href="../../../../guides/installation/basic_installation/esi/">this</a> document.</p>
                 
                   
