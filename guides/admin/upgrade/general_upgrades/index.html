@@ -1170,7 +1170,13 @@
 <h2 id="upgrading-using-the-seat-tool">Upgrading using the seat tool<a class="headerlink" href="#upgrading-using-the-seat-tool" title="Permanent link">&para;</a></h2>
 <p>All you need to do is run the upgrade command and all will be done for you. Follow the next steps to get this done:</p>
 <ul>
-<li>If you haven't downloaded the <code>seat</code> tool yet, do so now by running <code>bash &lt;(curl -fsSL https://git.io/seat-installer)</code>.</li>
+<li>If you haven't downloaded the <code>seat</code> tool yet, do so now by running:</li>
+</ul>
+<div class="codehilite"><pre><span></span>curl -fsSL https://git.io/seat-tool -o /usr/local/bin/seat <span class="o">&amp;&amp;</span> chmod +x /usr/local/bin/seat
+</pre></div>
+
+
+<ul>
 <li>If you already have the <code>seat</code> tool downloaded, make sure the tool itself is at its latest version. Do this by running: <code>seat update:self</code>.</li>
 <li>If you have not yet backed up your database, do so now! This is the only part that <strong>can not</strong> be recovered in case something goes wrong!</li>
 <li>Ensure that the job queue is empty.</li>
