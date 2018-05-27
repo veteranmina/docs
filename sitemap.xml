@@ -52,6 +52,12 @@
     </url>
         
     <url>
+     <loc>https://github.com/eveseat/docs/guides/installation/manual_installation/manual/</loc>
+     <lastmod>2018-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://github.com/eveseat/docs/guides/installation/manual_installation/ubuntu/</loc>
      <lastmod>2018-05-27</lastmod>
      <changefreq>daily</changefreq>

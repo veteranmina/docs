@@ -309,45 +309,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Getting Started
-      </label>
-    
     <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
       Getting Started
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#manual-installation" title="Manual Installation" class="md-nav__link">
-    Manual Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-instructions" title="General Instructions" class="md-nav__link">
-    General Instructions
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -384,6 +348,18 @@
   <li class="md-nav__item">
     <a href="../docker/" title="Docker" class="md-nav__link">
       Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manual/" title="Manual" class="md-nav__link">
+      Manual
     </a>
   </li>
 
@@ -1094,29 +1070,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#manual-installation" title="Manual Installation" class="md-nav__link">
-    Manual Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-instructions" title="General Instructions" class="md-nav__link">
-    General Instructions
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1132,29 +1085,15 @@
                 
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>So you have decided to manually install SeAT, before you start it would be a good idea to review what you need first. Once you have done this, head to the corresponding installation guide in the sidebar left which fits your setup best.</p>
-<h2 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Make sure you review the hardware and software requirements sections before installing anything intended for production use!</p>
-</div>
-<h2 id="general-instructions">General Instructions<a class="headerlink" href="#general-instructions" title="Permanent link">&para;</a></h2>
-<p>Finally, you can always install SeAT manually. You will need to get PHP 7.1, MariaDB, Redis and a web server such as nginx running. Guides for popular Linux distributions such as Debian, Ubuntu and CentOS can be found in the sidebar, but if those distributions aren't your cup of tea, follow these steps to get going:</p>
+<p>So you have decided to install SeAT, but without the <a href="../../../../guides/installation/basic_installation/installation/">Docker</a> or <a href="../../../../guides/installation/basic_installation/installation/">SeAT tool</a> helpers. Before you start it would be a good idea to review what you need first based on the <a href="../../../../general/requirements/">requirements</a> page.</p>
+<p>With the requirements out of the way, you need to choose which guide you want to follow. We have a number of detailed walkthroughs for popular Linux distributions such as CentOS, Ubuntu and Debian. Those can be found below, or linked in the sidebar:</p>
 <ul>
-<li>Install PHP 7.1.</li>
-<li>Install the latest MariaDB / MySQL server.</li>
-<li>Install Redis server.</li>
-<li>Install the <a href="https://getcomposer.org/">composer</a> PHP dependency manager.</li>
-<li>Choose where you want the SeAT sources to live and start the download with <code>composer create-project eveseat/seat</code>.</li>
-<li>Once installed, <code>cd</code> to the new <code>seat/</code> directory and publish migrations and assets with <code>php artisan vendor:publish --force --all</code>.</li>
-<li>If you want the Swagger API documentation, run <code>php artisan l5-swagger:generate</code>.</li>
-<li>Update the <code>.env</code> file with your database settings. Ideally SeAT should have full control over only its own database (not the entire database server);</li>
-<li>Run the database migrations with <code>php artisan migrate</code>.</li>
-<li>Update the EVE Static Data tables with <code>php artisan eve:update:sde -n</code>.</li>
-<li>Run the SeAT schedule seeder with <code>php artisan db:seed --class=Seat\\Services\\database\\seeds\\ScheduleSeeder</code>.</li>
-<li>Configure a web server to serve the <code>public/</code> directory to the world.</li>
-<li>Download supervisord and have it keep the <code>php artisan horizon</code> command alive. This will allow you to process jobs.</li>
+<li><a href="../../../../guides/installation/manual_installation/centos/">CentOS</a></li>
+<li><a href="../../../../guides/installation/manual_installation/debian/">Debian</a></li>
+<li><a href="../../../../guides/installation/manual_installation/docker/">Docker</a></li>
+<li><a href="../../../../guides/installation/manual_installation/ubuntu/">Ubuntu</a></li>
 </ul>
+<p>Finally, if you have done this type of thing before or want to go completely solo, there is always the <a href="../../../../guides/installation/manual_installation/manual/">manual</a> installation guide.</p>
                 
                   
                 
