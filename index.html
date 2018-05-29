@@ -1183,47 +1183,40 @@
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
 <h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h1>
 <p>Welcome to the <a href="https://github.com/eveseat/seat">SeAT</a> documentation pages!</p>
-<p>This site aims to provide you with useful, technical information about SeAT. Please refer to the index on the side for 
-detailed installation instructions, documentation about SeAT internals and or development guidelines!</p>
+<p>This site aims to provide you with useful, technical information about SeAT. Please refer to the index on the side for detailed installation instructions, documentation about SeAT internals and or development guidelines!</p>
 <div class="admonition info">
 <p class="admonition-title">Contributing to Documentation</p>
-<p>Great software is coupled with even greater documentation. If you would like to contribute to making this 
-documentation even better, please don't hesitate to fork the 
-<a href="https://github.com/eveseat/docs">documentation repository</a> and submit a pull request with your contribution. 
-We are always looking for better information.</p>
+<p>Great software is coupled with even greater documentation. If you would like to contribute to making this documentation even better, please don't hesitate to fork the <a href="https://github.com/eveseat/docs">documentation repository</a> and submit a pull request with your contribution. We are always looking for better information.</p>
 </div>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<p>There are many ways to install SeAT. In all cases you will need a dedicated Linux server as a minimum (except for Docker). Using the docker installation (which is recommended) you are free to choose <em>any</em> docker capable host (yes, even Windows!). However, if you choose to install SeAT in a VM, we suggest you choose an LTS version of Ubuntu.</p>
+<p>There are many ways to install SeAT. In all cases you will need a dedicated Linux server as a minimum (except for Docker). Using the docker installation you are free to choose <em>any</em> Docker capable host (yes, even Windows!). However, if you choose to install SeAT in a VM, we suggest you choose an LTS version of Ubuntu, Debian or CentOS.</p>
 <h3 id="installation-options">Installation Options<a class="headerlink" href="#installation-options" title="Permanent link">&para;</a></h3>
 <p>Ignoring the details, to get SeAT installed quickly you have a few options. All of them will get you SeAT installed, but you still have to manually configure an SSO application on the EVE Online Developers portal.</p>
 <table>
 <thead>
 <tr>
 <th>Method</th>
-<th>command + comments</th>
+<th>Comments</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>via Docker (recommended)</td>
-<td><code>bash &lt;(curl -fsSL https://git.io/seat-docker)</code> <br> This will download and run a <a href="https://github.com/eveseat/scripts/blob/master/docker-compose/bootstrap.sh">helper script</a> that will ensure <code>docker</code> and <code>docker-compose</code> is available and start up SeAT in containers.</td>
+<td>Docker</td>
+<td><code>bash &lt;(curl -fsSL https://git.io/seat-docker)</code> <br> This will download and run a <a href="https://github.com/eveseat/scripts/blob/master/docker-compose/bootstrap.sh">helper script</a> that will ensure <code>docker</code> and <code>docker-compose</code> is available and start SeAT in containers.</td>
 </tr>
 <tr>
 <td>SeAT Tool</td>
-<td><code>bash &lt;(curl -fsSL https://git.io/seat-installer)</code>  <br> This will download and run a helper script to start the installation process. Once done, the SeAT Tool will be available to use and provide semi automated installation option for <em>Debian 8 / 9</em>, <em>Ubuntu LTS versions</em> and <em>CentOS 7</em>. To get started with this method, a helper script should be downloaded and run.</td>
+<td><code>bash &lt;(curl -fsSL https://git.io/seat-installer)</code> <br> This will download and run a <a href="https://github.com/eveseat/scripts/blob/master/install/installer.sh">helper script</a> to start the installation process. Once done, the SeAT Tool will be available to use and provide semi automated installation option for <em>Debian 8 / 9</em>, <em>Ubuntu LTS versions</em> and <em>CentOS 7</em>.</td>
 </tr>
 <tr>
 <td>Manually</td>
-<td>see instructions in (Advanced) Installations. You can always install SeAT using one of the detailed manual guides available. All you need is PHP, MariaDB, Redis and a web server and some Linux experience.</td>
+<td>You can always install SeAT using one of the detailed manual guides available. All you need is PHP, MariaDB, Redis and a web server and some Linux experience. Refer to the <a href="http://0.0.0.0:8000/guides/installation/manual_installation/getting_started/">manual guides</a> for more information.</td>
 </tr>
 </tbody>
 </table>
-<p>Best way to start your SeAT installation would be <a href="./guides/installation/basic_installation/installation">Basic Installation</a>
-if you know what you are doing head to: <a href="./guides/installation/manual_installation/getting_started">Advanced Installation</a></p>
+<p>Best way to start your SeAT installation would be <a href="./guides/installation/basic_installation/installation">Basic Installation</a>. However, if you know what you are doing or need more options, head over to <a href="./guides/installation/manual_installation/getting_started">Advanced Installation</a></p>
 <h2 id="upgrades-updates">Upgrades / Updates<a class="headerlink" href="#upgrades-updates" title="Permanent link">&para;</a></h2>
-<p>SeAT is developed continuously, new features are developed, performance improvements made and bug fixed are. If you
-wish to upgrade to the latest version of SeAT refer to the <a href="./guides/admin/upgrade/general_upgrades">upgrade-section</a>.
-Refer to the upgrade guides applicable to your chosen installation method.</p>
+<p>SeAT is being worked on continuously. New features are added, performance improvements are made and bug fixed are done too. If you wish to upgrade to the latest version of SeAT refer to the <a href="./guides/admin/upgrade/general_upgrades">upgrade-section</a>.</p>
 <h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">&para;</a></h2>
 <p>Want to get in touch with developers, or just other users of SeAT? Refer to the <a href="./about/contact/">contact</a> details page to find out how!</p>
                 

@@ -1160,10 +1160,6 @@
 <td>Hard Drive Space</td>
 <td>10GB (used mostly by the database and the EVE API caching). Again, more is better. Monitor this closely as your installation grows!</td>
 </tr>
-<tr>
-<td>Operating System</td>
-<td>Any linux distribution will work with SeAT (depending on how you choose to install). For Windows, the only option available is <a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a> with Linux containers</td>
-</tr>
 </tbody>
 </table>
 <div class="admonition warning">
@@ -1171,38 +1167,45 @@
 <p>If you intend to process a large amount of data, plan your storage accordingly. The SeAT database can grow incredibly quickly depending on the amount of tokens you process.</p>
 </div>
 <h2 id="software-requirements">Software Requirements<a class="headerlink" href="#software-requirements" title="Permanent link">&para;</a></h2>
-<p>Software version requirements are based on a <em>minimum</em> requirement (Dockerized installation methods take care of these for you!). The requirements are:</p>
+<p>Software version requirements are based on a <em>minimum</em> requirement.</p>
 <table>
 <thead>
 <tr>
 <th>Type</th>
 <th>Requirement</th>
+<th>Version Check</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Operating System</td>
-<td>Any Linux-based distribution that can run PHP and a Web server should be fine.  For Windows, you will need Docker for Linux containers. We recommend you choose something like <a href="https://www.ubuntu.com/">Ubuntu LTS</a> as it is well supported and tested.</td>
+<td>Linux, preferably Ubuntu, Debian or CentOS. For Windows, you will need <a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a>.</td>
+<td>Usually, running <code>cat /etc/issue</code> should give you a good idea.</td>
 </tr>
 <tr>
 <td>PHP</td>
 <td><a href="http://php.net/">PHP: 7.1</a></td>
+<td><code>php -v</code></td>
 </tr>
 <tr>
 <td>Database</td>
 <td><a href="https://mariadb.org/">MariaDB: ^10.2.7</a> or <a href="https://www.mysql.com/">MySQL: ^5.7</a></td>
+<td><code>mysql -V</code></td>
 </tr>
 <tr>
 <td>Caching Service</td>
 <td><a href="https://redis.io/">Redis</a></td>
+<td><code>redis-server -v</code></td>
 </tr>
 <tr>
 <td>Service Supervisor</td>
 <td><a href="http://supervisord.org/">Supervisor : 3.x.x</a></td>
+<td><code>supervisord -v</code></td>
 </tr>
 <tr>
 <td>Web Server</td>
 <td>nginx, Apache</td>
+<td><code>nginx -v</code></td>
 </tr>
 </tbody>
 </table>
@@ -1212,16 +1215,19 @@
 <tr>
 <th>Type</th>
 <th>Requirement</th>
+<th>Version Check</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Docker</td>
 <td><a href="https://www.docker.com/">Docker: ^18.0</a></td>
+<td><code>docker -v</code></td>
 </tr>
 <tr>
 <td>Docker Compose</td>
 <td><a href="https://docs.docker.com/compose/">Docker compose: ^1.20</a></td>
+<td><code>docker-compose version</code></td>
 </tr>
 </tbody>
 </table>
