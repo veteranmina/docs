@@ -713,6 +713,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1175,7 +1187,11 @@
 <p>SeAT has a REST API. Endpoints are protected by an access token that is limited by IP address. For every IP address that wants to make API requests to SeAT, a unique token is required. API Tokens have no concept of ACL's. The API should primarily be used for integrations with other systems.</p>
 <h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
 <p>Currently, all API endpoints live at <code>&lt;seat url&gt;/api/&lt;version&gt;</code> where <code>&lt;seat url&gt;</code> is the full url to your SeAT instance and <code>&lt;version&gt;</code> is the API version you wish to interact with.</p>
-<p>Since SeAT 3.0 api endpoint documentation is driven from within the source code and presented via a Swagger UI. As a result, endpoint documentation is now directly available on your instance at the following address <code>&lt;seat url&gt;/api/documentation</code>. A link to the documentation is also provided on the API key management page available to users with the Superuser role.</p>
+<p>Since SeAT 3.0, API documentation is generated from source code annotations and presented via a Swagger UI. As a result, endpoint documentation is now directly available on your instance at the following address <code>&lt;seat url&gt;/api/documentation</code>. A link to the documentation is also provided on the API key management page available to users with the Superuser role.</p>
+<div class="admonition warning">
+<p class="admonition-title">Swagger JSON</p>
+<p>If you get an error when viewing the API documentation that complains about a file called <code>api-docs.json</code>, make sure that you ran the <code>php artisan l5-swagger:generate</code> command as part of the installation and upgrade routines.</p>
+</div>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
 <p>Authentication to the SeAT API is done via a <code>X-Token</code> header. A token may be obtained by browsing to the API settings page in the SeAT WebUI and generating one. A sample request using <code>curl</code> with an authentication token can be seen below:</p>
 <div class="codehilite"><pre><span></span>$ curl -X GET -H <span class="s2">&quot;X-Token:123456&quot;</span> -H <span class="s2">&quot;Accept: application/json&quot;</span> http://localhost:8000/api/v1/key

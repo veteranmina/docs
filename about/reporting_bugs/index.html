@@ -713,6 +713,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/admin/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1069,13 +1081,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagnose-command" title="Diagnose command" class="md-nav__link">
-    Diagnose command
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#report-the-bug" title="Report the bug" class="md-nav__link">
     Report the bug
   </a>
@@ -1152,13 +1157,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagnose-command" title="Diagnose command" class="md-nav__link">
-    Diagnose command
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#report-the-bug" title="Report the bug" class="md-nav__link">
     Report the bug
   </a>
@@ -1186,36 +1184,22 @@
                 
                 <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
 <h1 id="reporting-bugs">Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permanent link">&para;</a></h1>
-<p>So, the inevitable happened. Something broke! Its ok. The first thing to do is to relax, and prepare some info for a bug report.</p>
-<h3 id="the-more-info-the-better">The more info, the better<a class="headerlink" href="#the-more-info-the-better" title="Permanent link">&para;</a></h3>
+<p>So, you think its time to report an issue. Awesome! However, before you do this, <em>please</em> go through the <a href="../../guides/admin/troubleshooting/">troubleshooting</a> steps first to identify any common errors that you might be able to to fix yourself.</p>
+<h2 id="the-more-info-the-better">The more info, the better<a class="headerlink" href="#the-more-info-the-better" title="Permanent link">&para;</a></h2>
 <p>In order to best understand the bug, we need as much info as possible about your environment. For that, you can run the following command (from your SeAT directory), and copy / paste the output as part of your bug report:</p>
 <div class="codehilite"><pre><span></span>php artisan seat:admin:diagnose
 </pre></div>
 
 
-<h3 id="log-files">Log files<a class="headerlink" href="#log-files" title="Permanent link">&para;</a></h3>
-<p>Log files are a fantastic resource. Check out the laravel log for any <code>Exception</code> type errors, and add them to your bug report. The log file is located (relative to where you installed SeAT) at:</p>
-<div class="codehilite"><pre><span></span>storage/logs/laravel.log
+<h2 id="log-files">Log files<a class="headerlink" href="#log-files" title="Permanent link">&para;</a></h2>
+<p>Log files are a fantastic resource. Check out the Laravel log for any <code>Exception</code> type errors, and add them to your bug report. The log file is located (relative to where you installed SeAT) at:</p>
+<div class="codehilite"><pre><span></span>storage/logs/laravel-&lt;todays-date&gt;.log
 </pre></div>
 
 
-<h3 id="screenshots-and-debug-mode">Screenshots and debug mode<a class="headerlink" href="#screenshots-and-debug-mode" title="Permanent link">&para;</a></h3>
+<h2 id="screenshots-and-debug-mode">Screenshots and debug mode<a class="headerlink" href="#screenshots-and-debug-mode" title="Permanent link">&para;</a></h2>
 <p>Screenshots may also help, so don't be shy to take some and attach them to your bug report! If you flip your installation into debug mode then it may be possible to capture the error that is occurring via a screenshot.</p>
-<p>To flip to debug mode, open your applications <code>.env</code> file, and set <code>DEBUG=false</code> to <code>DEBUG=true</code>. See: <a href="https://github.com/eveseat/seat/blob/master/.env.example#L2">https://github.com/eveseat/seat/blob/master/.env.example#L2</a></p>
-<h3 id="diagnose-command">Diagnose command<a class="headerlink" href="#diagnose-command" title="Permanent link">&para;</a></h3>
-<p>SeAT is provided with some diagnostic tests that you can run using the following cli command :</p>
-<div class="codehilite"><pre><span></span>php artisan seat:admin:diagnose
-</pre></div>
-
-
-<p>The report it will produce is including a few of basic checks that should assist you in your problem resolution like
-ensuring the folder is writable by SeAT, the database is reachable, as well as the version of your installed SeAT packages.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Despite the check that's done by the command, you need to run it using the SeAT executive user (used to be <code>seat</code>).
-Other wise, it could produce false positive response.</p>
-</div>
-<h3 id="report-the-bug">Report the bug<a class="headerlink" href="#report-the-bug" title="Permanent link">&para;</a></h3>
+<h2 id="report-the-bug">Report the bug<a class="headerlink" href="#report-the-bug" title="Permanent link">&para;</a></h2>
 <p>Finally, to report the bug, head over to <a href="https://github.com/eveseat/seat/issues">https://github.com/eveseat/seat/issues</a> and click on <strong>New Issue</strong>.</p>
                 
                   
