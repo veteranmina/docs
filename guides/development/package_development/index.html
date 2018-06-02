@@ -906,13 +906,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" title="Best practices" class="md-nav__link">
-    Best practices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#getting-started" title="Getting started" class="md-nav__link">
     Getting started
   </a>
@@ -1040,6 +1033,18 @@
   <li class="md-nav__item">
     <a href="../seat_api/" title="SeAT API" class="md-nav__link">
       SeAT API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tips/" title="Development Tips" class="md-nav__link">
+      Development Tips
     </a>
   </li>
 
@@ -1252,13 +1257,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" title="Best practices" class="md-nav__link">
-    Best practices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#getting-started" title="Getting started" class="md-nav__link">
     Getting started
   </a>
@@ -1390,22 +1388,11 @@
 <h1 id="developers-guides-package-development">Developers Guides - Package Development<a class="headerlink" href="#developers-guides-package-development" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>So, you want to write a SeAT package? Hopefully this guide helps you along the way! This guide was written while writing the API package for SeAT <a href="https://github.com/eveseat/api">here</a>. I figured it would be best to try and capture the process to help in case I miss any important details.</p>
+<p>Be sure to also have a look at the <a href="../../../guides/development/tips/">Development Tips</a> page!</p>
 <h2 id="background-notes">Background notes<a class="headerlink" href="#background-notes" title="Permanent link">&para;</a></h2>
 <p>I think its important to keep in mind a few things about how SeAT is put together. The most important being a brief description of what each core package offers, and how you can integrate with them. For a breakdown on what the core packages provide, please refer the to breakdown <a href="../../../guides/development/package_breakdown/">here</a>.</p>
 <p>SeAT 3 is written on <a href="http://laravel.com/docs/5.5">Laravel 5.5</a>. A <strong>very</strong> good thing to do would be to actually read the documentation top-&gt;bottom and get an idea of what is possible with the framework. SeAT core packages make heavy use of many of the features, based directly of what has been interpreted by this very documentation.</p>
 <p>If you really want to start contributing packages, but juts cant get your head around this whole Laravel thing, then I can suggest you have a look at this excellent free course material covering the basics of what you will encounter in the SeAT codebase. <a href="https://laracasts.com/series/laravel-5-fundamentals">https://laracasts.com/series/laravel-5-fundamentals</a></p>
-<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<p>No doubt, there are no limits to what code you can write, how you structure it and how you name things. However, the last thing you want is to have conflicts with the SeAT core, or someone elses package! The following list contains some tips to help you avoid those conflicts and to help people better discover your packages:</p>
-<ul>
-<li>Prefix your github repository name with <code>seat</code> eg: <code>seat-teamspeak</code>.</li>
-<li>Tag your github repository with <code>seat</code>.</li>
-<li>Use a unique package namespace such as <code>Author\Seat\Package\</code> eg: <code>Warlof\Seat\Teamspeak\</code>.</li>
-<li>Prefix your database table names with something unique to your package. eg <code>warlof_teamspeak_users</code>.</li>
-<li>Do not modify core tables. This will break future updates for users of your package.</li>
-<li>Prefix your settings with both an author and package eg: <code>warlof.teamspeak.address</code>.</li>
-<li>Prefix redis records with both author and package eg: <code>warlof.teamspeak.channels</code>.</li>
-<li>In your <code>composer.json</code> file, set the <code>type</code> to <code>seat-plugin</code>.</li>
-</ul>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>The very first thing to do is prepare the empty git repository on say Github, as well as the composer package itself. Clone a clean repository, and run <code>composer init</code>, answering any questions. Once that is done, edit the resultant <code>composer.json</code> and prepare the <code>autoload</code> block. SeAT core follows the <a href="http://www.php-fig.org/psr/psr-4/">PSR-4</a> autoloading standard. I will suggest you do the same. For some more detailed composer info, refer to the docs <a href="https://getcomposer.org/doc/01-basic-usage.md">here</a>. For the API package, I am going to autoload <strong>Seat\Api</strong> from the <code>src</code> directory using PSR-4.</p>
 <h2 id="service-provider">Service provider<a class="headerlink" href="#service-provider" title="Permanent link">&para;</a></h2>
