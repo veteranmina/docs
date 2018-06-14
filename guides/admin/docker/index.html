@@ -1302,13 +1302,13 @@
 
 
 <h2 id="database-backups-and-restore">Database Backups and Restore<a class="headerlink" href="#database-backups-and-restore" title="Permanent link">&para;</a></h2>
-<p>Backups. They are important and really simple to do. To perform a backup of the current database used within the docker stack, run:</p>
-<div class="codehilite"><pre><span></span>docker-compose <span class="nb">exec</span> mariadb sh -c <span class="s1">&#39;exec mysqldump &quot;$MYSQL_DATABASE&quot; -u&quot;$MYSQL_USER&quot; -p&quot;$MYSQL_PASSWORD&quot;&#39;</span> &gt; seat_backup.sql
+<p>Backups. They are important and really simple to do. To perform a backup of the current database used within the docker stack, compressing and saving it to a file called <code>seat_backup.sql.gz</code>, run:</p>
+<div class="codehilite"><pre><span></span>docker-compose <span class="nb">exec</span> mariadb sh -c <span class="s1">&#39;exec mysqldump &quot;$MYSQL_DATABASE&quot; -u&quot;$MYSQL_USER&quot; -p&quot;$MYSQL_PASSWORD&quot;&#39;</span> <span class="p">|</span> gzip &gt; seat_backup.sql.gz
 </pre></div>
 
 
 <p>To restore a backup to a new dockerized instance of SeAT, run:</p>
-<div class="codehilite"><pre><span></span>cat seat_backup.sql <span class="p">|</span> docker-compose <span class="nb">exec</span> -T mariadb sh -c <span class="s1">&#39;exec mysql &quot;$MYSQL_DATABASE&quot; -u&quot;$MYSQL_USER&quot; -p&quot;$MYSQL_PASSWORD&quot;&#39;</span>
+<div class="codehilite"><pre><span></span>zcat seat_backup.sql.gz <span class="p">|</span> docker-compose <span class="nb">exec</span> -T mariadb sh -c <span class="s1">&#39;exec mysql &quot;$MYSQL_DATABASE&quot; -u&quot;$MYSQL_USER&quot; -p&quot;$MYSQL_PASSWORD&quot;&#39;</span>
 </pre></div>
 
 
