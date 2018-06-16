@@ -1511,7 +1511,7 @@ Query OK, <span class="m">0</span> rows affected <span class="o">(</span><span c
 <p>Remember the password for the <code>seat</code> database user as we will need it later to configure SeAT.</p>
 </div>
 <h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Since SeAT is written primarily in PHP, we will need to install PHP packages. Currently only PHP 7.1 is supported due to issues with Laravel (the framework SeAT is built on) and PHP 7.2. This should change in the very near future. Debian based systems can make use of <a href="https://deb.sury.org/">Sury DPA</a> which is a very popular repository used for specific PHP versions.</p>
+<p>Since SeAT is written primarily in PHP, we will need to install PHP packages. Debian based systems can make use of <a href="https://deb.sury.org/">Sury DPA</a> which is a very popular repository used for specific PHP versions.</p>
 <p>Depending on the version of Debian you are using, a release specific repository URL should be used for the repository. Select the tab applicable to your Debian version and run the commands within.</p>
 <section class="mdc-tabs">
 <ul class="mdc-tab-bar">
@@ -1541,7 +1541,7 @@ echo "deb-src https://packages.sury.org/php/ jessie main" >> /etc/apt/sources.li
 
 
 <p>Finally, install the required PHP packages with:</p>
-<div class="codehilite"><pre><span></span>apt-get install curl zip php7.1-cli php7.1-mysql php7.1-mcrypt php7.1-intl php7.1-curl php7.1-gd php7.1-mbstring php7.1-bz2 php7.1-dom php7.1-zip
+<div class="codehilite"><pre><span></span>apt-get install curl zip php7.2-cli php7.2-mysql php7.2-intl php7.2-curl php7.2-gd php7.2-mbstring php7.2-bz2 php7.2-dom php7.2-zip
 </pre></div>
 
 
@@ -1701,7 +1701,7 @@ chmod -R guo+w /var/www/seat/storage/
 <p>The SeAT web interface requires a web server to serve the HTML goodies it has. We highly recommend you to use <code>nginx</code> and will be covered in this document. You don't <strong>have</strong> to use it, so if you prefer something else, feel free.</p>
 <h4 id="nginx-install">Nginx Install<a class="headerlink" href="#nginx-install" title="Permanent link">&para;</a></h4>
 <p>Together with an <code>nginx</code> installation we also need to install <code>php-fpm</code> to handle the PHP execution for us. Let's install <code>nginx</code> and <code>php-fpm</code> with:</p>
-<div class="codehilite"><pre><span></span>apt-get install nginx php7.1-fpm
+<div class="codehilite"><pre><span></span>apt-get install nginx php7.2-fpm
 </pre></div>
 
 
@@ -1763,7 +1763,7 @@ rm /etc/nginx/sites-enabled/default
 
 <p>Finally, reload <code>nginx</code> and <code>php-fpm</code> for the new changes to take affect:</p>
 <div class="codehilite"><pre><span></span>systemctl restart nginx.service
-systemctl restart php7.1-fpm.service
+systemctl restart php7.2-fpm.service
 </pre></div>
 
 
