@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -1135,7 +1135,7 @@
 </div>
 <h2 id="configuration-changes">Configuration Changes<a class="headerlink" href="#configuration-changes" title="Permanent link">&para;</a></h2>
 <p>A dockerized installation of SeAT is primarily configured via a configuration file located at <code>.env</code>. Configuration options such as your applications SSO secrets, SeAT's web server ports are amongst the many configuration options available in this file.</p>
-<p>Making changes to this file requires the docker stack to be restarted so that the configuration may be applies. An example case would be when you <a href="/configuration/esi_configuration/">configure SSO</a> for your instance.</p>
+<p>Making changes to this file requires the docker stack to be restarted so that the configuration may be applies. An example case would be when you <a href="../../configuration/esi_configuration/">configure SSO</a> for your instance.</p>
 <p>Once you have made a configuration change, save the <code>.env</code> file and restart the stack by simply running the following command from the path where the <code>docker-compose.yml</code> lives:</p>
 <div class="codehilite"><pre><span></span>docker-compose up -d
 </pre></div>
@@ -1183,7 +1183,7 @@
 
 
 <h2 id="performing-updates">Performing Updates<a class="headerlink" href="#performing-updates" title="Permanent link">&para;</a></h2>
-<p>As expected, updates for SeAT are deployed via Dockerhub and the images within the <a href="https://hub.docker.com/u/eveseat/dashboard/">eveseat organization</a>. Every package version release will automatically start the build process to generate a new docker image. This means updates are suuuper simple in the docker world. To update your instance, simply run:</p>
+<p>As expected, updates for SeAT are deployed via Dockerhub and the images within the <a href="https://hub.docker.com/u/eveseat/">eveseat organization</a>. Every package version release will automatically start the build process to generate a new docker image. This means updates are suuuper simple in the docker world. To update your instance, simply run:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Update to the latest dockerhub images</span>
 docker-compose pull
 
@@ -1279,7 +1279,7 @@ docker image prune -f
       
     </div>
     
-      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
