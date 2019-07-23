@@ -1276,9 +1276,14 @@ chmod +x /usr/local/bin/docker-compose
 </pre></div>
 
 
+<p>Finally, download the mysql configuration file <code>my.cnf</code> with:</p>
+<div class="codehilite"><pre><span></span>curl -fsSL https://raw.githubusercontent.com/eveseat/scripts/master/docker-compose/my.cnf -o my.cnf
+</pre></div>
+
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The location of the <code>docker-compose.yml</code> and <code>.env</code> files are important. You need to <code>cd</code> back to the directory where these are stored in order to be able to execute commands for this stack at a later stage.</p>
+<p>The location of the <code>docker-compose.yml</code>, <code>.env</code> and <code>my.cnf</code> files are important. You need to <code>cd</code> back to the directory where these are stored in order to be able to execute commands for this stack at a later stage.</p>
 </div>
 <p>With the configuration files ready, start up the stack with:</p>
 <div class="codehilite"><pre><span></span>docker-compose up -d
