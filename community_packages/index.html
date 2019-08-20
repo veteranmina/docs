@@ -1129,6 +1129,19 @@
 <h2 id="generic-package-installation">Generic package installation<a class="headerlink" href="#generic-package-installation" title="Permanent link">&para;</a></h2>
 <p>Packages will normally come in the form of a composer package that you need to include in your SeAT install, as well as a Service Provider that you need to bootstrap. So, generically speaking, installing a package will mean that you:</p>
 <ul>
+<li>
+<p>Ensure that you are in the <em>path</em> where you installed. By default this should be 
+<code>/var/www/seat</code>.</p>
+</li>
+<li>
+<p>Put your application into <em>maintenance mode</em>. This will ensure that no request from the outside will hit your applications logic, and also help you perform an upgrade uninterrupted. Do this with:</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>php artisan down
+</pre></div>
+
+
+<ul>
 <li><em>Require</em> the package via composer:</li>
 </ul>
 <div class="codehilite"><pre><span></span>composer require &lt;package vendor&gt;/&lt;package-name&gt;
@@ -1146,6 +1159,20 @@
 <li><em>Run migration</em> in order to update database:</li>
 </ul>
 <div class="codehilite"><pre><span></span>php artisan migrate
+</pre></div>
+
+
+<ul>
+<li><em>Clear SeAT cache</em> after installation:</li>
+</ul>
+<div class="codehilite"><pre><span></span>php artisan seat:cache:clear
+</pre></div>
+
+
+<ul>
+<li>Bring your application <em>live</em> and back out of maintenance mode:</li>
+</ul>
+<div class="codehilite"><pre><span></span>php artisan up
 </pre></div>
 
 
@@ -1175,7 +1202,7 @@
 <tr>
 <td><a href="https://github.com/herpaderpaldent/seat-discourse">herpaderpaldent/seat-discourse</a></td>
 <td><a href="https://packagist.org/packages/herpaderpaldent/seat-discourse"><img alt="Latest Stable Version" src="https://poser.pugx.org/herpaderpaldent/seat-discourse/v/stable" /></a></td>
-<td>SeAT Discourse enables SeAT to act as SSO provider for your Discourse-Forum instance. Groups and Categories do respect roles of members. With this package you can create hidden sections for your member and public sections for potential recruits to which members get automatically access to. <strong>Important:</strong> Check installation instructions on github.</td>
+<td>SeAT Discourse enables SeAT to act as SSO provider for your Discourse-Forum instance. Groups and Categories do respect roles of members. With this package you can create hidden sections for your member and public sections for potential recruits to which members get automatically access to. <strong>Important:</strong> Check installation instructions on Github.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/herpaderpaldent/seat-groups">herpaderpaldent/seat-groups</a></td>
@@ -1248,8 +1275,7 @@
 </table>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>The package in this section are provided as history and idea database. They will not work on the stable version
-since they are non longer maintained by their author or have been integrated in core.</p>
+<p>The package in this section are provided as history and idea database. They will not work on the stable version since they are non longer maintained by their author or have been integrated in core.</p>
 </div>
 <h3 id="other-seat-related-packages">Other SeAT related packages<a class="headerlink" href="#other-seat-related-packages" title="Permanent link">&para;</a></h3>
 <ul>
