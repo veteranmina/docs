@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -1191,7 +1191,7 @@
 <li><code>git clone https://github.com/eveseat/scripts.git /var/seat</code></li>
 <li><code>cd /var/seat/docker-compose-dev</code></li>
 <li><code>bash prepare-source.sh</code> (Or, if you have an existing repository update the <code>.env</code> file)</li>
-<li><code>docker-compose --project-name seat-dev up -d</code></li>
+<li><code>docker-compose --project-name seat-dev up -d --build</code></li>
 </ol>
 <p>In order to login using SSO you must create an Application on the <a href="https://developers.eveonline.com/">CCP Developers Portal</a>. Select all esi-scopes and save the <code>EVE_CLIENT_ID</code> and <code>EVE_CLIENT_SECRET</code> in <code>.env</code>.</p>
 <h3 id="docker-usage">Docker Usage<a class="headerlink" href="#docker-usage" title="Permanent link">&para;</a></h3>
@@ -1313,7 +1313,7 @@ You are able to route your IDE to this folder and work from there.</p>
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       
         <script src="../../js/extra_tabs.js"></script>
       
