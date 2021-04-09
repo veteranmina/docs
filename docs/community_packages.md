@@ -13,6 +13,8 @@ Packages will normally come in the form of a composer package that you need to i
 - Ensure that you are in the *path* where you installed. By default this should be 
 `/var/www/seat`.
 
+- Update .env file located in `/var/www/seat` previously mentioned in "Community Packages" adding the package(s) to be installed.
+
 - Put your application into *maintenance mode*. This will ensure that no request from the outside will hit your applications logic, and also help you perform an upgrade uninterrupted. Do this with:
 
 ```bash
@@ -50,6 +52,16 @@ php artisan up
 ```
 
 Installing packages like this will ensure that none of the core SeAT packages are affected and you should be free to upgrade SeAT core at anytime.
+
+## Docker package installation
+
+- Update your .env located in `/opt/seat-docker` previously mentioned in "Community Packages" adding the package(s) to be installed.
+
+```bash
+docker-compose up -d
+```
+
+After running the above command wait for containers affected to rebuild. If SeAT does not come back up refer to [Troubleshooting](https://eveseat.github.io/docs/troubleshooting/) for more insight.
 
 ## Package list
 
