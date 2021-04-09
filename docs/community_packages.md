@@ -51,7 +51,16 @@ Installing packages like this will ensure that none of the core SeAT packages ar
 
 ## Docker package installation
 
-Applying community packages to SeAT instances with Docker requires you to update your .env file located in `/opt/seat-docker` and uncommenting SEAT_PLUGINS by removing the '#' and entering the package(s) to be installed following the guidelines provided.
+Applying community packages to your SeAT instance with Docker requires you to update your .env file located in `/opt/seat-docker` and uncommenting SEAT_PLUGINS by removing '#' and entering the package(s) to be installed separating each package with a comma. An example of how to enter packages in your .env would be:
+
+```yaml
+# SeAT Plugins
+# This is a list of the all of the third party plugins that you
+# would like to install as part of SeAT. Package names should be
+# comma seperated if multiple packages should be installed.
+
+SEAT_PLUGINS=denngarr/seat-fitting,cryptaeve/seat-squad-sync
+```
 
 - Once you have entered the plugin(s) to be installed run the below command in `/opt/seat-docker`:
 
