@@ -62,7 +62,7 @@ Applying community packages to your SeAT instance with Docker requires you to up
 SEAT_PLUGINS=denngarr/seat-fitting,cryptaeve/seat-squad-sync
 ```
 
-- Once you have entered the plugin(s) to be installed run the below command in `/opt/seat-docker`:
+- Once you have entered the package(s) to be installed run the below command in `/opt/seat-docker`:
 
 ```bash
 docker-compose up -d
