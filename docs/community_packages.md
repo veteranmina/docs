@@ -4,16 +4,12 @@
 
 Below is a list of packages contributed by the community. These packages normally follow the same installation procedure, however, its best you consult the documentation of the package itself in case there is anything special you need to get it working.
 
-Applying community packages to SeAT requires modifying your .env file located at /var/www/seat/.env for bare metal installs and /opt/seat-docker/.env for docker installs. To add the package(s) you must uncomment SEAT_PLUGINS by removing the '#' and entering the package(s) to be installed following the guidelines provided.
-
 ## Generic package installation
 
 Packages will normally come in the form of a composer package that you need to include in your SeAT install, as well as a Service Provider that you need to bootstrap. So, generically speaking, installing a package will mean that you:
 
 - Ensure that you are in the *path* where you installed. By default this should be 
 `/var/www/seat`.
-
-- Update .env file located in `/var/www/seat` previously mentioned in "Community Packages" adding the package(s) to be installed.
 
 - Put your application into *maintenance mode*. This will ensure that no request from the outside will hit your applications logic, and also help you perform an upgrade uninterrupted. Do this with:
 
@@ -55,7 +51,9 @@ Installing packages like this will ensure that none of the core SeAT packages ar
 
 ## Docker package installation
 
-- Update your .env located in `/opt/seat-docker` previously mentioned in "Community Packages" adding the package(s) to be installed.
+Applying community packages to SeAT instances with Docker requires you to update your .env file located in `/opt/seat-docker` and uncommenting SEAT_PLUGINS by removing the '#' and entering the package(s) to be installed following the guidlines provided.
+
+- Once you have entered the plugin(s) to be installed run the below command in `/opt/seat-docker`:
 
 ```bash
 docker-compose up -d
